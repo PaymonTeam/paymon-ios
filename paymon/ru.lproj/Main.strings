@@ -1,0 +1,387 @@
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "0ho-el-5f0"; */
+"0ho-el-5f0.title" = "Title";
+
+/* Class = "UIViewController"; title = "Profile Header View"; ObjectID = "0pk-24-hE2"; */
+"0pk-24-hE2.title" = "Profile Header View";
+
+/* Class = "UITableViewController"; title = "Settings Basic Table VIew"; ObjectID = "0vD-ru-TxK"; */
+"0vD-ru-TxK.title" = "Settings Basic Table VIew";
+
+/* Class = "UINavigationItem"; title = "Money"; ObjectID = "142-Rf-5v8"; */
+"142-Rf-5v8.title" = "Money";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "1HP-28-Kbf"; */
+"1HP-28-Kbf.text" = "Title";
+
+/* Class = "UITableViewSection"; headerTitle = "Denomination"; ObjectID = "24z-sj-yzg"; */
+"24z-sj-yzg.headerTitle" = "Denomination";
+
+/* Class = "UILabel"; text = "Привет"; ObjectID = "28u-h8-VaS"; */
+"28u-h8-VaS.text" = "Привет";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "2nG-kv-zNA"; */
+"2nG-kv-zNA.normalTitle" = "Log out";
+
+/* Class = "UITextField"; placeholder = "Bitcoin address"; ObjectID = "2vh-X8-3Rd"; */
+"2vh-X8-3Rd.placeholder" = "Bitcoin address";
+
+/* Class = "UILabel"; text = "Security"; ObjectID = "2zf-dj-4Pz"; */
+"2zf-dj-4Pz.text" = "Security";
+
+/* Class = "UILabel"; text = "Vibration"; ObjectID = "3Fp-Ij-BKq"; */
+"3Fp-Ij-BKq.text" = "Vibration";
+
+/* Class = "UINavigationItem"; title = "Contacts Root Controller"; ObjectID = "3Pd-ss-GnT"; */
+"3Pd-ss-GnT.title" = "Contacts Root Controller";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "3cU-RR-7J1"; */
+"3cU-RR-7J1.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Chats"; ObjectID = "3km-rt-gaW"; */
+"3km-rt-gaW.title" = "Chats";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "4QY-lj-b6o"; */
+"4QY-lj-b6o.title" = "Title";
+
+/* Class = "UITextField"; placeholder = "ƀ0.00 "; ObjectID = "4fS-JR-9D2"; */
+"4fS-JR-9D2.placeholder" = "ƀ0.00 ";
+
+/* Class = "UIButton"; normalTitle = "Change photo"; ObjectID = "5B0-hJ-bMt"; */
+"5B0-hJ-bMt.normalTitle" = "Change photo";
+
+/* Class = "UITableViewController"; title = "Notification Sound Table"; ObjectID = "5Dt-pV-DE6"; */
+"5Dt-pV-DE6.title" = "Notification Sound Table";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7Aj-la-wFt"; */
+"7Aj-la-wFt.text" = "Label";
+
+/* Class = "UILabel"; text = "Input your password"; ObjectID = "7Ym-QG-TBh"; */
+"7Ym-QG-TBh.text" = "Input your password";
+
+/* Class = "UIViewController"; title = "Settings Money View Controller"; ObjectID = "7ZD-DM-QlI"; */
+"7ZD-DM-QlI.title" = "Settings Money View Controller";
+
+/* Class = "UIViewController"; title = "About Program View Controller"; ObjectID = "7bk-1h-WyH"; */
+"7bk-1h-WyH.title" = "About Program View Controller";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "7iI-2g-wgc"; */
+"7iI-2g-wgc.text" = "00:00";
+
+/* Class = "UILabel"; text = "text"; ObjectID = "7p9-3p-k5u"; */
+"7p9-3p-k5u.text" = "text";
+
+/* Class = "UILabel"; text = "Добавить кошелек"; ObjectID = "8dT-gm-QbP"; */
+"8dT-gm-QbP.text" = "Добавить кошелек";
+
+/* Class = "UIButton"; normalTitle = "SEND"; ObjectID = "8kk-1L-3FJ"; */
+"8kk-1L-3FJ.normalTitle" = "SEND";
+
+/* Class = "UILabel"; text = "Balance:"; ObjectID = "8lV-pg-FKu"; */
+"8lV-pg-FKu.text" = "Balance:";
+
+/* Class = "UILabel"; text = "Icons from: icons8.com"; ObjectID = "9Er-0c-UCZ"; */
+"9Er-0c-UCZ.text" = "Icons from: icons8.com";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "A5g-JM-APE"; */
+"A5g-JM-APE.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Enter password"; ObjectID = "ANf-nn-CbF"; */
+"ANf-nn-CbF.text" = "Enter password";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "AiA-oH-p29"; */
+"AiA-oH-p29.text" = "Notifications";
+
+/* Class = "UIButton"; normalTitle = "1WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"; ObjectID = "BNO-S6-Xyh"; */
+"BNO-S6-Xyh.normalTitle" = "1WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
+
+/* Class = "UITableViewSection"; headerTitle = "Other"; ObjectID = "DQV-Xq-eKs"; */
+"DQV-Xq-eKs.headerTitle" = "Other";
+
+/* Class = "UILabel"; text = "Enter your secret password"; ObjectID = "DxS-oc-GIA"; */
+"DxS-oc-GIA.text" = "Enter your secret password";
+
+/* Class = "UITextField"; placeholder = "text"; ObjectID = "E1n-6L-kPO"; */
+"E1n-6L-kPO.placeholder" = "text";
+
+/* Class = "UITabBarItem"; title = "Games"; ObjectID = "EeL-DY-jRr"; */
+"EeL-DY-jRr.title" = "Games";
+
+/* Class = "UILabel"; text = "Yandex Money Wallet"; ObjectID = "FCJ-Zb-e8v"; */
+"FCJ-Zb-e8v.text" = "Yandex Money Wallet";
+
+/* Class = "UIButton"; normalTitle = "sign up"; ObjectID = "FLE-0S-xU4"; */
+"FLE-0S-xU4.normalTitle" = "sign up";
+
+/* Class = "UIViewController"; title = "Profile View"; ObjectID = "G9u-W8-WiM"; */
+"G9u-W8-WiM.title" = "Profile View";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GE7-Kl-UJN"; */
+"GE7-Kl-UJN.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "GSn-Sg-SXa"; */
+"GSn-Sg-SXa.text" = "Title";
+
+/* Class = "UISegmentedControl"; I0l-VD-aM7.segmentTitles[0] = "Transfer"; ObjectID = "I0l-VD-aM7"; */
+"I0l-VD-aM7.segmentTitles[0]" = "Transfer";
+
+/* Class = "UISegmentedControl"; I0l-VD-aM7.segmentTitles[1] = "Deposit"; ObjectID = "I0l-VD-aM7"; */
+"I0l-VD-aM7.segmentTitles[1]" = "Deposit";
+
+/* Class = "UISegmentedControl"; I0l-VD-aM7.segmentTitles[2] = "Withdraw"; ObjectID = "I0l-VD-aM7"; */
+"I0l-VD-aM7.segmentTitles[2]" = "Withdraw";
+
+/* Class = "UITableViewSection"; headerTitle = "Denomination"; ObjectID = "IAI-PQ-XRT"; */
+"IAI-PQ-XRT.headerTitle" = "Denomination";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Inh-DR-YjB"; */
+"Inh-DR-YjB.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "Messeges"; ObjectID = "IsD-fp-2PC"; */
+"IsD-fp-2PC.headerTitle" = "Messeges";
+
+/* Class = "UILabel"; text = "Paymon for iOS"; ObjectID = "Kbp-ot-qIJ"; */
+"Kbp-ot-qIJ.text" = "Paymon for iOS";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L5C-7W-lPU"; */
+"L5C-7W-lPU.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "LBR-zC-Vts"; */
+"LBR-zC-Vts.title" = "Title";
+
+/* Class = "UITabBarItem"; title = "Money"; ObjectID = "LoR-Cb-3OG"; */
+"LoR-Cb-3OG.title" = "Money";
+
+/* Class = "UIViewController"; title = "Update Profile Header View"; ObjectID = "MCj-1T-Fjk"; */
+"MCj-1T-Fjk.title" = "Update Profile Header View";
+
+/* Class = "UILabel"; text = "FAQ"; ObjectID = "MSr-nI-DcT"; */
+"MSr-nI-DcT.text" = "FAQ";
+
+/* Class = "UILabel"; text = "ƀ 0.00"; ObjectID = "NBp-ai-Edq"; */
+"NBp-ai-Edq.text" = "ƀ 0.00";
+
+/* Class = "UITextField"; placeholder = "Birthday"; ObjectID = "NKJ-4g-JNQ"; */
+"NKJ-4g-JNQ.placeholder" = "Birthday";
+
+/* Class = "UILabel"; text = "Make sure that the purse of the recipient is correct. To do this, click on the icon on the right."; ObjectID = "Ngk-zI-qbv"; */
+"Ngk-zI-qbv.text" = "Make sure that the purse of the recipient is correct. To do this, click on the icon on the right.";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "O22-JZ-zhZ"; */
+"O22-JZ-zhZ.placeholder" = "City";
+
+/* Class = "UITableViewController"; title = "Settings Security Table VIew"; ObjectID = "P3x-GP-vLN"; */
+"P3x-GP-vLN.title" = "Settings Security Table VIew";
+
+/* Class = "UILabel"; text = "455.0"; ObjectID = "P7L-ei-yVT"; */
+"P7L-ei-yVT.text" = "455.0";
+
+/* Class = "UITableViewSection"; headerTitle = "Contact Information"; ObjectID = "Ped-3u-9Kt"; */
+"Ped-3u-9Kt.headerTitle" = "Contact Information";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "PuC-F9-XKc"; */
+"PuC-F9-XKc.placeholder" = "Phone";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "QQT-2t-Phs"; */
+"QQT-2t-Phs.placeholder" = "Country";
+
+/* Class = "UIViewController"; title = "Chat View"; ObjectID = "QcQ-T5-2kY"; */
+"QcQ-T5-2kY.title" = "Chat View";
+
+/* Class = "UIViewController"; title = "StartViewController"; ObjectID = "Qyk-Vc-ItO"; */
+"Qyk-Vc-ItO.title" = "StartViewController";
+
+/* Class = "UILabel"; text = "Yandex Money"; ObjectID = "RNN-2J-qzU"; */
+"RNN-2J-qzU.text" = "Yandex Money";
+
+/* Class = "UILabel"; text = "133.7"; ObjectID = "SGa-dW-pwk"; */
+"SGa-dW-pwk.text" = "133.7";
+
+/* Class = "UILabel"; text = "About the program"; ObjectID = "TD2-4i-8Bl"; */
+"TD2-4i-8Bl.text" = "About the program";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "URz-tp-9qs"; */
+"URz-tp-9qs.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "W0T-0A-CQW"; */
+"W0T-0A-CQW.title" = "Профиль";
+
+/* Class = "UINavigationItem"; title = "Sign In"; ObjectID = "WVE-SL-zdC"; */
+"WVE-SL-zdC.title" = "Sign In";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "WXs-5F-9CE"; */
+"WXs-5F-9CE.text" = "Name";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "WfY-Lf-W1m"; */
+"WfY-Lf-W1m.title" = "Title";
+
+/* Class = "UIViewController"; title = "Games View"; ObjectID = "Wig-bN-clI"; */
+"Wig-bN-clI.title" = "Games View";
+
+/* Class = "UINavigationItem"; title = "Update profile"; ObjectID = "WkI-aF-Rm3"; */
+"WkI-aF-Rm3.title" = "Update profile";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "X0d-SQ-pAu"; */
+"X0d-SQ-pAu.text" = "00:00";
+
+/* Class = "UILabel"; text = "Denomination  BTC"; ObjectID = "XMY-Ka-GHd"; */
+"XMY-Ka-GHd.text" = "Denomination  BTC";
+
+/* Class = "UIButton"; normalTitle = "I already have an account"; ObjectID = "Ypw-c4-8Ef"; */
+"Ypw-c4-8Ef.normalTitle" = "I already have an account";
+
+/* Class = "UILabel"; text = "Password protect"; ObjectID = "Z6D-Ec-fyL"; */
+"Z6D-Ec-fyL.text" = "Password protect";
+
+/* Class = "UINavigationItem"; title = "Chats"; ObjectID = "ZSD-1d-evQ"; */
+"ZSD-1d-evQ.title" = "Chats";
+
+/* Class = "UILabel"; text = "Do not disturb"; ObjectID = "Zww-nz-AlM"; */
+"Zww-nz-AlM.text" = "Do not disturb";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "aPO-OS-96j"; */
+"aPO-OS-96j.text" = "Title";
+
+/* Class = "UIViewController"; title = "Settings Basic View Controller"; ObjectID = "aUT-i1-aeC"; */
+"aUT-i1-aeC.title" = "Settings Basic View Controller";
+
+/* Class = "UITableViewController"; title = "Settings Money Table VIew"; ObjectID = "b0c-4A-rI6"; */
+"b0c-4A-rI6.title" = "Settings Money Table VIew";
+
+/* Class = "UISegmentedControl"; b3Q-bD-xu9.segmentTitles[0] = "Male"; ObjectID = "b3Q-bD-xu9"; */
+"b3Q-bD-xu9.segmentTitles[0]" = "Male";
+
+/* Class = "UISegmentedControl"; b3Q-bD-xu9.segmentTitles[1] = "Female"; ObjectID = "b3Q-bD-xu9"; */
+"b3Q-bD-xu9.segmentTitles[1]" = "Female";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "cN1-ra-IEr"; */
+"cN1-ra-IEr.title" = "Settings";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "d1Y-rS-VSt"; */
+"d1Y-rS-VSt.title" = "Title";
+
+/* Class = "UIViewController"; title = "AuthViewController"; ObjectID = "dXh-09-pOj"; */
+"dXh-09-pOj.title" = "AuthViewController";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "dsT-xd-DHX"; */
+"dsT-xd-DHX.placeholder" = "Password";
+
+/* Class = "UIViewController"; title = "Settings Notification View Controller"; ObjectID = "e32-qQ-haU"; */
+"e32-qQ-haU.title" = "Settings Notification View Controller";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "eZD-wE-HOG"; */
+"eZD-wE-HOG.text" = "Name";
+
+/* Class = "UINavigationItem"; title = "Notifications"; ObjectID = "ezL-03-e3s"; */
+"ezL-03-e3s.title" = "Notifications";
+
+/* Class = "UIView"; accessibilityHint = "dfg"; ObjectID = "f9f-1t-VCv"; */
+"f9f-1t-VCv.accessibilityHint" = "dfg";
+
+/* Class = "UITableViewSection"; headerTitle = "Personal Information"; ObjectID = "fst-On-6B8"; */
+"fst-On-6B8.headerTitle" = "Personal Information";
+
+/* Class = "UITableViewSection"; headerTitle = "Application"; ObjectID = "gUr-9b-537"; */
+"gUr-9b-537.headerTitle" = "Application";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "ga3-bU-I76"; */
+"ga3-bU-I76.title" = "Title";
+
+/* Class = "UITableViewController"; title = "Settings Notification Table"; ObjectID = "gqh-Jl-92d"; */
+"gqh-Jl-92d.title" = "Settings Notification Table";
+
+/* Class = "UITextField"; placeholder = "Surname"; ObjectID = "h7F-d3-3FQ"; */
+"h7F-d3-3FQ.placeholder" = "Surname";
+
+/* Class = "UILabel"; text = "Maksim Skorynin"; ObjectID = "hva-WM-qd0"; */
+"hva-WM-qd0.text" = "Maksim Skorynin";
+
+/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "iJM-Vk-VPA"; */
+"iJM-Vk-VPA.normalTitle" = "Erase";
+
+/* Class = "UIButton"; normalTitle = "Deposit"; ObjectID = "iNJ-aQ-GQI"; */
+"iNJ-aQ-GQI.normalTitle" = "Deposit";
+
+/* Class = "UILabel"; text = "₽0.00"; ObjectID = "jHq-X8-CT7"; */
+"jHq-X8-CT7.text" = "₽0.00";
+
+/* Class = "UIViewController"; title = "Settings View Controller"; ObjectID = "jep-xP-Agm"; */
+"jep-xP-Agm.title" = "Settings View Controller";
+
+/* Class = "UINavigationItem"; title = "Money"; ObjectID = "kqF-ne-Rm0"; */
+"kqF-ne-Rm0.title" = "Money";
+
+/* Class = "UITableViewSection"; headerTitle = "Information about you"; ObjectID = "lmF-t8-c8x"; */
+"lmF-t8-c8x.headerTitle" = "Information about you";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "lrv-Fi-tTR"; */
+"lrv-Fi-tTR.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Contacts"; ObjectID = "msi-NU-7bj"; */
+"msi-NU-7bj.title" = "Contacts";
+
+/* Class = "UILabel"; text = "Transactions"; ObjectID = "nEY-N6-7jT"; */
+"nEY-N6-7jT.text" = "Transactions";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nIf-If-RQT"; */
+"nIf-If-RQT.text" = "Label";
+
+/* Class = "UILabel"; text = "Set the password for the application"; ObjectID = "o0d-kL-sOW"; */
+"o0d-kL-sOW.text" = "Set the password for the application";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oEY-0c-cfX"; */
+"oEY-0c-cfX.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Login"; ObjectID = "oPd-vB-BaG"; */
+"oPd-vB-BaG.placeholder" = "Login";
+
+/* Class = "UILabel"; text = "Sound"; ObjectID = "opH-3A-epI"; */
+"opH-3A-epI.text" = "Sound";
+
+/* Class = "UIButton"; normalTitle = "sign in"; ObjectID = "ot4-XS-Nl7"; */
+"ot4-XS-Nl7.normalTitle" = "sign in";
+
+/* Class = "UINavigationItem"; title = "Basic"; ObjectID = "pR3-rJ-3DZ"; */
+"pR3-rJ-3DZ.title" = "Basic";
+
+/* Class = "UILabel"; text = "Denomination ETH"; ObjectID = "pb4-h3-SDp"; */
+"pb4-h3-SDp.text" = "Denomination ETH";
+
+/* Class = "UIViewController"; title = "Update Profile View"; ObjectID = "pqP-DP-cvG"; */
+"pqP-DP-cvG.title" = "Update Profile View";
+
+/* Class = "UITableViewSection"; headerTitle = "Enter your login and password"; ObjectID = "r87-md-1f9"; */
+"r87-md-1f9.headerTitle" = "Enter your login and password";
+
+/* Class = "UILabel"; text = "You have an account?"; ObjectID = "rbg-6y-63A"; */
+"rbg-6y-63A.text" = "You have an account?";
+
+/* Class = "UILabel"; text = "Error:"; ObjectID = "rst-4D-rit"; */
+"rst-4D-rit.text" = "Error:";
+
+/* Class = "UITextField"; placeholder = "₽0.00"; ObjectID = "sNe-14-9yD"; */
+"sNe-14-9yD.placeholder" = "₽0.00";
+
+/* Class = "UILabel"; text = "₽"; ObjectID = "t2d-AF-9b2"; */
+"t2d-AF-9b2.text" = "₽";
+
+/* Class = "UILabel"; text = "Sort Friends"; ObjectID = "t7o-nF-Eas"; */
+"t7o-nF-Eas.text" = "Sort Friends";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "tob-9S-vls"; */
+"tob-9S-vls.placeholder" = "Name";
+
+/* Class = "UINavigationItem"; title = "Games"; ObjectID = "uoQ-qb-uMr"; */
+"uoQ-qb-uMr.title" = "Games";
+
+/* Class = "UITableViewController"; title = "Update Profile Info Table"; ObjectID = "vg2-Fo-Vxg"; */
+"vg2-Fo-Vxg.title" = "Update Profile Info Table";
+
+/* Class = "UILabel"; text = "0.00 ₽"; ObjectID = "w5n-gq-y2x"; */
+"w5n-gq-y2x.text" = "0.00 ₽";
+
+/* Class = "UITableViewController"; title = "Profile Information Table"; ObjectID = "xxG-cv-4t8"; */
+"xxG-cv-4t8.title" = "Profile Information Table";
+
+/* Class = "UILabel"; text = "="; ObjectID = "yL7-2i-Fkr"; */
+"yL7-2i-Fkr.text" = "=";

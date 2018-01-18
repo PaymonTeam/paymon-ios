@@ -1,0 +1,22 @@
+module BR_Core [system] [extern_c] {
+    textual header "secp256k1/src/basic-config.h"
+    textual header "secp256k1/src/secp256k1.c"
+    header "BR_Int.h"
+    header "BR_Array.h"
+    header "BR_Set.h"
+    header "BR_BloomFilter.h"
+    header "BR_MerkleBlock.h"
+    header "BR_Peer.h"
+    header "BR_Crypto.h"
+    header "BR_Base58.h"
+    header "BR_Key.h"
+    header "BR_BIP38Key.h"
+    header "BR_BIP39Mnemonic.h"
+    header "BR_BIP32Sequence.h"
+    header "BR_Transaction.h"
+    header "BR_PaymentProtocol.h"
+    header "BR_Address.h"
+    header "BR_Wallet.h"
+    header "BR_PeerManager.h"
+    export *
+}

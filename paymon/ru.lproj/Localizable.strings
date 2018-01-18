@@ -1,0 +1,161 @@
+/* 
+  Localizable.strings
+  paymon
+
+  Created by maks on 02.11.17.
+  Copyright © 2017 Paymon. All rights reserved.
+*/
+
+/*Tab bar*/
+"Money" = "Деньги";
+"Profile" = "Профиль";
+"Update Profile" = "Редактировать профиль";
+"Contacts" = "Контакты";
+"Games" = "Игры";
+"Chats" = "Чаты";
+
+/*Registration and Auth*/
+"sign in" = "войти";
+"Sign In" = "Войти";
+"sign up" = "зарегистрироваться";
+"Registration" = "Регистрация";
+"Login" = "Логин";
+"Password" = "Пароль";
+"Repeat" = "Повторите пароль";
+"Invite code"="Инвайт-код";
+"Register" = "Зарегистрироваться";
+"Registration Failed"="Ошибка регистрации";
+"Registration was successful"="Регистрация прошла успешно";
+"Congratulations, you have successfully registered. Account activation sent to your email. Confirm account and log in."="Поздравляем, вы успешно зарегистрировались. Письмо с ссылкой для активации выслано на вашу почту. Подтвердите аккаунт и авторизуйтесь.";
+"I already have an account" = "У меня уже есть аккаунт";
+"Fill out the information"="Заполните информацию";
+"Already have an account?" = "У вас есть аккаунт?";
+"Enter your login and password" = "Введите ваш логин и пароль";
+"Enter username or login" = "Введите имя пользователя или логин";
+"Invalid login or password"="Неправильный логин или пароль";
+"Такие логин или электронная почта уже используются"="Such login or email is already in use";
+"Login Failed"="Ошибка при входе";
+"Confirmation email"="Подтверждение электронной почты";
+"You did not verify your account by email \n %@ \n\n Send mail again?"="Вы не подтвердили аккаунт по электронной почте \n %@ \n\n Отправить письмо еще раз?";
+"The letter was sent"="Письмо было отправлено";
+"The email was not sent. Check your internet connection."="Письмо не было отправлено. Проверьте подключение к интернету.";
+
+"At least 3 symbols"="Не менее 3 символов";
+"At least 8 symbols"="Не менее 8 символов";
+"Required"="Обязательное поле";
+"Optional"="Необязательное поле";
+
+"I still learning how to play" = "Я только учусь играть";
+"We'll play later" = "Сыграем позднее";
+
+/*Chat View*/
+
+"To write a message"="Написать сообщение";
+
+/*Profile*/
+
+"Contact information" = "Контактная информация";
+"Personal information" = "Персональная информация";
+"Information about you" = "Информация о вас";
+"Not choosen" = "Не выбрано";
+"Invite Friends"="Пригласить друзей";
+"Your invite code"="Ваш код для приглашения";
+"Invite your friends in Paymon and receive additional rewards after the end of ICO"="Приглашайте ваших друзей в Paymon и получите дополнительное вознаграждение после окончания ICO";
+"The more people will register with your invite сode, the more will be your reward"="Чем больше людей зарегистрируются по вашему инвайт-коду, тем больше будет ваше вознаграждение";
+"share"="поделиться";
+"Hi! Install and register on this code '%@' in the app and get free cryptocurrency from Paymon!"="ПривЫУстанавливай и регистрируйся по этому коду '%@' в приложении и получи бесплатно криптовалюту от Paymon!";
+
+/*Update profile*/
+"Change photo" = "Изменить фото";
+"Name" = "Имя";
+"Surname" = "Фамилия";
+"Male" = "Мужчина";
+"Female" = "Женщина";
+"City" = "Город";
+"Country" = "Страна";
+"Phone number" = "Номер телефона";
+"E-mail" = "E-mail";
+
+/*Settings*/
+"Settings" = "Настройки";
+"Notifications" = "Уведомления";
+"Security" = "Безопасность";
+"About the program" = "О программе";
+"Log out" = "Выйти";
+"Open in browser?"="Открыть в браузере?";
+"Open"="Открыть";
+"Cancel"="Отмена";
+
+/*Notification settings*/
+"Messeges"="Сообщения";
+"Other"="Другое";
+"Do not disturb"="Не беспокоить";
+"Sound"="Звук";
+"Sounds"="Звуки";
+"Vibration"="Вибрация";
+"Transactions"="Транзакции";
+
+/*Security Settings*/
+"Protect"="Защита";
+"Security password"="Пароль безопасности";
+"Password protect"="Пароль безопасности";
+"Set the password for the application"="Установите пароль на приложение";
+"Enter password"="Введите пароль";
+"Enter your secret password"="Введите ваш секретный пароль";
+"Input your password"="Введите пароль";
+
+/*About the program*/
+"Paymon for iOS"="Paymon для iOS";
+"version "="версия ";
+
+/*Seed ViewController*/
+
+"if you ever lose your phone, you will need this phrase to recover your Bitcoin wallet"="Если вы когда-нибудь потеряете свой телефон, вам понадобится эта фраза, чтобы восстановить свой Bitcoin кошелек";
+"please write it down"="Пожалуйста, запишите эту фразу";
+"Remind me later"="Напомнить позднее";
+
+/*MoneyViewController*/
+
+"Enter old passcode"="Введите старый пароль";
+"Set a password for your wallet"="Установите пароль для вашего кошелька";
+"Enter the password of the wallet"="Введите пароль от кошелька";
+"This is address of your Bitcoin wallet. To send to someone, click on QR code."="Это адрес вашего Bitcoin кошелька. Чтобы отправить его кому-либо, нажмите на QR-код.";
+"What to do next?"="Что делать дальше?";
+"To find out the address of your wallet and the QR-code, hold the cell of wallet. \n\n To transfer, deposit or withdraw funds, click on the dell of wallet."="Чтобы узнать адрес вашего кошелька и QR-код, удерживайте ячейку кошелька. \n\n Чтобы перевести, внести или снять средства, щелкните по ячейке кошелька.";
+
+
+/*Money transfer*/
+
+"Address of the recipient"="Адрес получателя";
+"If you want to scan the QR-code, direct the scan area to the image of the QR-code"="Если вы хотите отсканировать QR-код, наведите область сканирования на изображение QR-кода";
+"QR-Code scan"="Сканер QR-кода";
+"Can't read this QR-code"="Невозможно считать QR-код";
+"Make sure that the purse of the recipient is correct. To do this, click on the icon on the right."="Убедитесь, что кошелек получаетеля введен верно. Для этого нажмите на иконку справа";
+"Bitcoin address"="Bitcoin адрес";
+"SEND"="ОТПРАВИТЬ";
+"Send"="Отправить";
+
+
+/*Yandex Money depisit view controller*/
+
+"Yandex wallet:"="Яндекс кошелек:";
+"DEPOSIT"="ПОПОЛНИТЬ";
+"WITHDRAW"="ВЫВЕСТИ";
+"Failed to load exchange rate"="Ошибка: не удалось загрузить курс валюты";
+"You don't have enough money"="У вас не достаточно средств";
+"Allowed amount: "="Допустимая сумма: ";
+
+/*Money deposit view*/
+
+"Yandex money"="Яндекс деньги";
+"Add Yandex wallet"="Добавить Яндекс кошелек";
+"Want to deposit funds?"="Хотоите пополнить средства?";
+"To Deposit funds to your Bitcoin wallet, select one of the suggested variants of deposit. To do this, please login  in E-wallet system and then fill in the form relevant data. Enjoy your use!" = "Чтобы внести средства на ваш Bitcoin кошелек, выберите один из предложенных способов пополнения. Для этого пройдите авторизацию в системе электронного кошелька, а затем заполните форму соответствующими данными. Приятного использования!";
+"Want to withdraw funds?"="Хотите вывести средства?";
+"To withdraw funds from Bitcoin wallet, select one of the options withdrawal. To do this, login to the E-wallet system, and then fill in the form relevant data. Enjoy your use!"="Для вывода средств из кошелька Bitcoin, выберите один из вариантов вывода средств. Для этого войдите в систему электронного кошелька, а затем заполните форму соответствующими данными. Приятного использования!";
+
+/*Wllet view controller*/
+
+"Transfer"="Перевод";
+"Deposit"="Пополнение";
+"Withdraw"="Вывод";
