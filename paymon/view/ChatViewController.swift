@@ -78,14 +78,20 @@ class ChatViewController: UIViewController, NotificationManagerListener {
                             break
                         }
                     }
-                    self.messages.append(update.newID)
+                    DispatchQueue.main.sync {
+                        self.messages.append(update.newID)
+                    }
+                    
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
                 }
             }
 
-            messages.append(mid)
+            DispatchQueue.main.sync {
+                messages.append(mid)
+            }
+            
             MessageManager.instance.putMessage(message, serverTime: false)
 //        tableView.reloadData()
             let index = IndexPath(row: messages.count > 0 ? messages.count - 1 : 0, section: 0)
@@ -190,7 +196,10 @@ class ChatViewController: UIViewController, NotificationManagerListener {
             if args.count == 2 {
                 if args[1] is Bool {
                     if let messagesToAdd = args[0] as? [Int64] {
-                        messages.append(contentsOf: messagesToAdd)
+                        
+                        DispatchQueue.main.sync {
+                            messages.append(contentsOf: messagesToAdd)
+                        }
                     }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -206,7 +215,10 @@ class ChatViewController: UIViewController, NotificationManagerListener {
             if args.count == 1 {
                 if let messagesToAdd = args[0] as? [RPC.Message] {
                     messagesToAdd.forEach({ msg in
-                        self.messages.append(msg.id)
+                        
+                        DispatchQueue.main.sync {
+                            self.messages.append(msg.id)
+                        }
 
                     })
                 }

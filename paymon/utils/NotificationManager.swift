@@ -250,8 +250,8 @@ class NotificationManager {
         }
 
         var objects = observers[id]
-        if objects != nil {
-            for i in 0..<observers.count {
+        if objects != nil && objects?.count != 0 {
+            for i in 0..<objects!.count {
                 if objects![i] != nil && objects![i]! === observer {
                     observers[id]!.remove(at: i)
                     return
