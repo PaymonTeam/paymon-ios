@@ -78,7 +78,7 @@ class ChatViewController: UIViewController, NotificationManagerListener {
                             break
                         }
                     }
-                    DispatchQueue.main.sync {
+                    DispatchQueue.global().sync {
                         self.messages.append(update.newID)
                     }
                     
@@ -88,7 +88,7 @@ class ChatViewController: UIViewController, NotificationManagerListener {
                 }
             }
 
-            DispatchQueue.main.sync {
+            DispatchQueue.global().sync {
                 messages.append(mid)
             }
             
@@ -197,7 +197,7 @@ class ChatViewController: UIViewController, NotificationManagerListener {
                 if args[1] is Bool {
                     if let messagesToAdd = args[0] as? [Int64] {
                         
-                        DispatchQueue.main.sync {
+                        DispatchQueue.global().sync {
                             messages.append(contentsOf: messagesToAdd)
                         }
                     }
@@ -216,7 +216,7 @@ class ChatViewController: UIViewController, NotificationManagerListener {
                 if let messagesToAdd = args[0] as? [RPC.Message] {
                     messagesToAdd.forEach({ msg in
                         
-                        DispatchQueue.main.sync {
+                        DispatchQueue.global().sync {
                             self.messages.append(msg.id)
                         }
 
