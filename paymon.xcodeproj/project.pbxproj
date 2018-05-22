@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1217798D20B2C86500E45E60 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */; };
 		2306AE83D8641FCDC31F33C4 /* libPods-paymon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B11FE9945162543E84A311 /* libPods-paymon.a */; };
 		2D1500E21F8B8D4C00665409 /* KeyGuardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1500E11F8B8D4C00665409 /* KeyGuardViewController.swift */; };
 		2D174FE61F88D2DA009113EA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D174FE51F88D2DA009113EA /* AuthViewController.swift */; };
@@ -246,6 +247,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		2D1500E11F8B8D4C00665409 /* KeyGuardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGuardViewController.swift; sourceTree = "<group>"; };
 		2D174FE51F88D2DA009113EA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		2D174FE71F88D6E3009113EA /* AuthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTableViewController.swift; sourceTree = "<group>"; };
@@ -1214,6 +1216,7 @@
 				3305FA50BDFA577D5FE6640F /* RegistrViewController.swift */,
 				3305FF737DBB6F377121285E /* QRScannerViewController.swift */,
 				3388DEF7E142303FA51D6A72 /* YMWithdrawViewController.swift */,
+				1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1977,6 +1980,7 @@
 				3388D610181B1B0FFD881E47 /* TransactionManager.swift in Sources */,
 				3388D6EB1A6173B93467218B /* GCDAsyncSocket.m in Sources */,
 				3388DD3013A4DA6C8824D308 /* WalletViewController.swift in Sources */,
+				1217798D20B2C86500E45E60 /* CreateGroupViewController.swift in Sources */,
 				3388D021FB59AE08D888733C /* NetworkReachability.swift in Sources */,
 				3388DC229CD9704564ABC453 /* Queue.m in Sources */,
 				3388D15915AC8F5543358FEE /* Connection.m in Sources */,

@@ -71,8 +71,11 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
         self.tabBarController?.tabBar.items?[4].title = "Profile".localized
 
         self.navigationItem.title = "Chats".localized
+        
+        let rightButton = UIBarButtonItem(image: UIImage(named: "user-group"), style: .plain, target: self, action: #selector(createGroup))
+        
+        self.navigationItem.rightBarButtonItem = rightButton;
         navigationBar.items = [navigationItem]
-
         borderConstraint.constant = 0.5
 
         list.removeAll()
@@ -90,6 +93,11 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
 
     }
 
+    func createGroup() {
+        let groupView = storyboard?.instantiateViewController(withIdentifier: "CreateGroupViewController") as! CreateGroupViewController
+        present(groupView, animated: false, completion: nil)
+    }
+    
     func didReceivedNotification(_ id: Int, _ args: [Any]) {
         if (id == NotificationManager.dialogsNeedReload) {
         //            if (progressBar != nil) {

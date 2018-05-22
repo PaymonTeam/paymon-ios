@@ -17,7 +17,7 @@ open class Utils {
         print(data.map { String(format: "%02x", $0) }.joined())
     }
 
-    public static func formatUserName(_ user:RPC.UserObject) -> String {
+    static func formatUserName(_ user:RPC.UserObject) -> String {
         if (user.first_name != nil && user.last_name != nil && !user.first_name.isEmpty && !user.last_name.isEmpty) {
             return "\(user.first_name!) \(user.last_name!)"
         } else {
