@@ -128,6 +128,9 @@ class SharedDictionary<K: Hashable, V> {
     public func removeValue(forKey key: K) -> V? {
         return dict.removeValue(forKey: key)
     }
+    public func value(forKey key: K) -> V? {
+        return dict[key]
+    }
 //    public mutating func remove(at index: [K : V].Index) -> SharedDictionary.Element {
 //        return remove(at: index)
 //    }

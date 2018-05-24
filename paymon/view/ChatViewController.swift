@@ -6,6 +6,9 @@
 import UIKit
 import UserNotifications
 
+class GroupChatMessageRcvViewCell : ChatMessageRcvViewCell {
+    @IBOutlet weak var photo: ObservableImageView!
+}
 //import PureLayout
 
 extension String {
@@ -38,7 +41,7 @@ class ChatViewController: UIViewController, NotificationManagerListener {
     var messages: [Int64] = [] //RPC.Message?
     var chatID: Int32!
     var isGroup: Bool!
-
+    var users = SharedArray<RPC.UserObject>()
     var oldFrame : CGRect!
 
     @IBAction private func onNavBarItemRightClicked() {
@@ -113,6 +116,13 @@ class ChatViewController: UIViewController, NotificationManagerListener {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
+//        MessageManager.getInstance().groupsUsers.get(cid)
+//        for user in MessageManager.instance.groupsUsers. {
+//            users.append(user)
+//        }
+        if isGroup {
+            users = MessageManager.instance.groupsUsers.value(forKey: chatID)!
+        }
         messageTextView.layer.cornerRadius = 15
         messageTextView.layer.borderWidth = 1;
         messageTextView.layer.borderColor = UIColor(r: 235, g: 235, b: 241).cgColor
@@ -258,6 +268,7 @@ extension ChatViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
+    
 
 //    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        let row = indexPath.row
@@ -295,17 +306,32 @@ extension ChatViewController: UITableViewDataSource {
                     return cell
                 }
             } else {
-                if message.itemType == nil || message.itemType == .NONE {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageRcvViewCell") as! ChatMessageRcvViewCell
-//                    cell.timeLabel.text = String(message.date)
-                    cell.messageLabel.text = message.text
-                    cell.messageLabel.sizeToFit()
-                    return cell
+                if isGroup {
+                    if message.itemType == nil || message.itemType == .NONE {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupChatMessageRcvViewCell") as! GroupChatMessageRcvViewCell
+                        cell.messageLabel.text = message.text
+                        cell.messageLabel.sizeToFit()
+                        cell.photo.setPhoto(ownerID: message.from_id, photoID: MediaManager.instance.userProfilePhotoIDs[message.from_id]!)
+                        return cell
+                    } else {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageItemRcvViewCell") as! ChatMessageItemRcvViewCell
+                        cell.stickerImage.setSticker(itemType: message.itemType, itemID: message.itemID)
+                        return cell
+                    }
                 } else {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageItemRcvViewCell") as! ChatMessageItemRcvViewCell
-                    cell.stickerImage.setSticker(itemType: message.itemType, itemID: message.itemID)
-                    return cell
+                    if message.itemType == nil || message.itemType == .NONE {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageRcvViewCell") as! ChatMessageRcvViewCell
+                        //                    cell.timeLabel.text = String(message.date)
+                        cell.messageLabel.text = message.text
+                        cell.messageLabel.sizeToFit()
+                        return cell
+                    } else {
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageItemRcvViewCell") as! ChatMessageItemRcvViewCell
+                        cell.stickerImage.setSticker(itemType: message.itemType, itemID: message.itemID)
+                        return cell
+                    }
                 }
+                
             }
         }
 
@@ -315,10 +341,38 @@ extension ChatViewController: UITableViewDataSource {
 }
 
 extension ChatViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         messageTextView.endEditing(true)
 
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if(section == 0) {
+            let view = UIView()
+            view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 80)
+            view.backgroundColor = UIColor(white: 1, alpha: 1)
+            let imageView = ObservableImageView()
+            imageView.frame =  CGRect(x: 10, y: 10, width: 60, height: 60);
+            imageView.setPhoto(ownerID: chatID, photoID: MediaManager.instance.groupPhotoIDs[chatID]!)
+            let label = UILabel()
+            label.frame = CGRect(x: 90, y: 0, width: self.view.frame.size.width, height: 80)
+            label.text = "Participants:" + String(users.count)
+            view.addSubview(label)
+            view.addSubview(imageView)
+            return view
+        }
+        return nil
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if isGroup {
+            return 80
+        } else {
+            return 0
+        }
+        
     }
 }
 
