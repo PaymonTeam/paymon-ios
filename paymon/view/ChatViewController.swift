@@ -116,10 +116,6 @@ class ChatViewController: UIViewController, NotificationManagerListener {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
-//        MessageManager.getInstance().groupsUsers.get(cid)
-//        for user in MessageManager.instance.groupsUsers. {
-//            users.append(user)
-//        }
         if isGroup {
             users = MessageManager.instance.groupsUsers.value(forKey: chatID)!
         }
@@ -262,6 +258,12 @@ class ChatViewController: UIViewController, NotificationManagerListener {
         NotificationManager.instance.removeObserver(self, id: NotificationManager.didReceivedNewMessages)
         NotificationCenter.default.removeObserver(self)
     }
+    
+    func goToSetting() {
+        let groupSettingView = storyboard?.instantiateViewController(withIdentifier: "GroupSettingViewController") as! GroupSettingViewController
+        groupSettingView.chatID = chatID
+        present(groupSettingView, animated: false, completion: nil)
+    }
 }
 
 extension ChatViewController: UITableViewDataSource {
@@ -354,12 +356,18 @@ extension ChatViewController: UITableViewDelegate {
             view.backgroundColor = UIColor(white: 1, alpha: 1)
             let imageView = ObservableImageView()
             imageView.frame =  CGRect(x: 10, y: 10, width: 60, height: 60);
-            imageView.setPhoto(ownerID: chatID, photoID: MediaManager.instance.groupPhotoIDs[chatID]!)
+            let group:RPC.Group! = MessageManager.instance.groups[chatID]!
+            imageView.setPhoto(ownerID: group.id, photoID: group.photo.id)
             let label = UILabel()
             label.frame = CGRect(x: 90, y: 0, width: self.view.frame.size.width, height: 80)
             label.text = "Participants:" + String(users.count)
             view.addSubview(label)
             view.addSubview(imageView)
+            let btn = UIButton()
+            btn.frame = view.frame;
+            btn.addTarget(self, action: #selector(goToSetting), for: .touchUpInside)
+            view.addSubview(btn)
+            
             return view
         }
         return nil

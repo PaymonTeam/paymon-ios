@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120AD14B20B93B4C00544418 /* GroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AD14A20B93B4C00544418 /* GroupSettingViewController.swift */; };
 		1217798D20B2C86500E45E60 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */; };
 		2306AE83D8641FCDC31F33C4 /* libPods-paymon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B11FE9945162543E84A311 /* libPods-paymon.a */; };
 		2D1500E21F8B8D4C00665409 /* KeyGuardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1500E11F8B8D4C00665409 /* KeyGuardViewController.swift */; };
@@ -247,6 +248,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120AD14A20B93B4C00544418 /* GroupSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingViewController.swift; sourceTree = "<group>"; };
 		1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		2D1500E11F8B8D4C00665409 /* KeyGuardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGuardViewController.swift; sourceTree = "<group>"; };
 		2D174FE51F88D2DA009113EA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -1217,6 +1219,7 @@
 				3305FF737DBB6F377121285E /* QRScannerViewController.swift */,
 				3388DEF7E142303FA51D6A72 /* YMWithdrawViewController.swift */,
 				1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */,
+				120AD14A20B93B4C00544418 /* GroupSettingViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1682,9 +1685,9 @@
 				TargetAttributes = {
 					91ABAC8C1F3DB90A002F6D48 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 5YNJ6HYTVJ;
+						DevelopmentTeam = 8FGX483ZEX;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					91ABACA01F3DB90B002F6D48 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1946,6 +1949,7 @@
 				3388D71052BF042E512CAE3E /* BRKVStoreObjects.swift in Sources */,
 				3388D4C626AA3EE2E09D35AE /* BRKVStorePlugin.swift in Sources */,
 				3388D479DB4056EB6263B072 /* BRLinkPlugin.swift in Sources */,
+				120AD14B20B93B4C00544418 /* GroupSettingViewController.swift in Sources */,
 				3388D2BD7863080EB0084229 /* BRMerkleBlock.mm in Sources */,
 				3388DEC07C229F4C030CD5A3 /* BRMerkleBlockEntity.mm in Sources */,
 				3388DB1CBC61A130A9F1C5A6 /* BRNavigationBar.mm in Sources */,
@@ -2190,9 +2194,9 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 5YNJ6HYTVJ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FGX483ZEX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/breadwallet-core";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -2217,10 +2221,10 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDebug";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.paymon.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = ash.paymon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3f4cc50c-7e83-4ebe-923c-9c3c0966926b";
-				PROVISIONING_PROFILE_SPECIFIER = "Paymon Provisioning Profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2241,9 +2245,9 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 5YNJ6HYTVJ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FGX483ZEX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/breadwallet-core";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -2267,10 +2271,10 @@
 					"/usr/local/cryptopp-ios/lib/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.paymon.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = ash.paymon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3f4cc50c-7e83-4ebe-923c-9c3c0966926b";
-				PROVISIONING_PROFILE_SPECIFIER = "Paymon Provisioning Profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;

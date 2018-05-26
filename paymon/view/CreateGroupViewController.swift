@@ -17,13 +17,24 @@ class GroupContactsTableViewCell : UITableViewCell {
 class CreateGroupViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var btnCreateGroup: UIBarButtonItem!
     @IBOutlet weak var tblVContacts: UITableView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     var usersData:[RPC.UserObject] = []
     var selectedUserData:NSMutableArray = []
+    var isGroupAlreadyCreated:Bool = false
+    var chatID: Int32!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         for user in MessageManager.instance.userContacts.values {
             usersData.append(user)
+        }
+        if isGroupAlreadyCreated {
+            let navigationItem = UINavigationItem()
+            navigationItem.title = value(forKey: "title") as? String
+            if navigationBar.items != nil {
+                navigationBar.items!.append(navigationItem)
+            }
         }
     }
 
