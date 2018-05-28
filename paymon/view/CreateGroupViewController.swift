@@ -14,6 +14,10 @@ class GroupContactsTableViewCell : UITableViewCell {
     @IBOutlet weak var checkBox: UIImageView!
 }
 
+class GroupContactsHeaderView : UIView {
+    @IBOutlet weak var txtVContacts: UITextView!
+}
+
 class CreateGroupViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var btnCreateGroup: UIBarButtonItem!
     @IBOutlet weak var tblVContacts: UITableView!
@@ -36,6 +40,7 @@ class CreateGroupViewController: UIViewController , UITableViewDataSource, UITab
                 navigationBar.items!.append(navigationItem)
             }
         }
+        self.setTableHeaderView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,5 +119,21 @@ class CreateGroupViewController: UIViewController , UITableViewDataSource, UITab
             selectedUserData.add(data)
         }
         tableView.reloadData()
+        self.setTableHeaderView()
+    }
+    
+    func setTableHeaderView() {
+        let headerView:GroupContactsHeaderView = tblVContacts.tableHeaderView as! GroupContactsHeaderView
+        if selectedUserData.count == 0 {
+            headerView.txtVContacts.text = "Whom would you like to message?"
+            headerView.txtVContacts.textColor = UIColor.gray
+        } else {
+            let strContacts:NSMutableArray! = NSMutableArray()
+            for user in selectedUserData {
+                strContacts.add(Utils.formatUserName(user as! RPC.UserObject))
+            }
+            headerView.txtVContacts.text = strContacts.componentsJoined(by: ", ")
+            headerView.txtVContacts.textColor = UIColor.darkGray
+        }
     }
 }

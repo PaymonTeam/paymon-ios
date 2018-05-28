@@ -8,6 +8,7 @@ import UserNotifications
 
 class GroupChatMessageRcvViewCell : ChatMessageRcvViewCell {
     @IBOutlet weak var photo: ObservableImageView!
+    @IBOutlet weak var lblName: UILabel!
 }
 //import PureLayout
 
@@ -38,6 +39,10 @@ class ChatViewController: UIViewController, NotificationManagerListener {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var contraintViewBottom: NSLayoutConstraint!
     //    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var groupIconImageView: ObservableImageView!
+    @IBOutlet weak var lblParticipants: UILabel!
+    
+    @IBOutlet weak var lblTitle: UILabel!
     var messages: [Int64] = [] //RPC.Message?
     var chatID: Int32!
     var isGroup: Bool!
@@ -132,20 +137,8 @@ class ChatViewController: UIViewController, NotificationManagerListener {
         newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height - 2)
         messageTextView.frame = newFrame
         oldFrame = newFrame
-
-        let navigationItem = UINavigationItem()
-//        let rightButton = UIBarButtonItem(image: UIImage(named: "nav_bar_item_right.png"), style: .plain, target: self, action: #selector(onNavBarItemRightClicked))
-//        navigationItem.rightBarButtonItem = rightButton
-        let leftButton = UIBarButtonItem(image: UIImage(named: "nav_bar_item_arrow_left"), style: .plain, target: self, action: #selector(onNavBarItemLeftClicked))
-        navigationItem.leftBarButtonItem = leftButton
-        navigationItem.title = value(forKey: "title") as? String
-//        navBar.autoSetDimension(.height, toSize: 64)
-        //        navBar.items![0].title =
-        if navBar.items != nil {
-            navBar.items!.append(navigationItem)
-        } else {
-            navBar.items = [navigationItem]
-        }
+        
+        lblTitle.text = value(forKey: "title") as? String
         sendButton.addTarget(self, action: #selector(onSendClicked), for: .touchUpInside)
         tableView.delegate = self
         tableView.dataSource = self
@@ -159,10 +152,14 @@ class ChatViewController: UIViewController, NotificationManagerListener {
             let peerGroup = RPC.PM_peerGroup()
             peerGroup.group_id = chatID;
             getChatMessages.chatID = peerGroup
+            lblParticipants.text = "Participants: " + String(users.count)
+            let group:RPC.Group! = MessageManager.instance.groups[chatID]!
+            groupIconImageView.setPhoto(ownerID: group.id, photoID: group.photo.id)
         } else {
             let peerUser = RPC.PM_peerUser()
             peerUser.user_id = chatID;
             getChatMessages.chatID = peerUser
+            groupIconImageView.isHidden = true
         }
         getChatMessages.offset = 0
         MessageManager.instance.loadMessages(chatID: chatID, count: 20, offset: 0, isGroup: isGroup)
@@ -252,6 +249,12 @@ class ChatViewController: UIViewController, NotificationManagerListener {
 
     }
 
+    @IBAction func btnSettingAction(_ sender: Any) {
+        self.goToSetting()
+    }
+    @IBAction func btnBackTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationManager.instance.removeObserver(self, id: NotificationManager.chatAddMessages)
@@ -314,6 +317,8 @@ extension ChatViewController: UITableViewDataSource {
                         cell.messageLabel.text = message.text
                         cell.messageLabel.sizeToFit()
                         cell.photo.setPhoto(ownerID: message.from_id, photoID: MediaManager.instance.userProfilePhotoIDs[message.from_id]!)
+                        let user = MessageManager.instance.users[message.from_id]
+                        cell.lblName.text = Utils.formatUserName(user!)
                         return cell
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageItemRcvViewCell") as! ChatMessageItemRcvViewCell
@@ -348,39 +353,6 @@ extension ChatViewController: UITableViewDelegate {
 
         messageTextView.endEditing(true)
 
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if(section == 0) {
-            let view = UIView()
-            view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 80)
-            view.backgroundColor = UIColor(white: 1, alpha: 1)
-            let imageView = ObservableImageView()
-            imageView.frame =  CGRect(x: 10, y: 10, width: 60, height: 60);
-            let group:RPC.Group! = MessageManager.instance.groups[chatID]!
-            imageView.setPhoto(ownerID: group.id, photoID: group.photo.id)
-            let label = UILabel()
-            label.frame = CGRect(x: 90, y: 0, width: self.view.frame.size.width, height: 80)
-            label.text = "Participants:" + String(users.count)
-            view.addSubview(label)
-            view.addSubview(imageView)
-            let btn = UIButton()
-            btn.frame = view.frame;
-            btn.addTarget(self, action: #selector(goToSetting), for: .touchUpInside)
-            view.addSubview(btn)
-            
-            return view
-        }
-        return nil
-    }
-    
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if isGroup {
-            return 80
-        } else {
-            return 0
-        }
-        
     }
 }
 
