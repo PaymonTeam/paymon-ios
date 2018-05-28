@@ -51,36 +51,58 @@ class CreateGroupViewController: UIViewController , UITableViewDataSource, UITab
     //MARK: - IBActions
     
     @IBAction func createGroupAction(_ sender: Any) {
-        if selectedUserData.count > 0 {
-            let alert = UIAlertController(title: "CREATE GROUP".localized, message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "CANCEL".localized, style: .default, handler: { (action) in
-                
-            }))
-            alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { (nil) in
-                let textField = alert.textFields![0] as UITextField
-                if !(textField.text?.isEmpty)! {
-                    let createGroup = RPC.PM_createGroup()
-                    createGroup.userIDs = []
-                    for user in self.selectedUserData {
-                        let data = user as! RPC.UserObject
-                        createGroup.userIDs.append(data.id)
-                    }
-                    createGroup.title = textField.text;
-                    NetworkManager.instance.sendPacket(createGroup) { response, e in
-                        let manager = MessageManager.instance
-                        if (response != nil) {
-                            let group:RPC.Group! = response as! RPC.Group!
-                            manager.putGroup(group)
-                            self.dismiss(animated: true, completion: nil)
+        if isGroupAlreadyCreated {
+            let addParticipant:RPC.PM_group_addParticipants! =  RPC.PM_group_addParticipants();
+            addParticipant.userIDs = []
+            for user in self.selectedUserData {
+                let data = user as! RPC.UserObject
+                addParticipant.userIDs.append(data.id)
+            }
+            if addParticipant.userIDs.isEmpty {
+                return ;
+            }
+            
+            addParticipant.id = chatID;
+            NetworkManager.instance.sendPacket(addParticipant) { response, e in
+                let manager = MessageManager.instance
+                if (response != nil) {
+                    let group:RPC.Group! = response as! RPC.Group!
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        } else {
+            if selectedUserData.count > 0 {
+                let alert = UIAlertController(title: "CREATE GROUP".localized, message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "CANCEL".localized, style: .default, handler: { (action) in
+                    
+                }))
+                alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { (nil) in
+                    let textField = alert.textFields![0] as UITextField
+                    if !(textField.text?.isEmpty)! {
+                        let createGroup = RPC.PM_createGroup()
+                        createGroup.userIDs = []
+                        for user in self.selectedUserData {
+                            let data = user as! RPC.UserObject
+                            createGroup.userIDs.append(data.id)
+                        }
+                        createGroup.title = textField.text;
+                        NetworkManager.instance.sendPacket(createGroup) { response, e in
+                            let manager = MessageManager.instance
+                            if (response != nil) {
+                                let group:RPC.Group! = response as! RPC.Group!
+                                manager.putGroup(group)
+                                self.dismiss(animated: true, completion: nil)
+                            }
                         }
                     }
+                }))
+                alert.addTextField { (textField) in
+                    textField.placeholder = "Enter group title"
                 }
-            }))
-            alert.addTextField { (textField) in
-                textField.placeholder = "Enter group title"
+                self.present(alert, animated: true, completion: nil)
             }
-            self.present(alert, animated: true, completion: nil)
         }
+        
     }
     
     

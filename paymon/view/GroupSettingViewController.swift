@@ -147,13 +147,34 @@ class GroupSettingViewController: UIViewController, UITableViewDataSource, UITab
         cell.btnCross.isHidden = true
         if data.id != creatorID {
             cell.btnCross.addTarget(self, action:#selector(btnCrossTapped), for: .touchUpInside)
+            cell.btnCross.tag = row
             cell.btnCross.isHidden = false
         }
         return cell
     }
     
-    func btnCrossTapped() {
-        
+    func btnCrossTapped(sender:UIButton) {
+        let user = participants[sender.tag]
+        let alert = UIAlertController(title: "Are you sure to remove this user".localized, message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "CANCEL".localized, style: .default, handler: { (action) in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { (nil) in
+            
+            let removeParticipant = RPC.PM_group_removeParticipant();
+            removeParticipant.id = self.chatID;
+            removeParticipant.userID = user.id;
+            NetworkManager.instance.sendPacket(removeParticipant) { response, e in
+                if (response != nil) {
+                    self.participants.remove(at: sender.tag)
+                    self.tblParticipants.reloadData()
+                }
+            }
+        }))
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter group title"
+        }
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
