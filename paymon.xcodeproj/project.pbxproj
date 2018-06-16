@@ -1622,8 +1622,6 @@
 				91ABAC891F3DB90A002F6D48 /* Sources */,
 				91ABAC8A1F3DB90A002F6D48 /* Frameworks */,
 				91ABAC8B1F3DB90A002F6D48 /* Resources */,
-				092C52C4B79D2277B4BF8A6B /* [CP] Embed Pods Frameworks */,
-				C77F9B7D62C9A2C7422C7F7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1764,40 +1762,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		092C52C4B79D2277B4BF8A6B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-paymon/Pods-paymon-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
-				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paymon/Pods-paymon-frameworks.sh\"\n";
-		};
-		C77F9B7D62C9A2C7422C7F7A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paymon/Pods-paymon-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FDF9A573718A1103567CDE61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -2198,7 +2162,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FGX483ZEX;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/breadwallet-core";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/breadwallet-core",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2215,6 +2182,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/PureLayout\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/web3swift\"",
 					"$(PROJECT_DIR)/openssl/iOS",
 					"$(PROJECT_DIR)/openssl/OSX",
 					"/usr/local/cryptopp-ios/lib/**",
@@ -2249,7 +2217,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FGX483ZEX;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/breadwallet-core";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/breadwallet-core",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2266,6 +2237,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/PureLayout\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/web3swift\"",
 					"$(PROJECT_DIR)/openssl/iOS",
 					"$(PROJECT_DIR)/openssl/OSX",
 					"/usr/local/cryptopp-ios/lib/**",

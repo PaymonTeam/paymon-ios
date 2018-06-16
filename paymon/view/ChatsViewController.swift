@@ -6,6 +6,7 @@
 import Foundation
 import UIKit
 
+
 class ChatsViewController: UIViewController, NotificationManagerListener {
     public class CellChatData {
         var photoID:Int64!
@@ -63,6 +64,9 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let configA = EthAccountConfiguration(namespace: "walletA", password: "qwerty")
+        
 
         self.tabBarController?.tabBar.items?[0].title = "Chats".localized
         self.tabBarController?.tabBar.items?[1].title = "Contacts".localized

@@ -1,12 +1,37 @@
 PODS:
+  - CryptoSwift (0.10.0)
+  - Geth (1.8.11)
   - PureLayout (3.0.2)
+  - web3swift (0.0.9):
+    - CryptoSwift
+    - Geth
 
 DEPENDENCIES:
   - PureLayout
+  - web3swift (from `https://github.com/MercuryProtocol/web3.swift.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CryptoSwift
+    - Geth
+    - PureLayout
+
+EXTERNAL SOURCES:
+  web3swift:
+    :branch: master
+    :git: https://github.com/MercuryProtocol/web3.swift.git
+
+CHECKOUT OPTIONS:
+  web3swift:
+    :commit: fe0c3047cc9f808774c6172afe3cb126715adf49
+    :git: https://github.com/MercuryProtocol/web3.swift.git
 
 SPEC CHECKSUMS:
+  CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
+  Geth: ae1b2b966edd0482eda293dcee9b7f906e161589
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  web3swift: 9cf4ccef0c7f7e9f9abb3bc5867789b928800af6
 
-PODFILE CHECKSUM: 4297d686d0727bc7956244e662d5b2b327a5c035
+PODFILE CHECKSUM: 2dbe670c1d61fd61ee799c884297434672793916
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
