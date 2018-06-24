@@ -1409,7 +1409,7 @@ public static class PayerCreate extends AsyncTask<PayerStruct, Object, PayerStru
             var tx: BRTransaction? = nil
             var amount: UInt64 = 0
             var fee: UInt64 = 0
-            var address: String = String.address(withScriptPubKey: protoReq.details.outputScripts.first as! Data)
+            var address: String = NSString.address(withScriptPubKey: protoReq.details.outputScripts.first as! Data)
             var valid: Bool = protoReq.isValid
             var outputTooSmall = false
             if !(valid && protoReq.errorMessage.isEqual(NSLocalizedString("request expired", comment: ""))) {

@@ -8,7 +8,8 @@
 
 import UIKit
 import UserNotifications
-
+import web3swift
+import Geth
 //@UIApplicationMain
 class AppDelegate: BRAppDelegate, NotificationManagerListener {
 
@@ -95,9 +96,21 @@ class AppDelegate: BRAppDelegate, NotificationManagerListener {
         NotificationManager.instance.addObserver(self, id: NotificationManager.didDisconnectedFromServer)
         NotificationManager.instance.addObserver(self, id: NotificationManager.didEstablishedSecuredConnection)
         NotificationManager.instance.addObserver(self, id: NotificationManager.authByTokenFailed)
+
+        //setup ether
+        loadEthenWallet()
         return true
     }
+    func loadEthenWallet() {
+        //Choose your namespace and password
+        let config = EthAccountConfiguration(namespace: "walletA", password: "qwerty")
 
+        //Call launch with configuration to create a keystore and account
+        //keystoreA : The encrypted private and public key for wallet A
+        //accountA : An Ethereum account
+        let (keystore, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
+
+    }
     override func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

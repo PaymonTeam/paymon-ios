@@ -5,7 +5,7 @@
 
 import Foundation
 import UIKit
-
+import web3swift
 
 class ChatsViewController: UIViewController, NotificationManagerListener {
     public class CellChatData {

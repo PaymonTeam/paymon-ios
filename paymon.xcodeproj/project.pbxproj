@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		120AD14B20B93B4C00544418 /* GroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AD14A20B93B4C00544418 /* GroupSettingViewController.swift */; };
 		1217798D20B2C86500E45E60 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */; };
-		2306AE83D8641FCDC31F33C4 /* libPods-paymon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B11FE9945162543E84A311 /* libPods-paymon.a */; };
 		2D1500E21F8B8D4C00665409 /* KeyGuardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1500E11F8B8D4C00665409 /* KeyGuardViewController.swift */; };
 		2D174FE61F88D2DA009113EA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D174FE51F88D2DA009113EA /* AuthViewController.swift */; };
 		2D174FE81F88D6E3009113EA /* AuthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D174FE71F88D6E3009113EA /* AuthTableViewController.swift */; };
@@ -182,6 +181,7 @@
 		3388DF8A5235F4F4DC232FE9 /* TextFieldInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388D2129EE99004AE929D8E /* TextFieldInTableViewCell.swift */; };
 		3388DF92E862014EE36DD3B5 /* BRPeerManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3388DB2759F8EC1C105A697E /* BRPeerManager.mm */; };
 		3388DFF34965E6E47D4A23ED /* BR_PeerManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 3388DACCA33E812D4FC40DEE /* BR_PeerManager.c */; };
+		9034551DDF256D5545CE2A4D /* Pods_paymon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B08434777D161AAF70CC862 /* Pods_paymon.framework */; };
 		915E3EEA1F66B482004B6AEE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3388DF49CEEFD6F6610C2FC0 /* libcrypto.a */; };
 		915E3EEC1F66E4A3004B6AEE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915E3EEB1F66E4A3004B6AEE /* AVFoundation.framework */; };
 		915E3EEE1F66E53F004B6AEE /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915E3EED1F66E53F004B6AEE /* WatchConnectivity.framework */; };
@@ -228,6 +228,8 @@
 		91EFF0D31F65676D00C9DE55 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */; };
 		91EFF0D51F65677600C9DE55 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */; };
 		91EFF0D71F65677C00C9DE55 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D61F65677C00C9DE55 /* PushKit.framework */; };
+		D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1120DFD42B00E11A7D /* SendViewController.swift */; };
+		D8A28C1420DFD6D600E11A7D /* CoinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -605,9 +607,9 @@
 		3388DFD4DE911F5F69BA121C /* BRBouncyBurgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBouncyBurgerButton.h; sourceTree = "<group>"; };
 		3388DFD64A1DEE8389E97988 /* BRReceiveViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRReceiveViewController.mm; sourceTree = "<group>"; };
 		3388DFE0384AAD5BB4C7CA9E /* dtls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
-		37B11FE9945162543E84A311 /* libPods-paymon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-paymon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B326EDB8E39EE17A3A0F324 /* Pods-paymon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paymon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paymon/Pods-paymon.debug.xcconfig"; sourceTree = "<group>"; };
 		4BE908DCD05CD6207FBEF062 /* Pods-paymon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paymon.release.xcconfig"; path = "Pods/Target Support Files/Pods-paymon/Pods-paymon.release.xcconfig"; sourceTree = "<group>"; };
+		8B08434777D161AAF70CC862 /* Pods_paymon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paymon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91169D691F6038BE002E85FC /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "Pods/OpenSSL-Universal/lib-ios/libcrypto.a"; sourceTree = "<group>"; };
 		91169D6A1F6038BE002E85FC /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "Pods/OpenSSL-Universal/lib-ios/libssl.a"; sourceTree = "<group>"; };
 		912CF3FD1FA37A0000ABA699 /* BR_Address.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BR_Address.c; sourceTree = "<group>"; };
@@ -762,6 +764,8 @@
 		91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		91EFF0D61F65677C00C9DE55 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		D8A28C1120DFD42B00E11A7D /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -784,7 +788,7 @@
 				91EFF0CD1F65674800C9DE55 /* libbz2.tbd in Frameworks */,
 				91EFF0CB1F65673D00C9DE55 /* libsqlite3.tbd in Frameworks */,
 				91BA52D91F46DBC20022F549 /* libcryptopp.a in Frameworks */,
-				2306AE83D8641FCDC31F33C4 /* libPods-paymon.a in Frameworks */,
+				9034551DDF256D5545CE2A4D /* Pods_paymon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1245,7 +1249,7 @@
 				91169D691F6038BE002E85FC /* libcrypto.a */,
 				91169D6A1F6038BE002E85FC /* libssl.a */,
 				91BA52D81F46DBC20022F549 /* libcryptopp.a */,
-				37B11FE9945162543E84A311 /* libPods-paymon.a */,
+				8B08434777D161AAF70CC862 /* Pods_paymon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1528,6 +1532,7 @@
 		91ABAC8F1F3DB90A002F6D48 /* paymon */ = {
 			isa = PBXGroup;
 			children = (
+				D8A28C1020DFD41600E11A7D /* ETH */,
 				2D1F26FB1F8CDCE5009DA744 /* animation */,
 				91ABACC71F3DBAF0002F6D48 /* cpp */,
 				91ABAC901F3DB90A002F6D48 /* AppDelegate.swift */,
@@ -1602,6 +1607,15 @@
 			name = cpp;
 			sourceTree = "<group>";
 		};
+		D8A28C1020DFD41600E11A7D /* ETH */ = {
+			isa = PBXGroup;
+			children = (
+				D8A28C1120DFD42B00E11A7D /* SendViewController.swift */,
+				D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */,
+			);
+			path = ETH;
+			sourceTree = "<group>";
+		};
 		EF5EE9064A9C05D8A6DB3EEF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1618,10 +1632,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91ABACB51F3DB90B002F6D48 /* Build configuration list for PBXNativeTarget "paymon" */;
 			buildPhases = (
-				FDF9A573718A1103567CDE61 /* [CP] Check Pods Manifest.lock */,
+				2D5588A37246EC47956B9552 /* [CP] Check Pods Manifest.lock */,
 				91ABAC891F3DB90A002F6D48 /* Sources */,
 				91ABAC8A1F3DB90A002F6D48 /* Frameworks */,
 				91ABAC8B1F3DB90A002F6D48 /* Resources */,
+				B7C89B88CC08622FEAD748BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1683,9 +1698,9 @@
 				TargetAttributes = {
 					91ABAC8C1F3DB90A002F6D48 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8FGX483ZEX;
+						DevelopmentTeam = M8A7BYS443;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					91ABACA01F3DB90B002F6D48 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1762,9 +1777,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FDF9A573718A1103567CDE61 /* [CP] Check Pods Manifest.lock */ = {
+		2D5588A37246EC47956B9552 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
@@ -1775,9 +1790,29 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-paymon-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7C89B88CC08622FEAD748BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-paymon/Pods-paymon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paymon/Pods-paymon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1891,6 +1926,7 @@
 				3388D5ADD9871ED24D431D9C /* BRAppleWatchData.mm in Sources */,
 				3388DBAAE39FEB561CAD7CAE /* BRAppleWatchTransactionData.mm in Sources */,
 				3388D31B35A3BEBA1FA17C0F /* BRBIP32Sequence.mm in Sources */,
+				D8A28C1420DFD6D600E11A7D /* CoinDetailsViewController.swift in Sources */,
 				3388DF7D1667E7C5AFB96133 /* BRBIP39Mnemonic.mm in Sources */,
 				3388DCDAFDF87356599E5A01 /* BRBitID.swift in Sources */,
 				3388DE397353F3C527674496 /* BRBloomFilter.mm in Sources */,
@@ -1938,6 +1974,7 @@
 				2D1DFF971FBCEB31006AE009 /* RegistrTableViewController.swift in Sources */,
 				2D1F26FA1F8CCEBF009DA744 /* SecurityPasswordViewController.swift in Sources */,
 				3305FF4E787A7171F38942F4 /* ProfileTableInfoView.swift in Sources */,
+				D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */,
 				3305F4D0892840CA56748907 /* ProfileHeaderView.swift in Sources */,
 				3305F7A19D6E1BCC3BEE1A4D /* UpdateProfileViewController.swift in Sources */,
 				3305FD97CAB889ABCE918074 /* UpdateProfileHeaderView.swift in Sources */,
@@ -2159,8 +2196,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FGX483ZEX;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M8A7BYS443;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/breadwallet-core",
@@ -2182,17 +2219,16 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/PureLayout\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/web3swift\"",
 					"$(PROJECT_DIR)/openssl/iOS",
 					"$(PROJECT_DIR)/openssl/OSX",
 					"/usr/local/cryptopp-ios/lib/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDebug";
-				PRODUCT_BUNDLE_IDENTIFIER = ash.paymon.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.trado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "0714eef9-478d-463b-9477-7c1bd08c850e";
+				PROVISIONING_PROFILE_SPECIFIER = RanosysWildcardDev;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2214,8 +2250,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FGX483ZEX;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M8A7BYS443;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/breadwallet-core",
@@ -2238,15 +2274,16 @@
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/PureLayout\"",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/web3swift\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/CryptoSwift\"",
 					"$(PROJECT_DIR)/openssl/iOS",
 					"$(PROJECT_DIR)/openssl/OSX",
 					"/usr/local/cryptopp-ios/lib/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = ash.paymon.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.trado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "bc7701d2-d61c-4c5a-88dc-7d611e06934c";
+				PROVISIONING_PROFILE_SPECIFIER = SBFdev;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;

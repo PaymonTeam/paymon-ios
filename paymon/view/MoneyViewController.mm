@@ -440,13 +440,19 @@ static NSString *sanitizeString(NSString *s) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    if (indexPath.row == 0) {
+        CoinDetailsViewController *coinDetail = [self.storyboard instantiateViewControllerWithIdentifier:@"CoinDetailsViewController"];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:coinDetail];
+        [self presentViewController:nav animated:true completion:nil];
 
-    [tableView deselectRowAtIndexPath:indexPath animated:true];
-    [self showWallet];
+    } else {
+        [tableView deselectRowAtIndexPath:indexPath animated:true];
+        [self showWallet];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -469,6 +475,12 @@ static NSString *sanitizeString(NSString *s) {
 //            cell.photo.setPhoto(ownerID: -groupData.chatID, photoID: groupData.photoID)
 //            return cell
 //    }
+
+    if (indexPath.row == 0) {
+        auto cell = (MoneyWalletTableCell *) [tableView dequeueReusableCellWithIdentifier:@"EtherWalletTableCell"];
+        return cell;
+
+    }
     auto manager = [BRWalletManager sharedInstance];
     if (!manager.noWallet) {
         auto cell = (MoneyWalletTableCell *) [tableView dequeueReusableCellWithIdentifier:@"MoneyWalletTableCell"];
