@@ -106,7 +106,7 @@ class AppDelegate: BRAppDelegate, NotificationManagerListener {
         let config = EthAccountConfiguration(namespace: "walletA", password: "qwerty")
 
         //Call launch with configuration to create a keystore and account
-        //keystoreA : The encrypted private and public key for wallet A
+        //keystoreA: The encrypted private and public key for wallet A
         //accountA : An Ethereum account
         let (keystore, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
 
