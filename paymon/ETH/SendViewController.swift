@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class SendViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!

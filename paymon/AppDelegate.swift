@@ -103,12 +103,16 @@ class AppDelegate: BRAppDelegate, NotificationManagerListener {
     }
     func loadEthenWallet() {
         //Choose your namespace and password
-        let config = EthAccountConfiguration(namespace: "walletA", password: "qwerty")
+        guard let _ = UserDefaults.instance.getEthernAddress() else {
+            let config = EthAccountConfiguration(namespace: "walletA", password: "qwerty")
 
-        //Call launch with configuration to create a keystore and account
-        //keystoreA: The encrypted private and public key for wallet A
-        //accountA : An Ethereum account
-        let (keystore, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
+            //Call launch with configuration to create a keystore and account
+            //keystoreA: The encrypted private and public key for wallet A
+            //accountA : An Ethereum account
+            let (keystore, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
+            UserDefaults.instance.setEthernAddress(value: account?.getAddress().getHex())
+            return
+        }
 
     }
     override func applicationWillResignActive(_ application: UIApplication) {

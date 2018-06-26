@@ -228,6 +228,13 @@
 		91EFF0D31F65676D00C9DE55 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */; };
 		91EFF0D51F65677600C9DE55 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */; };
 		91EFF0D71F65677C00C9DE55 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D61F65677C00C9DE55 /* PushKit.framework */; };
+		D83BCB1E20E2BA7D002B19C0 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */; };
+		D83BCB2020E2BBB7002B19C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB1F20E2BBB7002B19C0 /* Constants.swift */; };
+		D83BCB2420E2C05C002B19C0 /* QRGenerater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */; };
+		D83BCB2820E2C4D1002B19C0 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2720E2C4D1002B19C0 /* Keychain.swift */; };
+		D83BCB2A20E2C521002B19C0 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2920E2C521002B19C0 /* KeychainHelper.swift */; };
+		D83BCB2D20E2C70E002B19C0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2C20E2C70E002B19C0 /* UserDefaults.swift */; };
+		D83BCB2F20E2CB01002B19C0 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */; };
 		D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1120DFD42B00E11A7D /* SendViewController.swift */; };
 		D8A28C1420DFD6D600E11A7D /* CoinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -764,6 +771,13 @@
 		91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		91EFF0D61F65677C00C9DE55 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		D83BCB1F20E2BBB7002B19C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerater.swift; sourceTree = "<group>"; };
+		D83BCB2720E2C4D1002B19C0 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		D83BCB2920E2C521002B19C0 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		D83BCB2C20E2C70E002B19C0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		D8A28C1120DFD42B00E11A7D /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1532,6 +1546,7 @@
 		91ABAC8F1F3DB90A002F6D48 /* paymon */ = {
 			isa = PBXGroup;
 			children = (
+				D83BCB2520E2C4B7002B19C0 /* Helper */,
 				D8A28C1020DFD41600E11A7D /* ETH */,
 				2D1F26FB1F8CDCE5009DA744 /* animation */,
 				91ABACC71F3DBAF0002F6D48 /* cpp */,
@@ -1607,11 +1622,41 @@
 			name = cpp;
 			sourceTree = "<group>";
 		};
+		D83BCB2520E2C4B7002B19C0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB2B20E2C6D3002B19C0 /* DefaultManager */,
+				D83BCB2620E2C4C1002B19C0 /* KeychainManager */,
+				D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D83BCB2620E2C4C1002B19C0 /* KeychainManager */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB2720E2C4D1002B19C0 /* Keychain.swift */,
+				D83BCB2920E2C521002B19C0 /* KeychainHelper.swift */,
+			);
+			path = KeychainManager;
+			sourceTree = "<group>";
+		};
+		D83BCB2B20E2C6D3002B19C0 /* DefaultManager */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB2C20E2C70E002B19C0 /* UserDefaults.swift */,
+			);
+			path = DefaultManager;
+			sourceTree = "<group>";
+		};
 		D8A28C1020DFD41600E11A7D /* ETH */ = {
 			isa = PBXGroup;
 			children = (
 				D8A28C1120DFD42B00E11A7D /* SendViewController.swift */,
 				D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */,
+				D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */,
+				D83BCB1F20E2BBB7002B19C0 /* Constants.swift */,
+				D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */,
 			);
 			path = ETH;
 			sourceTree = "<group>";
@@ -1895,6 +1940,7 @@
 				3388DDBC2DEF851F38EC0F9B /* BRWalletManager.mm in Sources */,
 				3388DCB5E2B7C44CA8847A40 /* BRWallet.mm in Sources */,
 				3388D04EBC5D2CBA0CA34757 /* BRTransaction.mm in Sources */,
+				D83BCB2420E2C05C002B19C0 /* QRGenerater.swift in Sources */,
 				3388D741E69D252C3ACF2005 /* NSData+Bitcoin.mm in Sources */,
 				3388DCF8C8151F3C957E1CD4 /* NSMutableData+Bitcoin.mm in Sources */,
 				3388D06DE5972D8115B3098A /* NSString+Bitcoin.mm in Sources */,
@@ -1931,11 +1977,14 @@
 				3388DCDAFDF87356599E5A01 /* BRBitID.swift in Sources */,
 				3388DE397353F3C527674496 /* BRBloomFilter.mm in Sources */,
 				3388DEE5500BCE12AC830FC4 /* BRBouncyBurgerButton.mm in Sources */,
+				D83BCB1E20E2BA7D002B19C0 /* ReceiveViewController.swift in Sources */,
 				3388DC9CDADA6D59AA87D019 /* BRBrowserViewController.swift in Sources */,
 				3388DC0CE0EC198ACD4451B3 /* BRBSPatch.swift in Sources */,
+				D83BCB2F20E2CB01002B19C0 /* EnumCollection.swift in Sources */,
 				3388D95269C211246A5FD6DB /* BRBubbleView.mm in Sources */,
 				2D576BB31F6A7A270004CFD4 /* ContactsViewController.swift in Sources */,
 				3388D09C3BD0B40BD841E3B2 /* BRCameraPlugin.swift in Sources */,
+				D83BCB2020E2BBB7002B19C0 /* Constants.swift in Sources */,
 				3388DCC1B24ACBFD3E7515E7 /* BRCoding.swift in Sources */,
 				3388DBFC0195FBF096942E7A /* BRCopyLabel.mm in Sources */,
 				3388D280ED55AEE94F987045 /* BREventConfirmView.mm in Sources */,
@@ -1968,12 +2017,14 @@
 				3388D1AF8DB5F5E3EB8B0310 /* BRSendViewController.mm in Sources */,
 				3388D8D5CDB2317CBE4545F2 /* BRSettingsViewController.mm in Sources */,
 				3388DC858145892BF162886A /* BRSocketHelpers.c in Sources */,
+				D83BCB2820E2C4D1002B19C0 /* Keychain.swift in Sources */,
 				3388DC504CD5ED4B0B290F90 /* BRTar.swift in Sources */,
 				3388D7AEC71CB0970846C2CC /* BRTransaction+Utils.mm in Sources */,
 				3305FE73311E457DD2A0993B /* ProfileViewController.swift in Sources */,
 				2D1DFF971FBCEB31006AE009 /* RegistrTableViewController.swift in Sources */,
 				2D1F26FA1F8CCEBF009DA744 /* SecurityPasswordViewController.swift in Sources */,
 				3305FF4E787A7171F38942F4 /* ProfileTableInfoView.swift in Sources */,
+				D83BCB2D20E2C70E002B19C0 /* UserDefaults.swift in Sources */,
 				D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */,
 				3305F4D0892840CA56748907 /* ProfileHeaderView.swift in Sources */,
 				3305F7A19D6E1BCC3BEE1A4D /* UpdateProfileViewController.swift in Sources */,
@@ -1989,6 +2040,7 @@
 				3388D021FB59AE08D888733C /* NetworkReachability.swift in Sources */,
 				3388DC229CD9704564ABC453 /* Queue.m in Sources */,
 				3388D15915AC8F5543358FEE /* Connection.m in Sources */,
+				D83BCB2A20E2C521002B19C0 /* KeychainHelper.swift in Sources */,
 				3388DC507E0BD5D151E65C2A /* Request.m in Sources */,
 				3388DA672D82D4807F0E0C34 /* PMTimer.m in Sources */,
 				3388D69F79F7ADB98E7E355F /* MoneyTransferView.swift in Sources */,
@@ -2225,7 +2277,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDebug";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.trado;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0714eef9-478d-463b-9477-7c1bd08c850e";
 				PROVISIONING_PROFILE_SPECIFIER = RanosysWildcardDev;
@@ -2280,7 +2332,7 @@
 					"/usr/local/cryptopp-ios/lib/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.trado;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bc7701d2-d61c-4c5a-88dc-7d611e06934c";
 				PROVISIONING_PROFILE_SPECIFIER = SBFdev;

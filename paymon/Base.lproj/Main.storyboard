@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -4796,12 +4797,12 @@
         <!--Send-->
         <scene sceneID="Yc8-Kx-jo5">
             <objects>
-                <viewController storyboardIdentifier="SendViewController" title="Send" hidesBottomBarWhenPushed="YES" id="pb2-0K-fTG" customClass="SendViewController" customModule="ethereum_wallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendViewController" title="Send" hidesBottomBarWhenPushed="YES" id="pb2-0K-fTG" customClass="SendViewController" customModule="paymon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G28-O5-mnI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOk-PE-gpf" customClass="LightShadowView" customModule="ethereum_wallet" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOk-PE-gpf" customClass="LightShadowView" customModule="paymon" customModuleProvider="target">
                                 <rect key="frame" x="-1" y="19" width="322" height="167"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Recepient address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TBb-1a-kTL">
@@ -5031,7 +5032,7 @@
         <!--Coin Details View Controller-->
         <scene sceneID="0MS-aB-eBw">
             <objects>
-                <viewController storyboardIdentifier="CoinDetailsViewController" id="xny-E6-zWW" customClass="CoinDetailsViewController" customModule="ethereum_wallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoinDetailsViewController" id="xny-E6-zWW" customClass="CoinDetailsViewController" customModule="paymon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tki-l6-239">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5047,7 +5048,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-9H-RFJ">
                                             <rect key="frame" x="16" y="16" width="304" height="100"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TqZ-KK-0g8" customClass="BigTokenIconView" customModule="ethereum_wallet" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TqZ-KK-0g8" customClass="BigTokenIconView" customModule="paymon" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuE-bs-qPc">
@@ -5199,6 +5200,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nW4-oe-fv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="-1350"/>
+        </scene>
+        <!--Receive-->
+        <scene sceneID="qhA-pa-0G3">
+            <objects>
+                <viewController storyboardIdentifier="ReceiveViewController" id="z57-Ty-MIH" customClass="ReceiveViewController" customModule="paymon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iLh-jJ-RTM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmS-L4-4dm">
+                                <rect key="frame" x="15" y="50" width="290" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJ9-QS-Upu">
+                                <rect key="frame" x="40" y="90" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yJ9-QS-Upu" secondAttribute="height" multiplier="1:1" id="qD2-KS-T6R"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz0-jG-7dJ">
+                                <rect key="frame" x="40" y="374" width="240" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hul-dn-YRL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Copy address">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyAddressPressed" destination="z57-Ty-MIH" eventType="touchUpInside" id="sPC-Iw-NI1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bz0-jG-7dJ" firstAttribute="top" secondItem="yJ9-QS-Upu" secondAttribute="bottom" constant="44" id="2Dp-Ze-rmJ"/>
+                            <constraint firstItem="bz0-jG-7dJ" firstAttribute="leading" secondItem="6rR-Fc-pn1" secondAttribute="leading" constant="40" id="2IM-OI-Sr7"/>
+                            <constraint firstItem="DmS-L4-4dm" firstAttribute="top" secondItem="6rR-Fc-pn1" secondAttribute="top" constant="30" id="PpH-gE-ykH"/>
+                            <constraint firstItem="yJ9-QS-Upu" firstAttribute="top" secondItem="DmS-L4-4dm" secondAttribute="bottom" constant="24" id="Srt-rG-wm0"/>
+                            <constraint firstItem="6rR-Fc-pn1" firstAttribute="trailing" secondItem="bz0-jG-7dJ" secondAttribute="trailing" constant="40" id="TMS-Bi-KWN"/>
+                            <constraint firstItem="6rR-Fc-pn1" firstAttribute="trailing" secondItem="DmS-L4-4dm" secondAttribute="trailing" constant="15" id="aPV-ff-5ic"/>
+                            <constraint firstItem="DmS-L4-4dm" firstAttribute="leading" secondItem="6rR-Fc-pn1" secondAttribute="leading" constant="15" id="d7i-IP-zaA"/>
+                            <constraint firstItem="yJ9-QS-Upu" firstAttribute="leading" secondItem="6rR-Fc-pn1" secondAttribute="leading" constant="40" id="jP4-1s-SCJ"/>
+                            <constraint firstItem="yJ9-QS-Upu" firstAttribute="centerX" secondItem="iLh-jJ-RTM" secondAttribute="centerX" id="yUa-cw-ZPo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6rR-Fc-pn1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Receive" largeTitleDisplayMode="never" id="FhG-k7-gIl"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="DmS-L4-4dm" id="z6S-L4-nsb"/>
+                        <outlet property="copyAddressButton" destination="bz0-jG-7dJ" id="Dd3-7R-zDl"/>
+                        <outlet property="qrImageView" destination="yJ9-QS-Upu" id="mqM-ha-eey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCt-67-fZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5383" y="-1324"/>
         </scene>
     </scenes>
     <resources>
