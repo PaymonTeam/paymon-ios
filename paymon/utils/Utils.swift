@@ -26,29 +26,66 @@ open class Utils {
     }
 
     public static func formatDateTime(timestamp:Int64, format24h:Bool) -> String {
-        let minute = (timestamp / 60) % 60
-        var hour = (timestamp / 60 / 60) % 24
-        var dpstr = ""
+        let dateFormatter = DateFormatter()
+        let calendar = Calendar.current
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
+        dateFormatter.locale = NSLocale.current
 
-        if (!format24h) {
-            if (hour > 12) {
-                dpstr = " pm"
+        var result : String = ""
+        
+        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+        let dateNow = Date()
+        
+        if calendar.component(.year, from: date) - calendar.component(.year, from: dateNow) == 0 {
+            if calendar.component(.month, from: date) - calendar.component(.month, from: dateNow) == 0 {
+                if calendar.component(.weekOfMonth, from: date) - calendar.component(.weekOfMonth, from: dateNow) == 0 {
+                    if calendar.component(.day, from: date) - calendar.component(.day, from: dateNow) == 0 {
+                        dateFormatter.dateFormat = "HH:mm"
+                    } else {
+                        if calendar.isDateInYesterday(date) {
+                            result = "Yesterday"
+                        } else {
+                            dateFormatter.dateFormat = "EEEE"
+                        }
+                    }
+                } else {
+                    dateFormatter.dateFormat = "d MMM"
+                }
             } else {
-                dpstr = " am"
+                dateFormatter.dateFormat = "d MMM"
             }
-            hour %= 12
+        } else {
+            dateFormatter.dateFormat = "dd.MM.yyyy"
         }
-        var hstr = String(hour)
-        var mstr = String(minute)
-
-        if (hour < 10) {
-            hstr = "0" + hstr
+        
+        if (result != "Yesterday") {
+            result = dateFormatter.string(from: date)
         }
-        if (minute < 10) {
-            mstr = "0" + mstr
-        }
-        let tstr = hstr + ":" + mstr + dpstr
-        return tstr
+        
+        return result
+//        let minute = (timestamp / 60) % 60
+//        var hour = (timestamp / 60 / 60) % 24
+//        var dpstr = ""
+//
+//        if (!format24h) {
+//            if (hour > 12) {
+//                dpstr = " pm"
+//            } else {
+//                dpstr = " am"
+//            }
+//            hour %= 12
+//        }
+//        var hstr = String(hour)
+//        var mstr = String(minute)
+//
+//        if (hour < 10) {
+//            hstr = "0" + hstr
+//        }
+//        if (minute < 10) {
+//            mstr = "0" + mstr
+//        }
+//        let tstr = hstr + ":" + mstr + dpstr
+//        return tstr
     }
 
     final class Box<T> {

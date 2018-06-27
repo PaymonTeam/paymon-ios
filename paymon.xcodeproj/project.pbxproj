@@ -182,7 +182,6 @@
 		3388DF92E862014EE36DD3B5 /* BRPeerManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3388DB2759F8EC1C105A697E /* BRPeerManager.mm */; };
 		3388DFF34965E6E47D4A23ED /* BR_PeerManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 3388DACCA33E812D4FC40DEE /* BR_PeerManager.c */; };
 		9034551DDF256D5545CE2A4D /* Pods_paymon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B08434777D161AAF70CC862 /* Pods_paymon.framework */; };
-		915E3EEA1F66B482004B6AEE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3388DF49CEEFD6F6610C2FC0 /* libcrypto.a */; };
 		915E3EEC1F66E4A3004B6AEE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915E3EEB1F66E4A3004B6AEE /* AVFoundation.framework */; };
 		915E3EEE1F66E53F004B6AEE /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915E3EED1F66E53F004B6AEE /* WatchConnectivity.framework */; };
 		915E3EF01F66E58F004B6AEE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915E3EEF1F66E58F004B6AEE /* MessageUI.framework */; };
@@ -220,7 +219,6 @@
 		91ABAC9B1F3DB90A002F6D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91ABAC991F3DB90A002F6D48 /* LaunchScreen.storyboard */; };
 		91ABACA61F3DB90B002F6D48 /* paymonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABACA51F3DB90B002F6D48 /* paymonTests.swift */; };
 		91ABACB11F3DB90B002F6D48 /* paymonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABACB01F3DB90B002F6D48 /* paymonUITests.swift */; };
-		91BA52D91F46DBC20022F549 /* libcryptopp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BA52D81F46DBC20022F549 /* libcryptopp.a */; };
 		91EFF0CB1F65673D00C9DE55 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0CA1F65673D00C9DE55 /* libsqlite3.tbd */; };
 		91EFF0CD1F65674800C9DE55 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0CC1F65674800C9DE55 /* libbz2.tbd */; };
 		91EFF0CF1F65675100C9DE55 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0CE1F65675100C9DE55 /* WebKit.framework */; };
@@ -228,6 +226,9 @@
 		91EFF0D31F65676D00C9DE55 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */; };
 		91EFF0D51F65677600C9DE55 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */; };
 		91EFF0D71F65677C00C9DE55 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D61F65677C00C9DE55 /* PushKit.framework */; };
+		B0F9554120E1094400D63F35 /* libcryptopp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F9554020E1094400D63F35 /* libcryptopp.a */; };
+		B0F9554320E109E400D63F35 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F9554220E109E400D63F35 /* libcrypto.a */; };
+		B0F9554520E109F300D63F35 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F9554420E109F300D63F35 /* libssl.a */; };
 		D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1120DFD42B00E11A7D /* SendViewController.swift */; };
 		D8A28C1420DFD6D600E11A7D /* CoinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -756,7 +757,7 @@
 		91ABACB01F3DB90B002F6D48 /* paymonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymonUITests.swift; sourceTree = "<group>"; };
 		91ABACB21F3DB90B002F6D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91ABACBE1F3DB92C002F6D48 /* paymon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "paymon-Bridging-Header.h"; sourceTree = "<group>"; };
-		91BA52D81F46DBC20022F549 /* libcryptopp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcryptopp.a; path = "../../../../../usr/local/cryptopp-ios/lib/libcryptopp.a"; sourceTree = "<group>"; };
+		91BA52D81F46DBC20022F549 /* libcryptopp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcryptopp.a; path = "../../../../../usr/local/cryptopp-ios/include/libcryptopp.a"; sourceTree = "<group>"; };
 		91EFF0CA1F65673D00C9DE55 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		91EFF0CC1F65674800C9DE55 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		91EFF0CE1F65675100C9DE55 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -764,6 +765,9 @@
 		91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		91EFF0D61F65677C00C9DE55 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		B0F9554020E1094400D63F35 /* libcryptopp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcryptopp.a; path = ../../../../../usr/local/Cellar/cryptopp/7.0.0/lib/libcryptopp.a; sourceTree = "<group>"; };
+		B0F9554220E109E400D63F35 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../../usr/local/Cellar/openssl/1.0.2o_2/lib/libcrypto.a; sourceTree = "<group>"; };
+		B0F9554420E109F300D63F35 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../../../usr/local/Cellar/openssl/1.0.2o_2/lib/libssl.a; sourceTree = "<group>"; };
 		D8A28C1120DFD42B00E11A7D /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -773,13 +777,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F9554520E109F300D63F35 /* libssl.a in Frameworks */,
+				B0F9554320E109E400D63F35 /* libcrypto.a in Frameworks */,
+				B0F9554120E1094400D63F35 /* libcryptopp.a in Frameworks */,
 				916FE0621F72B6F300542F74 /* Accelerate.framework in Frameworks */,
 				915E3EF41F66E7A2004B6AEE /* LocalAuthentication.framework in Frameworks */,
 				915E3EF21F66E783004B6AEE /* MobileCoreServices.framework in Frameworks */,
 				915E3EF01F66E58F004B6AEE /* MessageUI.framework in Frameworks */,
 				915E3EEE1F66E53F004B6AEE /* WatchConnectivity.framework in Frameworks */,
 				915E3EEC1F66E4A3004B6AEE /* AVFoundation.framework in Frameworks */,
-				915E3EEA1F66B482004B6AEE /* libcrypto.a in Frameworks */,
 				91EFF0D71F65677C00C9DE55 /* PushKit.framework in Frameworks */,
 				91EFF0D51F65677600C9DE55 /* SystemConfiguration.framework in Frameworks */,
 				91EFF0D31F65676D00C9DE55 /* CoreLocation.framework in Frameworks */,
@@ -787,7 +793,6 @@
 				91EFF0CF1F65675100C9DE55 /* WebKit.framework in Frameworks */,
 				91EFF0CD1F65674800C9DE55 /* libbz2.tbd in Frameworks */,
 				91EFF0CB1F65673D00C9DE55 /* libsqlite3.tbd in Frameworks */,
-				91BA52D91F46DBC20022F549 /* libcryptopp.a in Frameworks */,
 				9034551DDF256D5545CE2A4D /* Pods_paymon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1231,6 +1236,9 @@
 		3C813D552419D29B79F53D33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0F9554420E109F300D63F35 /* libssl.a */,
+				B0F9554220E109E400D63F35 /* libcrypto.a */,
+				B0F9554020E1094400D63F35 /* libcryptopp.a */,
 				912CF3FC1FA37A0000ABA699 /* breadwallet-core */,
 				9151899B1F95F41B00F4AB2F /* libPureLayout.a */,
 				916FE0611F72B6F300542F74 /* Accelerate.framework */,
@@ -1693,14 +1701,14 @@
 					New,
 				);
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Semen Gleym";
 				TargetAttributes = {
 					91ABAC8C1F3DB90A002F6D48 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = M8A7BYS443;
+						DevelopmentTeam = CX6AZ34SLQ;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					91ABACA01F3DB90B002F6D48 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1797,7 +1805,7 @@
 		};
 		B7C89B88CC08622FEAD748BE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -2088,6 +2096,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2095,6 +2104,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2148,6 +2158,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2155,6 +2166,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2196,8 +2208,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = M8A7BYS443;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CX6AZ34SLQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/breadwallet-core",
@@ -2222,13 +2234,15 @@
 					"$(PROJECT_DIR)/openssl/iOS",
 					"$(PROJECT_DIR)/openssl/OSX",
 					"/usr/local/cryptopp-ios/lib/**",
+					/usr/local/Cellar/cryptopp/7.0.0/lib,
+					/usr/local/Cellar/openssl/1.0.2o_2/lib,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDebug";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.trado;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paymon.max;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0714eef9-478d-463b-9477-7c1bd08c850e";
-				PROVISIONING_PROFILE_SPECIFIER = RanosysWildcardDev;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2250,8 +2264,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = M8A7BYS443;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CX6AZ34SLQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/breadwallet-core",
@@ -2278,12 +2292,14 @@
 					"$(PROJECT_DIR)/openssl/iOS",
 					"$(PROJECT_DIR)/openssl/OSX",
 					"/usr/local/cryptopp-ios/lib/**",
+					/usr/local/Cellar/cryptopp/7.0.0/lib,
+					/usr/local/Cellar/openssl/1.0.2o_2/lib,
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.trado;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paymon.max;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bc7701d2-d61c-4c5a-88dc-7d611e06934c";
-				PROVISIONING_PROFILE_SPECIFIER = SBFdev;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
