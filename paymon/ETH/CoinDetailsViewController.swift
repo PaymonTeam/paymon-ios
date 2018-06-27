@@ -29,6 +29,9 @@ class CoinDetailsViewController: UIViewController {
     }
 
     @IBAction func receivePressed(_ sender: UIButton) {
+        if let recieveEthernVC = self.storyboard?.instantiateViewController(withIdentifier: StoryBoardIdentifier.receiveEthernVC) {
+            self.navigationController?.pushViewController(recieveEthernVC, animated: true)
+        }
     }
 
 }

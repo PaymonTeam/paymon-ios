@@ -1540,6 +1540,7 @@
 		91ABAC8F1F3DB90A002F6D48 /* paymon */ = {
 			isa = PBXGroup;
 			children = (
+				D83BCB2520E2C4B7002B19C0 /* Helper */,
 				D8A28C1020DFD41600E11A7D /* ETH */,
 				2D1F26FB1F8CDCE5009DA744 /* animation */,
 				91ABACC71F3DBAF0002F6D48 /* cpp */,
@@ -1615,11 +1616,41 @@
 			name = cpp;
 			sourceTree = "<group>";
 		};
+		D83BCB2520E2C4B7002B19C0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB2B20E2C6D3002B19C0 /* DefaultManager */,
+				D83BCB2620E2C4C1002B19C0 /* KeychainManager */,
+				D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D83BCB2620E2C4C1002B19C0 /* KeychainManager */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB2720E2C4D1002B19C0 /* Keychain.swift */,
+				D83BCB2920E2C521002B19C0 /* KeychainHelper.swift */,
+			);
+			path = KeychainManager;
+			sourceTree = "<group>";
+		};
+		D83BCB2B20E2C6D3002B19C0 /* DefaultManager */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB2C20E2C70E002B19C0 /* UserDefaults.swift */,
+			);
+			path = DefaultManager;
+			sourceTree = "<group>";
+		};
 		D8A28C1020DFD41600E11A7D /* ETH */ = {
 			isa = PBXGroup;
 			children = (
 				D8A28C1120DFD42B00E11A7D /* SendViewController.swift */,
 				D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */,
+				D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */,
+				D83BCB1F20E2BBB7002B19C0 /* Constants.swift */,
+				D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */,
 			);
 			path = ETH;
 			sourceTree = "<group>";
@@ -1903,6 +1934,7 @@
 				3388DDBC2DEF851F38EC0F9B /* BRWalletManager.mm in Sources */,
 				3388DCB5E2B7C44CA8847A40 /* BRWallet.mm in Sources */,
 				3388D04EBC5D2CBA0CA34757 /* BRTransaction.mm in Sources */,
+				D83BCB2420E2C05C002B19C0 /* QRGenerater.swift in Sources */,
 				3388D741E69D252C3ACF2005 /* NSData+Bitcoin.mm in Sources */,
 				3388DCF8C8151F3C957E1CD4 /* NSMutableData+Bitcoin.mm in Sources */,
 				3388D06DE5972D8115B3098A /* NSString+Bitcoin.mm in Sources */,
@@ -1939,11 +1971,14 @@
 				3388DCDAFDF87356599E5A01 /* BRBitID.swift in Sources */,
 				3388DE397353F3C527674496 /* BRBloomFilter.mm in Sources */,
 				3388DEE5500BCE12AC830FC4 /* BRBouncyBurgerButton.mm in Sources */,
+				D83BCB1E20E2BA7D002B19C0 /* ReceiveViewController.swift in Sources */,
 				3388DC9CDADA6D59AA87D019 /* BRBrowserViewController.swift in Sources */,
 				3388DC0CE0EC198ACD4451B3 /* BRBSPatch.swift in Sources */,
+				D83BCB2F20E2CB01002B19C0 /* EnumCollection.swift in Sources */,
 				3388D95269C211246A5FD6DB /* BRBubbleView.mm in Sources */,
 				2D576BB31F6A7A270004CFD4 /* ContactsViewController.swift in Sources */,
 				3388D09C3BD0B40BD841E3B2 /* BRCameraPlugin.swift in Sources */,
+				D83BCB2020E2BBB7002B19C0 /* Constants.swift in Sources */,
 				3388DCC1B24ACBFD3E7515E7 /* BRCoding.swift in Sources */,
 				3388DBFC0195FBF096942E7A /* BRCopyLabel.mm in Sources */,
 				3388D280ED55AEE94F987045 /* BREventConfirmView.mm in Sources */,
@@ -1976,12 +2011,14 @@
 				3388D1AF8DB5F5E3EB8B0310 /* BRSendViewController.mm in Sources */,
 				3388D8D5CDB2317CBE4545F2 /* BRSettingsViewController.mm in Sources */,
 				3388DC858145892BF162886A /* BRSocketHelpers.c in Sources */,
+				D83BCB2820E2C4D1002B19C0 /* Keychain.swift in Sources */,
 				3388DC504CD5ED4B0B290F90 /* BRTar.swift in Sources */,
 				3388D7AEC71CB0970846C2CC /* BRTransaction+Utils.mm in Sources */,
 				3305FE73311E457DD2A0993B /* ProfileViewController.swift in Sources */,
 				2D1DFF971FBCEB31006AE009 /* RegistrTableViewController.swift in Sources */,
 				2D1F26FA1F8CCEBF009DA744 /* SecurityPasswordViewController.swift in Sources */,
 				3305FF4E787A7171F38942F4 /* ProfileTableInfoView.swift in Sources */,
+				D83BCB2D20E2C70E002B19C0 /* UserDefaults.swift in Sources */,
 				D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */,
 				3305F4D0892840CA56748907 /* ProfileHeaderView.swift in Sources */,
 				3305F7A19D6E1BCC3BEE1A4D /* UpdateProfileViewController.swift in Sources */,
@@ -1997,6 +2034,7 @@
 				3388D021FB59AE08D888733C /* NetworkReachability.swift in Sources */,
 				3388DC229CD9704564ABC453 /* Queue.m in Sources */,
 				3388D15915AC8F5543358FEE /* Connection.m in Sources */,
+				D83BCB2A20E2C521002B19C0 /* KeychainHelper.swift in Sources */,
 				3388DC507E0BD5D151E65C2A /* Request.m in Sources */,
 				3388DA672D82D4807F0E0C34 /* PMTimer.m in Sources */,
 				3388D69F79F7ADB98E7E355F /* MoneyTransferView.swift in Sources */,
