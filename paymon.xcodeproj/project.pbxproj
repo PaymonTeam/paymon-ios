@@ -228,6 +228,15 @@
 		91EFF0D31F65676D00C9DE55 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */; };
 		91EFF0D51F65677600C9DE55 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */; };
 		91EFF0D71F65677C00C9DE55 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFF0D61F65677C00C9DE55 /* PushKit.framework */; };
+		D81763B720E809DD004D8D98 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763B620E809DD004D8D98 /* Chain.swift */; };
+		D81763BE20E8216B004D8D98 /* ChooseCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763BD20E8216B004D8D98 /* ChooseCurrencyViewController.swift */; };
+		D81763CC20E829A6004D8D98 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763C020E829A6004D8D98 /* ConnectionManager.swift */; };
+		D81763CD20E829A6004D8D98 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763C120E829A6004D8D98 /* BaseService.swift */; };
+		D81763D020E829A6004D8D98 /* EthernService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763C520E829A6004D8D98 /* EthernService.swift */; };
+		D81763D820E829FB004D8D98 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763D720E829FB004D8D98 /* API.swift */; };
+		D81763DD20E82DBB004D8D98 /* ETH.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763DC20E82DBB004D8D98 /* ETH.swift */; };
+		D81763E820E840BD004D8D98 /* Ether.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763E720E840BD004D8D98 /* Ether.swift */; };
+		D81763EB20E84119004D8D98 /* DecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763EA20E84119004D8D98 /* DecimalExtension.swift */; };
 		D83BCB1E20E2BA7D002B19C0 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */; };
 		D83BCB2020E2BBB7002B19C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB1F20E2BBB7002B19C0 /* Constants.swift */; };
 		D83BCB2420E2C05C002B19C0 /* QRGenerater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */; };
@@ -771,6 +780,15 @@
 		91EFF0D21F65676D00C9DE55 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		91EFF0D41F65677600C9DE55 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		91EFF0D61F65677C00C9DE55 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		D81763B620E809DD004D8D98 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
+		D81763BD20E8216B004D8D98 /* ChooseCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCurrencyViewController.swift; sourceTree = "<group>"; };
+		D81763C020E829A6004D8D98 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		D81763C120E829A6004D8D98 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		D81763C520E829A6004D8D98 /* EthernService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthernService.swift; sourceTree = "<group>"; };
+		D81763D720E829FB004D8D98 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D81763DC20E82DBB004D8D98 /* ETH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETH.swift; sourceTree = "<group>"; };
+		D81763E720E840BD004D8D98 /* Ether.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ether.swift; sourceTree = "<group>"; };
+		D81763EA20E84119004D8D98 /* DecimalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalExtension.swift; sourceTree = "<group>"; };
 		D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
 		D83BCB1F20E2BBB7002B19C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerater.swift; sourceTree = "<group>"; };
@@ -1546,6 +1564,9 @@
 		91ABAC8F1F3DB90A002F6D48 /* paymon */ = {
 			isa = PBXGroup;
 			children = (
+				D81763E920E840FF004D8D98 /* Extension */,
+				D81763D920E82CB6004D8D98 /* Models */,
+				D81763BF20E829A6004D8D98 /* NetworkManager */,
 				D83BCB2520E2C4B7002B19C0 /* Helper */,
 				D8A28C1020DFD41600E11A7D /* ETH */,
 				2D1F26FB1F8CDCE5009DA744 /* animation */,
@@ -1622,12 +1643,57 @@
 			name = cpp;
 			sourceTree = "<group>";
 		};
+		D81763BC20E8215D004D8D98 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				D81763BD20E8216B004D8D98 /* ChooseCurrencyViewController.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		D81763BF20E829A6004D8D98 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				D81763C020E829A6004D8D98 /* ConnectionManager.swift */,
+				D81763C120E829A6004D8D98 /* BaseService.swift */,
+				D81763C220E829A6004D8D98 /* Service */,
+				D81763D720E829FB004D8D98 /* API.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		D81763C220E829A6004D8D98 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D81763C520E829A6004D8D98 /* EthernService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D81763D920E82CB6004D8D98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D81763DC20E82DBB004D8D98 /* ETH.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D81763E920E840FF004D8D98 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D81763EA20E84119004D8D98 /* DecimalExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D83BCB2520E2C4B7002B19C0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				D83BCB2B20E2C6D3002B19C0 /* DefaultManager */,
 				D83BCB2620E2C4C1002B19C0 /* KeychainManager */,
 				D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */,
+				D81763B620E809DD004D8D98 /* Chain.swift */,
+				D81763E720E840BD004D8D98 /* Ether.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1652,6 +1718,7 @@
 		D8A28C1020DFD41600E11A7D /* ETH */ = {
 			isa = PBXGroup;
 			children = (
+				D81763BC20E8215D004D8D98 /* Currency */,
 				D8A28C1120DFD42B00E11A7D /* SendViewController.swift */,
 				D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */,
 				D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */,
@@ -1847,11 +1914,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-paymon/Pods-paymon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
@@ -1883,6 +1952,7 @@
 				91724ADA1F54424700C369DB /* BuffersStorage.cpp in Sources */,
 				91724ADC1F54424700C369DB /* ByteArray_Wrapper.mm in Sources */,
 				91724AE01F54424700C369DB /* SerializedBuffer-Wrapper.mm in Sources */,
+				D81763CD20E829A6004D8D98 /* BaseService.swift in Sources */,
 				91724AE11F54424700C369DB /* SerializedBuffer.cpp in Sources */,
 				91724AE31F54424700C369DB /* PMFileManager.swift in Sources */,
 				91724AE41F54424700C369DB /* MessageManager.swift in Sources */,
@@ -1898,6 +1968,7 @@
 				2D174FE81F88D6E3009113EA /* AuthTableViewController.swift in Sources */,
 				91724B041F54424700C369DB /* ChatsTableViewOld.swift in Sources */,
 				3388DF1A13EA0C8CF29BE06F /* StartViewController.swift in Sources */,
+				D81763CC20E829A6004D8D98 /* ConnectionManager.swift in Sources */,
 				3388D65931A4F4DBC59A217C /* TabsViewController.swift in Sources */,
 				3388DB4FFA5422AD118E2192 /* ChatsTableViewCell.swift in Sources */,
 				3388D295234AAB6F24930B97 /* TextFieldWithImageInTableViewCellDelegate.swift in Sources */,
@@ -1921,6 +1992,7 @@
 				3388D50B22F0F2C15B9EBC9A /* BR_Address.c in Sources */,
 				3388DC649EC89CC9BD50234E /* BR_Base58.c in Sources */,
 				3388D61E7EBA42D400832531 /* BR_BIP32Sequence.c in Sources */,
+				D81763B720E809DD004D8D98 /* Chain.swift in Sources */,
 				3388D47C4CB1579EA76BE701 /* BR_BIP38Key.c in Sources */,
 				2D174FE61F88D2DA009113EA /* AuthViewController.swift in Sources */,
 				2D1500E21F8B8D4C00665409 /* KeyGuardViewController.swift in Sources */,
@@ -1938,6 +2010,7 @@
 				3388DCA61A59C68D3A3262C8 /* BR_Wallet.c in Sources */,
 				3388DBA98E7F5898033F1CB7 /* Paymon.xcdatamodeld in Sources */,
 				3388DDBC2DEF851F38EC0F9B /* BRWalletManager.mm in Sources */,
+				D81763D020E829A6004D8D98 /* EthernService.swift in Sources */,
 				3388DCB5E2B7C44CA8847A40 /* BRWallet.mm in Sources */,
 				3388D04EBC5D2CBA0CA34757 /* BRTransaction.mm in Sources */,
 				D83BCB2420E2C05C002B19C0 /* QRGenerater.swift in Sources */,
@@ -2008,10 +2081,12 @@
 				3388DF360423F236DCAAEF74 /* BRPeerEntity.mm in Sources */,
 				3388DF92E862014EE36DD3B5 /* BRPeerManager.mm in Sources */,
 				3388D76ABF726A0E45B9DCD1 /* BRPhoneWCSessionManager.mm in Sources */,
+				D81763BE20E8216B004D8D98 /* ChooseCurrencyViewController.swift in Sources */,
 				3388DAF0D18DBF339D88223E /* BRReceiveViewController.mm in Sources */,
 				3388D2F794D78CDF2B37E395 /* BRReplicatedKVStore.swift in Sources */,
 				3388D8C1174EEB8A3353DAF8 /* BRRestoreViewController.mm in Sources */,
 				3388D56441A01B1184BC45DD /* BRScanViewController.mm in Sources */,
+				D81763E820E840BD004D8D98 /* Ether.swift in Sources */,
 				3388DD2760B64706B779E0AC /* BRSeedViewController.mm in Sources */,
 				3388DED1DF96ECB731BEFD94 /* BRSendBCHViewController.mm in Sources */,
 				3388D1AF8DB5F5E3EB8B0310 /* BRSendViewController.mm in Sources */,
@@ -2039,6 +2114,7 @@
 				1217798D20B2C86500E45E60 /* CreateGroupViewController.swift in Sources */,
 				3388D021FB59AE08D888733C /* NetworkReachability.swift in Sources */,
 				3388DC229CD9704564ABC453 /* Queue.m in Sources */,
+				D81763DD20E82DBB004D8D98 /* ETH.swift in Sources */,
 				3388D15915AC8F5543358FEE /* Connection.m in Sources */,
 				D83BCB2A20E2C521002B19C0 /* KeychainHelper.swift in Sources */,
 				3388DC507E0BD5D151E65C2A /* Request.m in Sources */,
@@ -2048,6 +2124,8 @@
 				3305F51ADD0EC4FB42086EF1 /* SettingsSecurityViewController.swift in Sources */,
 				3305FAB28562F6DAC6F32EF2 /* AboutProgramViewController.swift in Sources */,
 				3305F46034D07038F58128E1 /* NotificationSoundTableViewController.swift in Sources */,
+				D81763D820E829FB004D8D98 /* API.swift in Sources */,
+				D81763EB20E84119004D8D98 /* DecimalExtension.swift in Sources */,
 				3305FC95158525D91BBE4707 /* NotificationSoundViewController.swift in Sources */,
 				3305F894A28F599AA22CBAF9 /* SettingsNotificationViewController.swift in Sources */,
 				3388DAE36131BB047C3ADA2D /* YMDepositViewController.swift in Sources */,
@@ -2173,7 +2251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-frandom-seed=$@";
@@ -2227,7 +2305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;

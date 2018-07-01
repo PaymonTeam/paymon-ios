@@ -7,11 +7,16 @@ import Foundation
 import UIKit
 import AVFoundation
 
+protocol QRCaptureDelegate: class {
+    func qrCaptureDidDetect(object: AVMetadataMachineReadableCodeObject)
+}
+
 class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var navigationBarView: UIView!
     @IBOutlet weak var square: UIImageView!
     var video = AVCaptureVideoPreviewLayer()
+    var delegate: QRCaptureDelegate?
 
     let infoButton = UIBarButtonItem(image: UIImage(named: "info_circle"), style: .plain, target: self, action: #selector(onInfoClick))
     let leftButton = UIBarButtonItem(image: UIImage(named: "nav_bar_item_arrow_left"), style: .plain, target: self, action: #selector(onNavBarItemLeftClicked))
@@ -92,12 +97,15 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
                         self.dismiss(animated: true)
                     } else if scan!.starts(with: Config.ETHEREUM_WALLET) {
                         Config.QR_CODE_VALUE = String(scan!.dropFirst(9))
+                        delegate?.qrCaptureDidDetect(object: object)
                         self.dismiss(animated: true)
                     } else if scan!.starts(with: Config.ETHEREUM_WALLET_2) {
                         Config.QR_CODE_VALUE = String(scan!.dropFirst(1))
+                        delegate?.qrCaptureDidDetect(object: object)
                         self.dismiss(animated: true)
                     } else if scan!.starts(with: Config.ETHEREUM_WALLET_3) {
                         Config.QR_CODE_VALUE = scan!
+                        delegate?.qrCaptureDidDetect(object: object)
                         self.dismiss(animated: true)
                     } else if scan!.starts(with: Config.WEB_CONTENT) || scan!.starts(with: Config.WEB_CONTENT_2){
                         let alert = UIAlertController(title: "Open in browser?".localized, message: scan!, preferredStyle: .alert)

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.7.2)
   - CryptoSwift (0.10.0)
   - Geth (1.8.11)
   - PureLayout (3.0.2)
@@ -7,11 +8,13 @@ PODS:
     - Geth
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - PureLayout
   - web3swift (from `https://github.com/MercuryProtocol/web3.swift.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - CryptoSwift
     - Geth
     - PureLayout
@@ -27,11 +30,12 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MercuryProtocol/web3.swift.git
 
 SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   Geth: ae1b2b966edd0482eda293dcee9b7f906e161589
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   web3swift: 9cf4ccef0c7f7e9f9abb3bc5867789b928800af6
 
-PODFILE CHECKSUM: e4fff83070926b6a390ab350517a0a7c3ed35ae3
+PODFILE CHECKSUM: 7381507f89b14170a4df10e80cfbf636e0b0f339
 
 COCOAPODS: 1.5.3

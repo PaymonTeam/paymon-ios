@@ -26,6 +26,10 @@ class CoinDetailsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func sendPressed(_ sender: UIButton) {
+        if let recieveEthernVC = self.storyboard?.instantiateViewController(withIdentifier: StoryBoardIdentifier.sendVCStoryID) {
+            self.navigationController?.pushViewController(recieveEthernVC, animated: true)
+        }
+
     }
 
     @IBAction func receivePressed(_ sender: UIButton) {

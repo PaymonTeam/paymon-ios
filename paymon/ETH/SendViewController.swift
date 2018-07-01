@@ -7,8 +7,15 @@
 //
 
 import Foundation
+import Geth
 
-class SendViewController: UIViewController {
+class SendViewController: UIViewController, QRCaptureDelegate, SelectedCurrencyDelegate {
+
+    private var amount: Decimal = 0
+    private var address: String!
+    private var gasLimit: Decimal = Send.defaultGasLimit
+    private var gasPrice: Decimal = Send.defaultGasPrice
+    private var selectedCurrency = Wallet.defaultCurrency
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var gasLimitTextField: UITextField!
@@ -22,14 +29,17 @@ class SendViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var keyboardConstraint: NSLayoutConstraint!
 
-//    var output: SendViewOutput!
+    var rates: ETHModel?
 
+    var client = GethEthereumClient()
+    let context: GethContext = GethNewContext()
 
     // MARK: Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        output.viewIsReady()
+        getRates()
+//        getSuggestedGasPrice()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +51,14 @@ class SendViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
-
+    func getRates() {
+        ETHModel().getRates(success: { (response) in
+            self.rates = response
+            self.calculateTotalAmount()
+        }) { (error) in
+            print("")
+        }
+    }
     // MARK: Privates
 
     private func setupKeyboardNotifications() {
@@ -61,6 +78,11 @@ class SendViewController: UIViewController {
         keyboardConstraint.constant = 10
         view.layoutIfNeeded()
     }
+    func selectedCurrency(value: String) {
+        selectedCurrency = value
+        currencyButton.setTitle(value, for: UIControlState.normal)
+        self.calculateTotalAmount()
+    }
 
     // MARK: Actions
 
@@ -69,11 +91,21 @@ class SendViewController: UIViewController {
     }
 
     @IBAction func currencyPressed(_ sender: UIButton) {
-
+        if let currencyVC = storyboard?.instantiateViewController(withIdentifier: StoryBoardIdentifier.chooseCurrencyVCStoryID) as? ChooseCurrencyViewController {
+            currencyVC.delegate = self
+            self.navigationController?.pushViewController(currencyVC, animated: true)
+        }
     }
 
     @IBAction func scanQRPressed(_ sender: UIButton) {
+        if let scanController = storyboard?.instantiateViewController(withIdentifier: "ScanViewController") as? QRScannerViewController {
+            scanController.delegate = self
+            present(scanController, animated: true)
+        }
 
+    }
+    func qrCaptureDidDetect(object: AVMetadataMachineReadableCodeObject) {
+        addressTextField.text = object.stringValue
     }
 
     @IBAction func addressDidChange(_ sender: UITextField) {
@@ -81,6 +113,11 @@ class SendViewController: UIViewController {
     }
 
     @IBAction func amountDidChange(_ sender: UITextField) {
+        if let text = sender.text {
+            let formated = text.replacingOccurrences(of: ",", with: ".")
+            self.amount = Decimal(formated)
+            calculateTotalAmount()
+        }
 
     }
 
@@ -88,5 +125,55 @@ class SendViewController: UIViewController {
 
     }
 
-}
+    func getSuggestedGasPrice() {
+        do {
+            let gasPrice = try self.client.suggestGasPrice(self.context)
+            DispatchQueue.main.async {
+                self.gasPrice = Decimal(gasPrice.getInt64())
+                self.calculateTotalAmount()
+            }
+        } catch {
+         print("")
+        }
+    }
+    private func calculateTotalAmount() {
+        let fee = gasLimit * gasPrice
+        getCheckout(amount: amount, iso: selectedCurrency, fee: fee)
+    }
+    func didReceiveCheckout(amount: String, fiatAmount: String, fee: String, fiatFee: String) {
+        amountLabel.text = amount
+        localAmountLabel.text = fiatAmount
+        feeLabel.text = fee
+        localFeeLabel.text = fiatFee
+    }
+    func getCheckout(amount: Decimal, iso: String, fee: Decimal) {
+        do {
+            var rateValue = 0.0
+            switch selectedCurrency {
+            case "BTC":
+                rateValue = self.rates?.BTC ?? 0.0
+            case "CNY":
+                rateValue = self.rates?.CNY ?? 0.0
+            case "ETH":
+                rateValue = self.rates?.ETH ?? 0.0
+            case "EUR":
+                rateValue = self.rates?.EUR ?? 0.0
+            case "GBP":
+                rateValue = self.rates?.GBP ?? 0.0
+            case "USD":
+                rateValue = self.rates?.USD ?? 0.0
+            default:
+                print("")
+            }
 
+            let feeAmount = Ether(weiValue: fee)
+            let fiatFee = feeAmount.amount(in: iso, rate: rateValue)
+            let rawLocalAmount = amount.localToEther(rate: rateValue).toWei()
+            let ethAmount = Ether(weiValue: rawLocalAmount + fee)
+            let fiatAmount = ethAmount.amount(in: iso, rate: rateValue)
+            didReceiveCheckout(amount: ethAmount.amount, fiatAmount: fiatAmount, fee: feeAmount.amount, fiatFee: fiatFee)
+        } catch let error {
+            print("")
+        }
+    }
+}
