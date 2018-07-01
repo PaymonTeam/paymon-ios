@@ -167,7 +167,7 @@ class ChatViewController: UIViewController, NotificationManagerListener {
     }
 
 
-    func handleKeyboardNotification(notification: NSNotification) {
+    @objc func handleKeyboardNotification(notification: NSNotification) {
 
         if let userInfo = notification.userInfo {
             let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
@@ -402,14 +402,14 @@ extension ChatViewController: UITextViewDelegate {
         })
 
         if newFrame.height > oldFrame.height {
-            var resizeFrame = newFrame.height - oldFrame.height
+            let resizeFrame = newFrame.height - oldFrame.height
             oldFrame = newFrame
 //            print(resizeFrame)
             messageViewHeight.constant += resizeFrame
 
         } else if oldFrame.height > newFrame.height {
 
-            var resizeFrame = oldFrame.height - newFrame.height
+            let resizeFrame = oldFrame.height - newFrame.height
             oldFrame = newFrame
             messageViewHeight.constant -= resizeFrame
             UIView.animate(withDuration: 0,

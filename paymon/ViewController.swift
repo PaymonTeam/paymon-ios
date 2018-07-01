@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NetworkManager.instance
+//        NetworkManager.instance
 //        let myView = ChatsView(frame: CGRect.zero)
 //        self.view.addSubview(myView)
 //        myView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)

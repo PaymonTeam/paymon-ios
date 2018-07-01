@@ -155,7 +155,7 @@ class YMWithdrawViewController: UIViewController, UITextFieldDelegate {
                 */
                 if let number = localFormat.number(from: text) {
                     let num = NSDecimalNumber(decimal: number.decimalValue)
-//                    print(num)
+                    print(num)
                 }
                 updateViews()
             } else {
