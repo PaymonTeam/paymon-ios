@@ -97,7 +97,7 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
 
     }
 
-    func createGroup() {
+    @objc func createGroup() {
         let groupView = storyboard?.instantiateViewController(withIdentifier: "CreateGroupViewController") as! CreateGroupViewController
         present(groupView, animated: false, completion: nil)
     }
@@ -109,7 +109,9 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
         //            }
 
             var array:[CellChatData] = []
+            
             for user in MessageManager.instance.userContacts.values {
+                let data = CellDialogData()
                 let username = Utils.formatUserName(user)
                 var lastMessageText = ""
                 var lastMessageTime = ""
@@ -117,23 +119,28 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
                 if let lastMessageID = MessageManager.instance.lastMessages[user.id] {
                     if let msg:RPC.Message = MessageManager.instance.messages[lastMessageID] {
                         if (msg is RPC.PM_message) {
+                            print(msg.text)
                             lastMessageText = msg.text
                         } else if (msg is RPC.PM_messageItem) {
                             lastMessageText = String(describing: msg.itemType!)
                         }
+                        data.time = Int64(msg.date)
                         lastMessageTime = Utils.formatDateTime(timestamp: Int64(msg.date), format24h: true)
                     }
                 }
-                let data = CellDialogData()
+                
                 data.chatID = user.id
                 data.photoID = user.photoID
                 data.name = username
                 data.lastMessageText = lastMessageText
                 data.timeString = lastMessageTime
+
                 array.append(data)
             }
 
             for group in MessageManager.instance.groups.values {
+                let data = CellGroupData()
+
                 let title = group.title
                 var lastMessageText = ""
                 var lastMessageTimeString = ""
@@ -146,6 +153,7 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
                         } else if (msg is RPC.PM_messageItem) {
                             lastMessageText = String(describing: msg.itemType!)
                         }
+                        data.time = Int64(msg.date)
                         lastMessageTimeString = Utils.formatDateTime(timestamp: Int64(msg.date), format24h: true)
 
                         let user = MessageManager.instance.users[msg.from_id]
@@ -163,7 +171,6 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
                 if (photo!.user_id == 0) {
                     photo!.user_id = -group.id
                 }
-                let data = CellGroupData()
                 data.chatID = group.id
                 data.photoID = photo!.id
                 data.name = title!
@@ -177,9 +184,10 @@ class ChatsViewController: UIViewController, NotificationManagerListener {
             activityView.stopAnimating()
 
             if !array.isEmpty {
-                array.sort(by: {o1, o2 in
-                    return o1.time < o2.time
-                })
+                array.sort {
+                    $0.0.time > $0.1.time
+                }
+            
                 list.removeAll()
                 list.append(contentsOf: array)
                 chatsTable.reloadData()

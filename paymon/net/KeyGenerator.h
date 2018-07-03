@@ -9,8 +9,8 @@
 #include "SerializedBuffer.h"
 #include "Defines.h"
 
-#include "cryptopp/cryptlib.h"
-#include "cryptopp/hex.h"
+#include "cryptlib.h"
+#include "hex.h"
 
 #include <stdexcept>
 #include "cryptopp/osrng.h"

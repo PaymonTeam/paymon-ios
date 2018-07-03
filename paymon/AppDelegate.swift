@@ -14,7 +14,7 @@ import Geth
 class AppDelegate: BRAppDelegate, NotificationManagerListener {
 
 //    var window: UIWindow?
-    var willAuth = false;
+    var willAuth = true;
     var vc: UIViewController? = nil
 
     private func authByToken() {
@@ -24,15 +24,18 @@ class AppDelegate: BRAppDelegate, NotificationManagerListener {
         if let vc = vc {
             let auth = RPC.PM_authToken()
             auth.token = User.currentUser!.token
+
             let _ = NetworkManager.instance.sendPacket(auth) { p, e in
                 self.willAuth = false
 
                 DispatchQueue.main.async {
                     if e != nil || !(p is RPC.PM_userFull) {
+
                         User.clearConfig()
                         let startView = vc.storyboard?.instantiateViewController(withIdentifier: "StartViewController") as! StartViewController
                         vc.present(startView, animated: true)
                     } else {
+
                         User.isAuthenticated = true
                         User.currentUser = (p as! RPC.PM_userFull)
                         User.saveConfig()
@@ -109,13 +112,14 @@ class AppDelegate: BRAppDelegate, NotificationManagerListener {
             //Call launch with configuration to create a keystore and account
             //keystoreA: The encrypted private and public key for wallet A
             //accountA : An Ethereum account
-            let (keystore, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
+            let (_, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
             UserDefaults.instance.setEthernAddress(value: account?.getAddress().getHex())
             return
         }
 
     }
     override func applicationWillResignActive(_ application: UIApplication) {
+
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
@@ -130,6 +134,7 @@ class AppDelegate: BRAppDelegate, NotificationManagerListener {
     }
 
     override func applicationDidBecomeActive(_ application: UIApplication) {
+
         if vc == nil {
             vc = window?.rootViewController ?? nil
         }

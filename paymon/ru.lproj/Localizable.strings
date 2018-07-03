@@ -50,6 +50,7 @@
 
 /*Chat View*/
 
+"Yesterday" = "Вчера";
 "To write a message"="Написать сообщение";
 
 /*Profile*/
@@ -60,8 +61,8 @@
 "Not choosen" = "Не выбрано";
 "Invite Friends"="Пригласить друзей";
 "Your invite code"="Ваш код для приглашения";
-"Invite your friends in Paymon and receive additional rewards after the end of ICO"="Приглашайте ваших друзей в Paymon и получите дополнительное вознаграждение после окончания ICO";
-"The more people will register with your invite сode, the more will be your reward"="Чем больше людей зарегистрируются по вашему инвайт-коду, тем больше будет ваше вознаграждение";
+"Invite your friends to Paymon and help us develop"="Приглашай своих друзей в Paymon, помогай нам развиваться";
+"Write feedback and shortcomings to our official email address"="Пишите отзывы и недостатки на наш официальный адрес электронной почты";
 "share"="поделиться";
 "Hi! Install and register on this code '%@' in the app and get free cryptocurrency from Paymon!"="ПривЫУстанавливай и регистрируйся по этому коду '%@' в приложении и получи бесплатно криптовалюту от Paymon!";
 

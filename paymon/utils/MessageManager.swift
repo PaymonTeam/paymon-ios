@@ -174,12 +174,6 @@ class MessageManager : NotificationManagerListener {
     public func loadChats(_ fromCache:Bool) {
         if (fromCache) {
 
-    //            ApplicationLoader.applicationHandler.post(Runnable() {
-    //                @Override
-    //                public func run() {
-    //                    NotificationManager.instance.postNotificationName(NotificationManager.dialogsNeedReload)
-    //                }
-    //            })
         } else {
             if User.currentUser == nil {
                 return
@@ -246,6 +240,7 @@ class MessageManager : NotificationManagerListener {
                 }
                 DispatchQueue.main.async {
                     NotificationManager.instance.postNotificationName(id: NotificationManager.chatAddMessages, args: messagesToAdd, true)
+                    NotificationManager.instance.postNotificationName(id: NotificationManager.dialogsNeedReload)
                 }
             }
         }
@@ -256,9 +251,8 @@ class MessageManager : NotificationManagerListener {
             if let messages = args[0] as? SharedArray<RPC.Message> {
                 var messagesToShow:[Int64] = []
 
-
-
                 for msg in messages.array {
+                    print(msg.text)
                     putMessage(msg, serverTime: true)
                     var to_id = msg.to_id.user_id
                     var isGroup = false
@@ -275,19 +269,16 @@ class MessageManager : NotificationManagerListener {
                             messagesToShow.append(msg.id)
                         }
                     }
-                    //                chatAdapter.messageIDs.add(String.format(Locale.getDefault(), "%d: %s", msg.from_id, msg.text))
                 }
                 if (messagesToShow.count > 0) {
-//                    Collections.sort(messagesToShow, Comparator<Long>() {
-//                        @Override
-//                        public int compare(Long o1, Long o2) {
-//                            return o1.compareTo(o2)
-//                        }
-//                    })
                     messagesToShow.sort(by: {e1, e2 in
                         return e1 > e2
                     })
-                    NotificationManager.instance.postNotificationName(id: NotificationManager.chatAddMessages, args: messagesToShow, false)
+                    DispatchQueue.main.async {
+
+                        NotificationManager.instance.postNotificationName(id: NotificationManager.chatAddMessages, args: messagesToShow, false)
+                        NotificationManager.instance.postNotificationName(id: NotificationManager.dialogsNeedReload)
+                    }
                 }
             }
         } else if (id == NotificationManager.doLoadChatMessages) {
