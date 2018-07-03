@@ -1550,6 +1550,9 @@
 		91ABAC8F1F3DB90A002F6D48 /* paymon */ = {
 			isa = PBXGroup;
 			children = (
+				D81763E920E840FF004D8D98 /* Extension */,
+				D81763D920E82CB6004D8D98 /* Models */,
+				D81763BF20E829A6004D8D98 /* NetworkManager */,
 				D83BCB2520E2C4B7002B19C0 /* Helper */,
 				D8A28C1020DFD41600E11A7D /* ETH */,
 				2D1F26FB1F8CDCE5009DA744 /* animation */,
@@ -1867,11 +1870,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-paymon/Pods-paymon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
@@ -1903,6 +1908,7 @@
 				91724ADA1F54424700C369DB /* BuffersStorage.cpp in Sources */,
 				91724ADC1F54424700C369DB /* ByteArray_Wrapper.mm in Sources */,
 				91724AE01F54424700C369DB /* SerializedBuffer-Wrapper.mm in Sources */,
+				D81763CD20E829A6004D8D98 /* BaseService.swift in Sources */,
 				91724AE11F54424700C369DB /* SerializedBuffer.cpp in Sources */,
 				91724AE31F54424700C369DB /* PMFileManager.swift in Sources */,
 				91724AE41F54424700C369DB /* MessageManager.swift in Sources */,
@@ -1920,6 +1926,7 @@
 				2D174FE81F88D6E3009113EA /* AuthTableViewController.swift in Sources */,
 				91724B041F54424700C369DB /* ChatsTableViewOld.swift in Sources */,
 				3388DF1A13EA0C8CF29BE06F /* StartViewController.swift in Sources */,
+				D81763CC20E829A6004D8D98 /* ConnectionManager.swift in Sources */,
 				3388D65931A4F4DBC59A217C /* TabsViewController.swift in Sources */,
 				3388DB4FFA5422AD118E2192 /* ChatsTableViewCell.swift in Sources */,
 				3388D295234AAB6F24930B97 /* TextFieldWithImageInTableViewCellDelegate.swift in Sources */,
@@ -1943,6 +1950,7 @@
 				3388D50B22F0F2C15B9EBC9A /* BR_Address.c in Sources */,
 				3388DC649EC89CC9BD50234E /* BR_Base58.c in Sources */,
 				3388D61E7EBA42D400832531 /* BR_BIP32Sequence.c in Sources */,
+				D81763B720E809DD004D8D98 /* Chain.swift in Sources */,
 				3388D47C4CB1579EA76BE701 /* BR_BIP38Key.c in Sources */,
 				2D174FE61F88D2DA009113EA /* AuthViewController.swift in Sources */,
 				2D1500E21F8B8D4C00665409 /* KeyGuardViewController.swift in Sources */,
@@ -1960,6 +1968,7 @@
 				3388DCA61A59C68D3A3262C8 /* BR_Wallet.c in Sources */,
 				3388DBA98E7F5898033F1CB7 /* Paymon.xcdatamodeld in Sources */,
 				3388DDBC2DEF851F38EC0F9B /* BRWalletManager.mm in Sources */,
+				D81763D020E829A6004D8D98 /* EthernService.swift in Sources */,
 				3388DCB5E2B7C44CA8847A40 /* BRWallet.mm in Sources */,
 				B04E6BA720E3A8F80032AE3C /* KeychainHelper.swift in Sources */,
 				3388D04EBC5D2CBA0CA34757 /* BRTransaction.mm in Sources */,
@@ -2035,6 +2044,7 @@
 				3388D2F794D78CDF2B37E395 /* BRReplicatedKVStore.swift in Sources */,
 				3388D8C1174EEB8A3353DAF8 /* BRRestoreViewController.mm in Sources */,
 				3388D56441A01B1184BC45DD /* BRScanViewController.mm in Sources */,
+				D81763E820E840BD004D8D98 /* Ether.swift in Sources */,
 				3388DD2760B64706B779E0AC /* BRSeedViewController.mm in Sources */,
 				3388DED1DF96ECB731BEFD94 /* BRSendBCHViewController.mm in Sources */,
 				3388D1AF8DB5F5E3EB8B0310 /* BRSendViewController.mm in Sources */,
@@ -2070,6 +2080,8 @@
 				3305F51ADD0EC4FB42086EF1 /* SettingsSecurityViewController.swift in Sources */,
 				3305FAB28562F6DAC6F32EF2 /* AboutProgramViewController.swift in Sources */,
 				3305F46034D07038F58128E1 /* NotificationSoundTableViewController.swift in Sources */,
+				D81763D820E829FB004D8D98 /* API.swift in Sources */,
+				D81763EB20E84119004D8D98 /* DecimalExtension.swift in Sources */,
 				3305FC95158525D91BBE4707 /* NotificationSoundViewController.swift in Sources */,
 				3305F894A28F599AA22CBAF9 /* SettingsNotificationViewController.swift in Sources */,
 				3388DAE36131BB047C3ADA2D /* YMDepositViewController.swift in Sources */,
@@ -2197,7 +2209,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-frandom-seed=$@";
@@ -2253,7 +2265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
