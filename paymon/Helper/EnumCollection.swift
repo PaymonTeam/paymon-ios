@@ -10,6 +10,13 @@ import Foundation
 
 import Foundation
 
+enum TransferType {
+    case `default`
+    case token
+}
+
+
+
 public protocol EnumCollection: Hashable {
     static func cases() -> AnySequence<Self>
     static var allValues: [Self] { get }

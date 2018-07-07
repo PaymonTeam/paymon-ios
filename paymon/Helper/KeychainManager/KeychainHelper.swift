@@ -70,6 +70,15 @@ extension Keychain {
             setString(newValue, for: .passphrase)
         }
     }
+    var keystore: String? {
+        get {
+            return getString(for: .passphrase)
+        }
+
+        set {
+            setString(newValue, for: .passphrase)
+        }
+    }
 
     // MARK: - Getters
 

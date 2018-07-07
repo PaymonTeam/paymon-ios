@@ -1,7 +1,12 @@
 PODS:
   - Alamofire (4.7.2)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
   - CryptoSwift (0.10.0)
   - Geth (1.8.11)
+  - MBProgressHUD (1.0.0)
+  - ObjectMapper (3.3.0)
   - PureLayout (3.0.2)
   - web3swift (0.0.9):
     - CryptoSwift
@@ -9,14 +14,19 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - AlamofireObjectMapper
+  - MBProgressHUD (~> 1.0.0)
   - PureLayout
   - web3swift (from `https://github.com/MercuryProtocol/web3.swift.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireObjectMapper
     - CryptoSwift
     - Geth
+    - MBProgressHUD
+    - ObjectMapper
     - PureLayout
 
 EXTERNAL SOURCES:
@@ -31,11 +41,14 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   Geth: ae1b2b966edd0482eda293dcee9b7f906e161589
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   web3swift: 9cf4ccef0c7f7e9f9abb3bc5867789b928800af6
 
-PODFILE CHECKSUM: 7381507f89b14170a4df10e80cfbf636e0b0f339
+PODFILE CHECKSUM: b6da8b2067ed83432dce82bed311f6a16fa55173
 
 COCOAPODS: 1.5.3

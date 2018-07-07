@@ -13,6 +13,8 @@ import Geth
 //@UIApplicationMain
 class AppDelegate: BRAppDelegate, NotificationManagerListener {
 
+    var keystore = KeystoreService()
+
 //    var window: UIWindow?
     var willAuth = false;
     var vc: UIViewController? = nil
@@ -104,17 +106,26 @@ class AppDelegate: BRAppDelegate, NotificationManagerListener {
     func loadEthenWallet() {
         //Choose your namespace and password
         guard let _ = UserDefaults.instance.getEthernAddress() else {
-            let config = EthAccountConfiguration(namespace: "walletA", password: "qwerty")
+            let passphrase = "qwerty"
+            let config = EthAccountConfiguration(namespace: "walletA", password: passphrase)
 
             //Call launch with configuration to create a keystore and account
             //keystoreA: The encrypted private and public key for wallet A
             //accountA : An Ethereum account
-            let (keystore, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
+            var (keystore, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(config)
             UserDefaults.instance.setEthernAddress(value: account?.getAddress().getHex())
+            KeystoreService().keystore = keystore
+            self.keystore.keystore = keystore
+            Keychain().passphrase = passphrase
+            let jsonKey = try? keystore?.exportKey(account, passphrase: passphrase, newPassphrase: passphrase)
+            let keychain = Keychain()
+            keychain.jsonKey = jsonKey!
+            keychain.passphrase = passphrase
             return
         }
 
     }
+    
     override func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

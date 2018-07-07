@@ -8,6 +8,14 @@
 
 import Foundation
 
+struct TransactionInfo {
+    let amount: Decimal
+    let address: String
+    let contractAddress: String?
+    let gasLimit: Decimal
+    let gasPrice: Decimal
+}
+
 class ETHModel: Codable{
 
     var BTC: Double?
@@ -16,6 +24,26 @@ class ETHModel: Codable{
     var EUR: Double?
     var GBP: Double?
     var USD: Double?
+
+    func getValueForSelected(currency: String) -> Double? {
+
+        switch currency {
+        case "BTC":
+            return self.BTC
+        case "CNY":
+            return self.CNY
+        case "ETH":
+            return self.ETH
+        case "EUR":
+            return self.EUR
+        case "GBP":
+            return self.GBP
+        case "USD":
+            return self.USD
+        default:
+            return nil
+        }
+    }
 }
 
 extension ETHModel {

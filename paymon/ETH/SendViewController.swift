@@ -8,6 +8,7 @@
 
 import Foundation
 import Geth
+import web3swift
 
 class SendViewController: UIViewController, QRCaptureDelegate, SelectedCurrencyDelegate {
 
@@ -28,11 +29,14 @@ class SendViewController: UIViewController, QRCaptureDelegate, SelectedCurrencyD
     @IBOutlet weak var feeLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var keyboardConstraint: NSLayoutConstraint!
-
+    var transactionService: TransactionServiceProtocol!
     var rates: ETHModel?
 
     var client = GethEthereumClient()
     let context: GethContext = GethNewContext()
+    let core = Ethereums.core
+
+    var ethereumService: EthereumCoreProtocol!
 
     // MARK: Life cycle
 
@@ -40,8 +44,24 @@ class SendViewController: UIViewController, QRCaptureDelegate, SelectedCurrencyD
         super.viewDidLoad()
         getRates()
 //        getSuggestedGasPrice()
+        startSynchronization()
     }
+    func startSynchronization() {
+        Ethereums.syncQueue.async { [unowned self] in
+            do  {
+//                let syncCoordinator = StandardSyncCoordinator()
+//                core.syncCoordinator = syncCoordinator
+                self.ethereumService = self.core
+                try self.ethereumService.start(chain: Defaults.chain, delegate: nil)
+                let keystore = appDelegate.keystore
+                self.transactionService = TransactionService(core: self.core, keystore: keystore, transferType: .default, viewC: self)
 
+            } catch {
+                print("failed sync")
+            }
+        }
+
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupKeyboardNotifications()
@@ -88,6 +108,39 @@ class SendViewController: UIViewController, QRCaptureDelegate, SelectedCurrencyD
 
     @IBAction func sendPressed(_ sender: UIButton) {
 
+        if let add = addressTextField.text {
+
+            if let rateValue = rates?.getValueForSelected(currency: selectedCurrency) {
+                let amountEther = amount.localToEther(rate: rateValue).toWei()
+                
+                self.view.showLoadingOnWindow()
+                sendTransaction(amount: amountEther, to: add, gasLimit: gasLimit, gasPrice: gasPrice)
+            }
+        }
+    }
+    func sendTransaction(amount: Decimal, to: String, gasLimit: Decimal, gasPrice: Decimal) {
+        do {
+            let keychain = Keychain()
+            let passphrase = try keychain.getPassphrase()
+            let info = TransactionInfo(amount: amount, address: to, contractAddress: nil, gasLimit: gasLimit, gasPrice: gasPrice)
+            transactionService.sendTransaction(with: info, passphrase: passphrase) { [weak self] result in
+                self?.view.hideLoadingOnWindow()
+                guard let `self` = self else { return }
+
+                switch result {
+                case .success(let sendedTransaction):
+                    var transaction = Transaction.mapFromGethTransaction(sendedTransaction, time: Date().timeIntervalSince1970)
+                    transaction.isPending = true
+                    transaction.isIncoming = false
+                    print("success")
+                case .failure(let error):
+                    // Need to add alert
+                    print(error)
+                }
+            }
+        } catch {
+            print("exception accure")
+        }
     }
 
     @IBAction func currencyPressed(_ sender: UIButton) {
