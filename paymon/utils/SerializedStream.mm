@@ -28,8 +28,6 @@
     if (self != nil) {
         self.isOut = false;
         self.justCalc = false;
-        self.len = 0;
-        int len = data.length;
         self.in = [[NSInputStream alloc] initWithData:data];
         [self.in open];
 //        bool has = self.in.hasBytesAvailable;

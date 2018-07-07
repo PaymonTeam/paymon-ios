@@ -39,14 +39,16 @@ open class Utils {
         if calendar.component(.year, from: date) - calendar.component(.year, from: dateNow) == 0 {
             if calendar.component(.month, from: date) - calendar.component(.month, from: dateNow) == 0 {
                 if calendar.component(.weekOfMonth, from: date) - calendar.component(.weekOfMonth, from: dateNow) == 0 {
-                    if calendar.component(.day, from: date) - calendar.component(.day, from: dateNow) == 0 {
+                    
+                    let dateDay = calendar.dateComponents(in: TimeZone(abbreviation: "GMT")!, from: date).day!
+                    let dateNowDay = calendar.dateComponents(in: TimeZone(abbreviation: "GMT")!, from: dateNow).day!
+
+                    if dateNowDay - dateDay == 0 {
                         dateFormatter.dateFormat = "HH:mm"
+                    } else if dateNowDay - dateDay == 1 {
+                        result = "Yesterday".localized
                     } else {
-                        if calendar.isDateInYesterday(date) {
-                            result = "Yesterday"
-                        } else {
-                            dateFormatter.dateFormat = "EEEE"
-                        }
+                        dateFormatter.dateFormat = "E"
                     }
                 } else {
                     dateFormatter.dateFormat = "d MMM"
@@ -58,7 +60,7 @@ open class Utils {
             dateFormatter.dateFormat = "dd.MM.yyyy"
         }
         
-        if (result != "Yesterday") {
+        if (result != "Yesterday".localized) {
             result = dateFormatter.string(from: date)
         }
         

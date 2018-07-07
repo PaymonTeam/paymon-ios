@@ -6,12 +6,6 @@
 import UIKit
 import UserNotifications
 
-class GroupChatMessageRcvViewCell : ChatMessageRcvViewCell {
-    @IBOutlet weak var photo: ObservableImageView!
-    @IBOutlet weak var lblName: UILabel!
-}
-//import PureLayout
-
 extension String {
 
     func widthOfString(usingFont font: UIFont) -> CGFloat {
@@ -28,8 +22,6 @@ extension String {
 }
 
 class ChatViewController: UIViewController, NotificationManagerListener {
-
-
     @IBOutlet weak var messageTextView: UITextView!
 
     @IBOutlet weak var messageViewHeight: NSLayoutConstraint!
@@ -129,6 +121,7 @@ class ChatViewController: UIViewController, NotificationManagerListener {
         messageTextView.layer.borderColor = UIColor(r: 235, g: 235, b: 241).cgColor
         messageTextView.text = "To write a message".localized
         messageTextView.textColor = UIColor.lightGray
+        messageTextView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
 
         let fixedWidth = messageTextView.frame.size.width
         messageTextView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
@@ -297,13 +290,17 @@ extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let mid = messages[row]
+
         if let message = MessageManager.instance.messages[mid] {
+            
             if message.from_id == User.currentUser!.id {
                 if message.itemType == nil || message.itemType == .NONE {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageViewCell") as! ChatMessageViewCell
-//                    cell.timeLabel.text = String(message.date)
-                    cell.messageLabel.text = message.text
-                    cell.messageLabel.sizeToFit()
+
+                    cell.message.text = message.text
+//                    message.date
+//                    cell.timeLabel.text = Utils.formatDateTime(timestamp: Int64(message.date), format24h: false)
+//                    cell.messageLabel.sizeToFit()
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageItemViewCell") as! ChatMessageItemViewCell
@@ -314,8 +311,9 @@ extension ChatViewController: UITableViewDataSource {
                 if isGroup {
                     if message.itemType == nil || message.itemType == .NONE {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupChatMessageRcvViewCell") as! GroupChatMessageRcvViewCell
-                        cell.messageLabel.text = message.text
-                        cell.messageLabel.sizeToFit()
+                        cell.messageView.text = message.text
+                        
+//                        cell.message.sizeToFit()
                         cell.photo.setPhoto(ownerID: message.from_id, photoID: MediaManager.instance.userProfilePhotoIDs[message.from_id]!)
                         let user = MessageManager.instance.users[message.from_id]
                         cell.lblName.text = Utils.formatUserName(user!)
@@ -328,9 +326,9 @@ extension ChatViewController: UITableViewDataSource {
                 } else {
                     if message.itemType == nil || message.itemType == .NONE {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageRcvViewCell") as! ChatMessageRcvViewCell
-                        //                    cell.timeLabel.text = String(message.date)
-                        cell.messageLabel.text = message.text
-                        cell.messageLabel.sizeToFit()
+                        //cell.timeLabel.text = String(message.date)
+                        cell.message.text = message.text
+//                        cell.messageLabel.sizeToFit()
                         return cell
                     } else {
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageItemRcvViewCell") as! ChatMessageItemRcvViewCell
@@ -338,13 +336,11 @@ extension ChatViewController: UITableViewDataSource {
                         return cell
                     }
                 }
-                
             }
         }
 
         return UITableViewCell(style: .default, reuseIdentifier: nil)
     }
-
 }
 
 extension ChatViewController: UITableViewDelegate {
@@ -370,26 +366,12 @@ extension ChatViewController: UITextViewDelegate {
 
     func resizeTextView(_ textView: UITextView){
 
-//        let textViewFixedWidth: CGFloat = textView.frame.size.width
-//        let newSize: CGSize = textView.sizeThatFits(CGSize(width: textViewFixedWidth, height: CGFloat(MAXFLOAT)))
-//        var newFrame: CGRect = textView.frame
-//
-//        var textViewYPosition = textView.frame.origin.y
-//        var heightDifference = textView.frame.height - newSize.height
-//
-//        if (abs(heightDifference) > 20) {
-//            newFrame.size = CGSize(width: fmax(newSize.width, textViewFixedWidth), height: newSize.height)
-//            newFrame.offsetBy(dx: 0.0, dy: 0)
-//        }
-//        textView.frame = newFrame
-
         let fixedWidth = textView.frame.size.width
-//        textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+
         let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
         var newFrame = textView.frame
         newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height - 2)
         textView.frame = newFrame
-//        textView.isScrollEnabled
 
         UIView.animate(withDuration: 0,
                 delay: 0,
@@ -432,10 +414,6 @@ extension ChatViewController: UITextViewDelegate {
             textView.frame = oldFrame
             messageViewHeight.constant = 44
         }
-
-//        if messageViewHeight.constant < messageTextViewHeight.constant {
-//            messageViewHeight.constant += messageTextViewHeight.constant
-//        }
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {

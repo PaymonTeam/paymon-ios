@@ -2452,7 +2452,7 @@ enum GCDAsyncSocketConfig
             }
             freeifaddrs(ifaddr);
 
-			dispatch_async(socketQueue, ^{ @autoreleasepool {
+            dispatch_async(self->socketQueue, ^{ @autoreleasepool {
 				[self didConnect:aConnectIndex];
 			}});
 		}
@@ -2460,7 +2460,7 @@ enum GCDAsyncSocketConfig
 		{
 			NSError *error = [self errnoErrorWithReason:@"Error in connect() function"];
 			
-			dispatch_async(socketQueue, ^{ @autoreleasepool {
+            dispatch_async(self->socketQueue, ^{ @autoreleasepool {
 				
 				[self didNotConnect:aConnectIndex error:error];
 			}});

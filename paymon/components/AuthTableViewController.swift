@@ -111,7 +111,9 @@ class AuthTableViewController: UITableViewController, UITextFieldDelegate {
                                     }
 
                                     print("Я не смог отправить письмо")
-                                    print(error)
+                                    if error != nil {
+                                        print(error!)
+                                    }
                                 }
 
                                 User.clearConfig()

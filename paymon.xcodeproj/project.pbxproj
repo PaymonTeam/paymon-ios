@@ -255,6 +255,18 @@
 		D83BCB2A20E2C521002B19C0 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2920E2C521002B19C0 /* KeychainHelper.swift */; };
 		D83BCB2D20E2C70E002B19C0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2C20E2C70E002B19C0 /* UserDefaults.swift */; };
 		D83BCB2F20E2CB01002B19C0 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */; };
+		B04E6B9B20E3A8970032AE3C /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E6B9820E3A8970032AE3C /* ReceiveViewController.swift */; };
+		B04E6B9C20E3A8970032AE3C /* QRGenerater.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E6B9920E3A8970032AE3C /* QRGenerater.swift */; };
+		B04E6B9D20E3A8970032AE3C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E6B9A20E3A8970032AE3C /* Constants.swift */; };
+		B04E6B9F20E3A8A40032AE3C /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E6B9E20E3A8A40032AE3C /* EnumCollection.swift */; };
+		B04E6BA320E3A8EF0032AE3C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E6BA220E3A8EF0032AE3C /* UserDefaults.swift */; };
+		B04E6BA620E3A8F80032AE3C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E6BA420E3A8F80032AE3C /* Keychain.swift */; };
+		B04E6BA720E3A8F80032AE3C /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E6BA520E3A8F80032AE3C /* KeychainHelper.swift */; };
+		B0566A0720E65D38004D00EC /* GroupChatMessageRcvViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0566A0620E65D38004D00EC /* GroupChatMessageRcvViewCell.swift */; };
+		B0566A0A20E66693004D00EC /* TimeIntervalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0566A0920E66693004D00EC /* TimeIntervalViewCell.swift */; };
+		B0F9554120E1094400D63F35 /* libcryptopp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F9554020E1094400D63F35 /* libcryptopp.a */; };
+		B0F9554320E109E400D63F35 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F9554220E109E400D63F35 /* libcrypto.a */; };
+		B0F9554520E109F300D63F35 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F9554420E109F300D63F35 /* libssl.a */; };
 		D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1120DFD42B00E11A7D /* SendViewController.swift */; };
 		D8A28C1420DFD6D600E11A7D /* CoinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -783,7 +795,6 @@
 		91ABACB01F3DB90B002F6D48 /* paymonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymonUITests.swift; sourceTree = "<group>"; };
 		91ABACB21F3DB90B002F6D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91ABACBE1F3DB92C002F6D48 /* paymon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "paymon-Bridging-Header.h"; sourceTree = "<group>"; };
-		91BA52D81F46DBC20022F549 /* libcryptopp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcryptopp.a; path = "../../../../../usr/local/cryptopp-ios/include/libcryptopp.a"; sourceTree = "<group>"; };
 		91EFF0CA1F65673D00C9DE55 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		91EFF0CC1F65674800C9DE55 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		91EFF0CE1F65675100C9DE55 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -820,6 +831,18 @@
 		D83BCB2920E2C521002B19C0 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		D83BCB2C20E2C70E002B19C0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
+		B04E6B9820E3A8970032AE3C /* ReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		B04E6B9920E3A8970032AE3C /* QRGenerater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGenerater.swift; sourceTree = "<group>"; };
+		B04E6B9A20E3A8970032AE3C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B04E6B9E20E3A8A40032AE3C /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
+		B04E6BA220E3A8EF0032AE3C /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		B04E6BA420E3A8F80032AE3C /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		B04E6BA520E3A8F80032AE3C /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B0566A0620E65D38004D00EC /* GroupChatMessageRcvViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatMessageRcvViewCell.swift; sourceTree = "<group>"; };
+		B0566A0920E66693004D00EC /* TimeIntervalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalViewCell.swift; sourceTree = "<group>"; };
+		B0F9554020E1094400D63F35 /* libcryptopp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcryptopp.a; path = ../../../../../usr/local/Cellar/cryptopp/7.0.0/lib/libcryptopp.a; sourceTree = "<group>"; };
+		B0F9554220E109E400D63F35 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../../usr/local/Cellar/openssl/1.0.2o_2/lib/libcrypto.a; sourceTree = "<group>"; };
+		B0F9554420E109F300D63F35 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../../../usr/local/Cellar/openssl/1.0.2o_2/lib/libssl.a; sourceTree = "<group>"; };
 		D8A28C1120DFD42B00E11A7D /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1183,18 +1206,12 @@
 		3388DACF0A5C4538ABE90A8C /* components */ = {
 			isa = PBXGroup;
 			children = (
-				3388D0CC75003AAC22F35D94 /* ChatsTableViewCell.swift */,
+				B0566A0820E66644004D00EC /* chats */,
 				3388D6396D2D06BC1A1ABA1F /* TextFieldWithImageInTableViewCellDelegate.swift */,
 				3388D2129EE99004AE929D8E /* TextFieldInTableViewCell.swift */,
-				3388D9F922B9E01FC3EA9FC0 /* ChatsTableViewCellDelegate.swift */,
 				3388D5B3381FD1A80B8E640B /* TextFieldWithImageInTableViewCell.swift */,
 				3388D4B49277848574A2991E /* TextFieldInTableViewCellDelegate.swift */,
 				3388DF2A69A3B5172646B5C3 /* ObservableImageView.swift */,
-				3388D5C3924766345FA81C2C /* ChatsTableGroupViewCell.swift */,
-				3388DC5A1BC4A9886EFC2645 /* ChatMessageViewCell.swift */,
-				3388D167BBE6667513705219 /* ChatMessageRcvViewCell.swift */,
-				3388D283967B917EEFE79828 /* ChatMessageItemViewCell.swift */,
-				3388D0FD01FE0CA66CA8FB65 /* ChatMessageItemRcvViewCell.swift */,
 				3305FB524D6E1B0D0E597741 /* ProfileTableInfoView.swift */,
 				3305FA73D7DDCFB7A3556B5A /* ProfileHeaderView.swift */,
 				3305FFA3F0D1EAEB4F2A0055 /* UpdateProfileHeaderView.swift */,
@@ -1308,7 +1325,6 @@
 				91EFF0CA1F65673D00C9DE55 /* libsqlite3.tbd */,
 				91169D691F6038BE002E85FC /* libcrypto.a */,
 				91169D6A1F6038BE002E85FC /* libssl.a */,
-				91BA52D81F46DBC20022F549 /* libcryptopp.a */,
 				8B08434777D161AAF70CC862 /* Pods_paymon.framework */,
 			);
 			name = Frameworks;
@@ -1710,14 +1726,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D81763E920E840FF004D8D98 /* Extension */ = {
+		B0566A0820E66644004D00EC /* chats */ = {
 			isa = PBXGroup;
 			children = (
 				D81763EA20E84119004D8D98 /* DecimalExtension.swift */,
 				D837DEC820F108840059FE1D /* String+Helpers.swift */,
 				D837DECA20F14BAD0059FE1D /* UIView+Loading.swift */,
+				B0566A0620E65D38004D00EC /* GroupChatMessageRcvViewCell.swift */,
+				3388D0FD01FE0CA66CA8FB65 /* ChatMessageItemRcvViewCell.swift */,
+				3388D283967B917EEFE79828 /* ChatMessageItemViewCell.swift */,
+				3388DC5A1BC4A9886EFC2645 /* ChatMessageViewCell.swift */,
+				3388D167BBE6667513705219 /* ChatMessageRcvViewCell.swift */,
+				3388D5C3924766345FA81C2C /* ChatsTableGroupViewCell.swift */,
+				3388D9F922B9E01FC3EA9FC0 /* ChatsTableViewCellDelegate.swift */,
+				3388D0CC75003AAC22F35D94 /* ChatsTableViewCell.swift */,
+				B0566A0920E66693004D00EC /* TimeIntervalViewCell.swift */,
 			);
-			path = Extension;
+			path = chats;
 			sourceTree = "<group>";
 		};
 		D837DEC520F106790059FE1D /* Protocols */ = {
@@ -1741,6 +1766,7 @@
 			isa = PBXGroup;
 			children = (
 				D837DED120F157D60059FE1D /* Defaults */,
+				B04E6B9E20E3A8A40032AE3C /* EnumCollection.swift */,
 				D83BCB2B20E2C6D3002B19C0 /* DefaultManager */,
 				D83BCB2620E2C4C1002B19C0 /* KeychainManager */,
 				D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */,
@@ -1755,8 +1781,8 @@
 		D83BCB2620E2C4C1002B19C0 /* KeychainManager */ = {
 			isa = PBXGroup;
 			children = (
-				D83BCB2720E2C4D1002B19C0 /* Keychain.swift */,
-				D83BCB2920E2C521002B19C0 /* KeychainHelper.swift */,
+				B04E6BA420E3A8F80032AE3C /* Keychain.swift */,
+				B04E6BA520E3A8F80032AE3C /* KeychainHelper.swift */,
 			);
 			path = KeychainManager;
 			sourceTree = "<group>";
@@ -1764,7 +1790,7 @@
 		D83BCB2B20E2C6D3002B19C0 /* DefaultManager */ = {
 			isa = PBXGroup;
 			children = (
-				D83BCB2C20E2C70E002B19C0 /* UserDefaults.swift */,
+				B04E6BA220E3A8EF0032AE3C /* UserDefaults.swift */,
 			);
 			path = DefaultManager;
 			sourceTree = "<group>";
@@ -1772,12 +1798,11 @@
 		D8A28C1020DFD41600E11A7D /* ETH */ = {
 			isa = PBXGroup;
 			children = (
-				D81763BC20E8215D004D8D98 /* Currency */,
+				B04E6B9A20E3A8970032AE3C /* Constants.swift */,
+				B04E6B9920E3A8970032AE3C /* QRGenerater.swift */,
+				B04E6B9820E3A8970032AE3C /* ReceiveViewController.swift */,
 				D8A28C1120DFD42B00E11A7D /* SendViewController.swift */,
 				D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */,
-				D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */,
-				D83BCB1F20E2BBB7002B19C0 /* Constants.swift */,
-				D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */,
 			);
 			path = ETH;
 			sourceTree = "<group>";
@@ -2017,6 +2042,7 @@
 				91724AE11F54424700C369DB /* SerializedBuffer.cpp in Sources */,
 				91724AE31F54424700C369DB /* PMFileManager.swift in Sources */,
 				91724AE41F54424700C369DB /* MessageManager.swift in Sources */,
+				B0566A0A20E66693004D00EC /* TimeIntervalViewCell.swift in Sources */,
 				2D84E07F1F62823800D40DB0 /* SettingsViewController.swift in Sources */,
 				91724AE51F54424700C369DB /* KeychainWrapper.swift in Sources */,
 				91724AE71F54424700C369DB /* KeychainItemAccessibility.swift in Sources */,
@@ -2025,6 +2051,7 @@
 				91724AEC1F54424700C369DB /* User.swift in Sources */,
 				91724AED1F54424700C369DB /* Config.swift in Sources */,
 				91724B011F54424700C369DB /* NetworkManager_Wrapper.mm in Sources */,
+				B04E6BA320E3A8EF0032AE3C /* UserDefaults.swift in Sources */,
 				91724B031F54424700C369DB /* NetworkManager.swift in Sources */,
 				2D174FE81F88D6E3009113EA /* AuthTableViewController.swift in Sources */,
 				91724B041F54424700C369DB /* ChatsTableViewOld.swift in Sources */,
@@ -2076,6 +2103,7 @@
 				3388DDBC2DEF851F38EC0F9B /* BRWalletManager.mm in Sources */,
 				D81763D020E829A6004D8D98 /* EthernService.swift in Sources */,
 				3388DCB5E2B7C44CA8847A40 /* BRWallet.mm in Sources */,
+				B04E6BA720E3A8F80032AE3C /* KeychainHelper.swift in Sources */,
 				3388D04EBC5D2CBA0CA34757 /* BRTransaction.mm in Sources */,
 				D837DEBE20F0FFFA0059FE1D /* TransactionFactory.swift in Sources */,
 				D83BCB2420E2C05C002B19C0 /* QRGenerater.swift in Sources */,
@@ -2086,6 +2114,7 @@
 				3388D9844DCB2023512C9BFA /* NSManagedObject+Sugar.mm in Sources */,
 				3388DB52D11DFAC3EE08B3DA /* BRWalletPlugin.swift in Sources */,
 				3388DB86557E3397652013CE /* BRWebSocket.swift in Sources */,
+				B04E6B9F20E3A8A40032AE3C /* EnumCollection.swift in Sources */,
 				3388D4C54680B5DD793AE637 /* BRWelcomeViewController.mm in Sources */,
 				3388D5D5CCF4B6ADDF317063 /* Extensions.swift in Sources */,
 				3388D3E212B7E78A779E560E /* BRWalletConstants.mm in Sources */,
@@ -2115,15 +2144,13 @@
 				3388DCDAFDF87356599E5A01 /* BRBitID.swift in Sources */,
 				3388DE397353F3C527674496 /* BRBloomFilter.mm in Sources */,
 				3388DEE5500BCE12AC830FC4 /* BRBouncyBurgerButton.mm in Sources */,
-				D83BCB1E20E2BA7D002B19C0 /* ReceiveViewController.swift in Sources */,
+				B04E6B9B20E3A8970032AE3C /* ReceiveViewController.swift in Sources */,
 				3388DC9CDADA6D59AA87D019 /* BRBrowserViewController.swift in Sources */,
 				D837DED520F1588F0059FE1D /* SyncMode.swift in Sources */,
 				3388DC0CE0EC198ACD4451B3 /* BRBSPatch.swift in Sources */,
-				D83BCB2F20E2CB01002B19C0 /* EnumCollection.swift in Sources */,
 				3388D95269C211246A5FD6DB /* BRBubbleView.mm in Sources */,
 				2D576BB31F6A7A270004CFD4 /* ContactsViewController.swift in Sources */,
 				3388D09C3BD0B40BD841E3B2 /* BRCameraPlugin.swift in Sources */,
-				D83BCB2020E2BBB7002B19C0 /* Constants.swift in Sources */,
 				3388DCC1B24ACBFD3E7515E7 /* BRCoding.swift in Sources */,
 				3388DBFC0195FBF096942E7A /* BRCopyLabel.mm in Sources */,
 				3388D280ED55AEE94F987045 /* BREventConfirmView.mm in Sources */,
@@ -2143,13 +2170,14 @@
 				3388DB1CBC61A130A9F1C5A6 /* BRNavigationBar.mm in Sources */,
 				3388DADA86B0EF30DD2DB443 /* BRPaymentProtocol.mm in Sources */,
 				3388D0B8B067A623B8D4ACD2 /* BRPaymentRequest.mm in Sources */,
-				D837DED020F151900059FE1D /* Transaction.swift in Sources */,
+				B04E6B9D20E3A8970032AE3C /* Constants.swift in Sources */,
 				3388D5D5ABCCE99A9C54B76C /* BRPeer.mm in Sources */,
 				3388DF360423F236DCAAEF74 /* BRPeerEntity.mm in Sources */,
 				3388DF92E862014EE36DD3B5 /* BRPeerManager.mm in Sources */,
 				3388D76ABF726A0E45B9DCD1 /* BRPhoneWCSessionManager.mm in Sources */,
 				D81763BE20E8216B004D8D98 /* ChooseCurrencyViewController.swift in Sources */,
 				D837DEC020F1004B0059FE1D /* KeystoreService.swift in Sources */,
+				B04E6B9C20E3A8970032AE3C /* QRGenerater.swift in Sources */,
 				3388DAF0D18DBF339D88223E /* BRReceiveViewController.mm in Sources */,
 				3388D2F794D78CDF2B37E395 /* BRReplicatedKVStore.swift in Sources */,
 				3388D8C1174EEB8A3353DAF8 /* BRRestoreViewController.mm in Sources */,
@@ -2160,14 +2188,12 @@
 				3388D1AF8DB5F5E3EB8B0310 /* BRSendViewController.mm in Sources */,
 				3388D8D5CDB2317CBE4545F2 /* BRSettingsViewController.mm in Sources */,
 				3388DC858145892BF162886A /* BRSocketHelpers.c in Sources */,
-				D83BCB2820E2C4D1002B19C0 /* Keychain.swift in Sources */,
 				3388DC504CD5ED4B0B290F90 /* BRTar.swift in Sources */,
 				3388D7AEC71CB0970846C2CC /* BRTransaction+Utils.mm in Sources */,
 				3305FE73311E457DD2A0993B /* ProfileViewController.swift in Sources */,
 				2D1DFF971FBCEB31006AE009 /* RegistrTableViewController.swift in Sources */,
 				2D1F26FA1F8CCEBF009DA744 /* SecurityPasswordViewController.swift in Sources */,
 				3305FF4E787A7171F38942F4 /* ProfileTableInfoView.swift in Sources */,
-				D83BCB2D20E2C70E002B19C0 /* UserDefaults.swift in Sources */,
 				D8A28C1220DFD42B00E11A7D /* SendViewController.swift in Sources */,
 				3305F4D0892840CA56748907 /* ProfileHeaderView.swift in Sources */,
 				3305F7A19D6E1BCC3BEE1A4D /* UpdateProfileViewController.swift in Sources */,
@@ -2184,11 +2210,11 @@
 				1217798D20B2C86500E45E60 /* CreateGroupViewController.swift in Sources */,
 				3388D021FB59AE08D888733C /* NetworkReachability.swift in Sources */,
 				3388DC229CD9704564ABC453 /* Queue.m in Sources */,
-				D81763DD20E82DBB004D8D98 /* ETH.swift in Sources */,
+				B04E6BA620E3A8F80032AE3C /* Keychain.swift in Sources */,
 				3388D15915AC8F5543358FEE /* Connection.m in Sources */,
-				D83BCB2A20E2C521002B19C0 /* KeychainHelper.swift in Sources */,
 				3388DC507E0BD5D151E65C2A /* Request.m in Sources */,
 				3388DA672D82D4807F0E0C34 /* PMTimer.m in Sources */,
+				B0566A0720E65D38004D00EC /* GroupChatMessageRcvViewCell.swift in Sources */,
 				3388D69F79F7ADB98E7E355F /* MoneyTransferView.swift in Sources */,
 				3305F1DCCA8DAF868D11BD18 /* SettingsTableView.swift in Sources */,
 				3305F51ADD0EC4FB42086EF1 /* SettingsSecurityViewController.swift in Sources */,
@@ -2429,7 +2455,7 @@
 					/usr/local/Cellar/cryptopp/7.0.0/lib,
 					/usr/local/Cellar/openssl/1.0.2o_2/lib,
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDebug";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.paymon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2441,7 +2467,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = arm64;
+				VALID_ARCHS = "armv7s arm64";
 				"VALID_ARCHS[sdk=*]" = arm64;
 			};
 			name = Debug;
@@ -2487,8 +2513,8 @@
 					/usr/local/Cellar/cryptopp/7.0.0/lib,
 					/usr/local/Cellar/openssl/1.0.2o_2/lib,
 				);
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.paymon;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paymon.max;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2497,7 +2523,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = arm64;
+				VALID_ARCHS = "armv7s arm64";
 			};
 			name = Release;
 		};

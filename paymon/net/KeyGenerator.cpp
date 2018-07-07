@@ -21,8 +21,7 @@ SerializedBuffer *KeyGenerator::wrapData(int64_t &messageID, byte *authKey, int6
     SerializedBuffer *request = buffer;
     
     CryptoPP::DH dh;
-    
-    int addr = 0;
+
     SerializedBuffer *sbuffer;
 
     if (authKeyID != 0) {

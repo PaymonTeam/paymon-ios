@@ -14,6 +14,14 @@ extension String {
     }
 }
 
+extension UITextView {
+    func alignCenterVertical() {
+        var topCorrect = (self.bounds.size.height - self.contentSize.height * self.zoomScale) / 2
+        topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
+        self.contentInset.top = topCorrect
+    }
+}
+
 class ViewController: UIViewController {
     var willAuth = false;
 

@@ -166,8 +166,9 @@ class GroupSettingViewController: UIViewController, UITableViewDataSource, UITab
             removeParticipant.userID = user.id;
             NetworkManager.instance.sendPacket(removeParticipant) { response, e in
                 if (response != nil) {
-                    self.participants.remove(at: sender.tag)
-                    self.tblParticipants.reloadData()
+                    DispatchQueue.main.async {
+                        self.participants.remove(at: sender.tag)
+                        self.tblParticipants.reloadData()                    }
                 }
             }
         }))
