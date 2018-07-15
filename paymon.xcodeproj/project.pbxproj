@@ -193,16 +193,12 @@
 		91724ACE1F54424700C369DB /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388D0CC89375C16F04C759E /* Packet.swift */; };
 		91724ACF1F54424700C369DB /* RPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388D99B0C956DB4A637FEDA /* RPC.swift */; };
 		91724AD01F54424700C369DB /* KeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388D01C1469A6979402B914 /* KeyGenerator.swift */; };
-		91724AD21F54424700C369DB /* KeyGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3388D87E6C8FD1BCD83179EF /* KeyGenerator.cpp */; };
 		91724AD41F54424700C369DB /* KeyGenerator_Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3388D0F36A93213A2CE46044 /* KeyGenerator_Wrapper.mm */; };
 		91724AD61F54424700C369DB /* ClassStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388DCC55426490385D910B2 /* ClassStore.swift */; };
 		91724AD71F54424700C369DB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388D610D7A1AF8B8E4F355C /* NotificationManager.swift */; };
 		91724AD81F54424700C369DB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388DDE884A300337BD36EF1 /* Utils.swift */; };
-		91724AD91F54424700C369DB /* ByteArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3388DB06489D366449EDCD23 /* ByteArray.cpp */; };
-		91724ADA1F54424700C369DB /* BuffersStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3388DFC02E08A59C30F12DA8 /* BuffersStorage.cpp */; };
 		91724ADC1F54424700C369DB /* ByteArray_Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3388DA35ED59673699C0AA56 /* ByteArray_Wrapper.mm */; };
 		91724AE01F54424700C369DB /* SerializedBuffer-Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3388D28C40971C759620CCA6 /* SerializedBuffer-Wrapper.mm */; };
-		91724AE11F54424700C369DB /* SerializedBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3388DD80CED5B25C7EB6A935 /* SerializedBuffer.cpp */; };
 		91724AE31F54424700C369DB /* PMFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388DB08C149FB477C04A405 /* PMFileManager.swift */; };
 		91724AE41F54424700C369DB /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388D92B9646936301718E46 /* MessageManager.swift */; };
 		91724AE51F54424700C369DB /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3388D3D3FCA6B74669074910 /* KeychainWrapper.swift */; };
@@ -238,6 +234,12 @@
 		D81763DD20E82DBB004D8D98 /* ETH.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763DC20E82DBB004D8D98 /* ETH.swift */; };
 		D81763E820E840BD004D8D98 /* Ether.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763E720E840BD004D8D98 /* Ether.swift */; };
 		D81763EB20E84119004D8D98 /* DecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81763EA20E84119004D8D98 /* DecimalExtension.swift */; };
+		D817A2D120FB21680049F93C /* SettingsMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305F6A52C79A9B32E4EBF36 /* SettingsMoneyViewController.swift */; };
+		D817A2D220FB21680049F93C /* SettingsBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305FB35FEE7E1C2D2356A84 /* SettingsBasicViewController.swift */; };
+		D817A2E220FB26C30049F93C /* ByteArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D817A2DE20FB26C20049F93C /* ByteArray.cpp */; };
+		D817A2E320FB26C30049F93C /* SerializedBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D817A2DF20FB26C20049F93C /* SerializedBuffer.cpp */; };
+		D817A2E420FB26C30049F93C /* BuffersStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D817A2E020FB26C20049F93C /* BuffersStorage.cpp */; };
+		D817A2E520FB26C30049F93C /* KeyGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D817A2E120FB26C20049F93C /* KeyGenerator.cpp */; };
 		D837DEBE20F0FFFA0059FE1D /* TransactionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837DEBD20F0FFFA0059FE1D /* TransactionFactory.swift */; };
 		D837DEC020F1004B0059FE1D /* KeystoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837DEBF20F1004B0059FE1D /* KeystoreService.swift */; };
 		D837DEC420F100FA0059FE1D /* Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837DEC320F100FA0059FE1D /* Ethereum.swift */; };
@@ -328,7 +330,7 @@
 		3305FFA3F0D1EAEB4F2A0055 /* UpdateProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileHeaderView.swift; sourceTree = "<group>"; };
 		3305FFBB384DA93ED39E591F /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		3388D01B450C1E24A753AF1F /* rsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
-		3388D01C1469A6979402B914 /* KeyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyGenerator.swift; path = net/KeyGenerator.swift; sourceTree = "<group>"; };
+		3388D01C1469A6979402B914 /* KeyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyGenerator.swift; sourceTree = "<group>"; };
 		3388D030C1C2137E5CD9C4F3 /* BRAppleWatchData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRAppleWatchData.mm; sourceTree = "<group>"; };
 		3388D044BB1151F956D6E350 /* pkcs12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
 		3388D04D4A32C9C0C9B29999 /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
@@ -337,13 +339,13 @@
 		3388D062335E68B53A3EA25C /* safestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
 		3388D075F158E410D64CB4A4 /* SerializedBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerializedBuffer.h; sourceTree = "<group>"; };
 		3388D08832C7EF70E92606F2 /* BRMerkleBlockEntity.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRMerkleBlockEntity.mm; sourceTree = "<group>"; };
-		3388D0B9CE2708B2808909D6 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Request.m; path = net/Request.m; sourceTree = "<group>"; };
+		3388D0B9CE2708B2808909D6 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
 		3388D0CC75003AAC22F35D94 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
-		3388D0CC89375C16F04C759E /* Packet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Packet.swift; path = net/Packet.swift; sourceTree = "<group>"; };
+		3388D0CC89375C16F04C759E /* Packet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		3388D0D775B9DE13CA5B3390 /* NewMoneyTransferView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMoneyTransferView.swift; sourceTree = "<group>"; };
-		3388D0F36A93213A2CE46044 /* KeyGenerator_Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = KeyGenerator_Wrapper.mm; path = net/KeyGenerator_Wrapper.mm; sourceTree = "<group>"; };
+		3388D0F36A93213A2CE46044 /* KeyGenerator_Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KeyGenerator_Wrapper.mm; sourceTree = "<group>"; };
 		3388D0FD01FE0CA66CA8FB65 /* ChatMessageItemRcvViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageItemRcvViewCell.swift; sourceTree = "<group>"; };
-		3388D109400970B8D71B2CAA /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queue.m; path = net/Queue.m; sourceTree = "<group>"; };
+		3388D109400970B8D71B2CAA /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		3388D114DF1C781EBA9F473A /* BRRestoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRestoreViewController.h; sourceTree = "<group>"; };
 		3388D1222F7B24B4F132A462 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
 		3388D1260CB2B735087605B0 /* BR_BIP32Sequence.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_BIP32Sequence.c; sourceTree = "<group>"; };
@@ -371,11 +373,11 @@
 		3388D28C40971C759620CCA6 /* SerializedBuffer-Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "SerializedBuffer-Wrapper.mm"; sourceTree = "<group>"; };
 		3388D2A034832DFF0E35C35A /* ui_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
 		3388D2A301E129D132145F5D /* NSManagedObject+Sugar.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSManagedObject+Sugar.mm"; sourceTree = "<group>"; };
-		3388D2A8E83A3AE79A88BF1F /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = net/Queue.h; sourceTree = "<group>"; };
+		3388D2A8E83A3AE79A88BF1F /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		3388D2BA3D62A7CEC590EBB9 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
 		3388D2E4B74E9E4E84049AB5 /* BR_Transaction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_Transaction.c; sourceTree = "<group>"; };
 		3388D2F8482BB7932E8FFF24 /* tls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
-		3388D2FF28E32435B8C52E79 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = net/NetworkManager.swift; sourceTree = "<group>"; };
+		3388D2FF28E32435B8C52E79 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3388D30DC1BAE9F481FFEC80 /* BREventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BREventManager.h; sourceTree = "<group>"; };
 		3388D3131DFBD6AC312CA37A /* BRBloomFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBloomFilter.h; sourceTree = "<group>"; };
 		3388D31B02F076E765A97BF7 /* BRBIP32Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBIP32Sequence.h; sourceTree = "<group>"; };
@@ -400,7 +402,7 @@
 		3388D4562B39648EAC6A2C3E /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
 		3388D467ED26ECE662259D81 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		3388D46D9294E98AD49FECA0 /* cmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
-		3388D481598CD8B55954FFD1 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkReachability.swift; path = net/NetworkReachability.swift; sourceTree = "<group>"; };
+		3388D481598CD8B55954FFD1 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		3388D4924D11FA559F2F5DDF /* ebcdic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
 		3388D496E250479AC1271E49 /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
 		3388D4B49277848574A2991E /* TextFieldInTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldInTableViewCellDelegate.swift; sourceTree = "<group>"; };
@@ -419,7 +421,7 @@
 		3388D56E8F736EBEA6CB66D8 /* Bonjour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bonjour.swift; sourceTree = "<group>"; };
 		3388D5835121F3D9CE432435 /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
 		3388D5876C10FFE2E39BFAEC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		3388D591931FE9DC456B85F9 /* BIP39Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = BIP39Words.plist; sourceTree = "<group>"; };
+		3388D591931FE9DC456B85F9 /* BIP39Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BIP39Words.plist; sourceTree = "<group>"; };
 		3388D59F669C1532D4F0FA1E /* BRAppleWatchSharedConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAppleWatchSharedConstants.h; sourceTree = "<group>"; };
 		3388D5B3381FD1A80B8E640B /* TextFieldWithImageInTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithImageInTableViewCell.swift; sourceTree = "<group>"; };
 		3388D5C3924766345FA81C2C /* ChatsTableGroupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableGroupViewCell.swift; sourceTree = "<group>"; };
@@ -449,7 +451,7 @@
 		3388D6FCD57CBAB27B55BECD /* BRHTTPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRHTTPServer.swift; sourceTree = "<group>"; };
 		3388D70BA32580EEA7E1D1E4 /* NSString+Bitcoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Bitcoin.h"; sourceTree = "<group>"; };
 		3388D71607D9C714C48756BB /* BRWalletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRWalletManager.h; sourceTree = "<group>"; };
-		3388D72490DFC3256B67956B /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Request.h; path = net/Request.h; sourceTree = "<group>"; };
+		3388D72490DFC3256B67956B /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
 		3388D7281C1563981BA0B45E /* BRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRScanViewController.h; sourceTree = "<group>"; };
 		3388D733CD030EB4D67C4EA5 /* BR_Set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_Set.c; sourceTree = "<group>"; };
 		3388D7450D1F7924B5D365E7 /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
@@ -466,11 +468,10 @@
 		3388D80928D8EF88A1E27C50 /* BRBouncyBurgerButton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRBouncyBurgerButton.mm; sourceTree = "<group>"; };
 		3388D80B5897471C0679E524 /* BuffersStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuffersStorage.h; sourceTree = "<group>"; };
 		3388D817711F363B00DC4D4D /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
-		3388D8329D0684F4A0E082CF /* NetworkManager_Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager_Wrapper.h; path = net/NetworkManager_Wrapper.h; sourceTree = "<group>"; };
+		3388D8329D0684F4A0E082CF /* NetworkManager_Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager_Wrapper.h; sourceTree = "<group>"; };
 		3388D84B15D706E23B02E6FA /* BRWelcomeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRWelcomeViewController.mm; sourceTree = "<group>"; };
 		3388D84C34D15EE95528ACD1 /* opensslconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
 		3388D87DE29B0E691BFA9D26 /* ObservableMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableMediaManager.swift; sourceTree = "<group>"; };
-		3388D87E6C8FD1BCD83179EF /* KeyGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyGenerator.cpp; path = net/KeyGenerator.cpp; sourceTree = "<group>"; };
 		3388D88FA344913DC2E836E6 /* BRTxHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTxHistoryViewController.h; sourceTree = "<group>"; };
 		3388D890D5239CA982D85D6E /* symhacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
 		3388D89CFC3965783F717717 /* BRTxMetadataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTxMetadataEntity.h; sourceTree = "<group>"; };
@@ -489,7 +490,7 @@
 		3388D948481084711DFBC7DC /* des_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
 		3388D9800AFC4512407357A2 /* objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
 		3388D983678E28F31E49D454 /* BR_Key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_Key.c; sourceTree = "<group>"; };
-		3388D99B0C956DB4A637FEDA /* RPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RPC.swift; path = net/RPC.swift; sourceTree = "<group>"; };
+		3388D99B0C956DB4A637FEDA /* RPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPC.swift; sourceTree = "<group>"; };
 		3388D99C3969FC1C3B3DA212 /* BRPeerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPeerManager.h; sourceTree = "<group>"; };
 		3388D99CE88CDA0BF713E7F4 /* BRWalletPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRWalletPlugin.swift; sourceTree = "<group>"; };
 		3388D9A31D4CC4BD4815E5F3 /* BRUserDefaultsSwitchCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRUserDefaultsSwitchCell.mm; sourceTree = "<group>"; };
@@ -515,9 +516,9 @@
 		3388DA44814A1B059E1175C7 /* BRTxInputEntity.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRTxInputEntity.mm; sourceTree = "<group>"; };
 		3388DA529BF194F790BB8AB7 /* NSMutableData+Bitcoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+Bitcoin.h"; sourceTree = "<group>"; };
 		3388DA530AF8EF5D9A9BB01D /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		3388DA67889648663F05CB62 /* KeyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyGenerator.h; path = net/KeyGenerator.h; sourceTree = "<group>"; };
+		3388DA67889648663F05CB62 /* KeyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyGenerator.h; sourceTree = "<group>"; };
 		3388DA76ABF61B849AF47F79 /* BRTxHistoryViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRTxHistoryViewController.mm; sourceTree = "<group>"; };
-		3388DA7AC690054F0876297B /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = net/Connection.h; sourceTree = "<group>"; };
+		3388DA7AC690054F0876297B /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		3388DA8A8E27B1C883C612FF /* BRSocketHelpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BRSocketHelpers.c; sourceTree = "<group>"; };
 		3388DA997847BAC1C76248C5 /* MoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyViewController.h; sourceTree = "<group>"; };
 		3388DA9AE2CFD9E4BC7E737A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -530,7 +531,6 @@
 		3388DAEEE8FBA9D3EAD1CD76 /* dsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
 		3388DAF38FC0E546FC1E5C8D /* BRMnemonic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRMnemonic.h; sourceTree = "<group>"; };
 		3388DB0233444007E950962B /* BRBitID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRBitID.swift; sourceTree = "<group>"; };
-		3388DB06489D366449EDCD23 /* ByteArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ByteArray.cpp; sourceTree = "<group>"; };
 		3388DB06FF7CAA0E84BB1F2B /* Paymon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paymon.xcdatamodel; sourceTree = "<group>"; };
 		3388DB07E96EA6379C3A536F /* BR_Address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_Address.c; sourceTree = "<group>"; };
 		3388DB08C149FB477C04A405 /* PMFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMFileManager.swift; sourceTree = "<group>"; };
@@ -542,15 +542,15 @@
 		3388DB3CC29908359DE37637 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
 		3388DB4C2F8ACD1CFD3E8EC2 /* BRAdvancedSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAdvancedSettingsViewController.h; sourceTree = "<group>"; };
 		3388DB57984F9D8CF4ED224D /* ocsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
-		3388DB788CBE8C294FC1D573 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = net/Connection.m; sourceTree = "<group>"; };
+		3388DB788CBE8C294FC1D573 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
 		3388DB82025DF455582E1F72 /* MoneyDepositView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyDepositView.swift; sourceTree = "<group>"; };
 		3388DB8C2DB35BE77F19C949 /* BRKey+BIP38.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BRKey+BIP38.mm"; sourceTree = "<group>"; };
 		3388DB95D8F3D22567E10E4A /* BRKVStoreObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRKVStoreObjects.swift; sourceTree = "<group>"; };
-		3388DBAD42768831A2A9BF37 /* KeyGenerator_Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyGenerator_Wrapper.h; path = net/KeyGenerator_Wrapper.h; sourceTree = "<group>"; };
+		3388DBAD42768831A2A9BF37 /* KeyGenerator_Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyGenerator_Wrapper.h; sourceTree = "<group>"; };
 		3388DBCD60CB8E06ED6D75C8 /* BRBIP39Mnemonic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBIP39Mnemonic.h; sourceTree = "<group>"; };
 		3388DBD3EC244F2BA27A79C8 /* BRKeySequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRKeySequence.h; sourceTree = "<group>"; };
 		3388DBF656DB69009CCDA33C /* txt_db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
-		3388DBF94EFDBED6727EBF3D /* NetworkManager_Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NetworkManager_Wrapper.mm; path = net/NetworkManager_Wrapper.mm; sourceTree = "<group>"; };
+		3388DBF94EFDBED6727EBF3D /* NetworkManager_Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkManager_Wrapper.mm; sourceTree = "<group>"; };
 		3388DC1112FAE01789CA047D /* conf_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
 		3388DC1978128EB029AC0F16 /* BRAppleWatchTransactionData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRAppleWatchTransactionData.mm; sourceTree = "<group>"; };
 		3388DC1F3EE69E810AADF4AF /* dh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
@@ -569,7 +569,7 @@
 		3388DCA63DDFF016E0968F9B /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
 		3388DCA833C4A46CBF540AA4 /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
 		3388DCBE84DC2122C98E3ED0 /* BRMerkleBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRMerkleBlock.h; sourceTree = "<group>"; };
-		3388DCC55426490385D910B2 /* ClassStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassStore.swift; path = net/ClassStore.swift; sourceTree = "<group>"; };
+		3388DCC55426490385D910B2 /* ClassStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassStore.swift; sourceTree = "<group>"; };
 		3388DCCFE467FD5F0B012C6F /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
 		3388DCE5E210FA3D355B8DB0 /* BR_Crypto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_Crypto.c; sourceTree = "<group>"; };
 		3388DCF84272F05CC3637AFB /* ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
@@ -580,7 +580,6 @@
 		3388DD66E975E9F2BE3311AE /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
 		3388DD6AA075A34ACEAA9470 /* BRBloomFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRBloomFilter.mm; sourceTree = "<group>"; };
 		3388DD72097817A42F993713 /* BRSeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSeedViewController.h; sourceTree = "<group>"; };
-		3388DD80CED5B25C7EB6A935 /* SerializedBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SerializedBuffer.cpp; sourceTree = "<group>"; };
 		3388DD89D8157AD88695133B /* evp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
 		3388DD8EF7ED3FF7A529675B /* BRTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTransaction.h; sourceTree = "<group>"; };
 		3388DD98468614245F424280 /* cms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
@@ -616,21 +615,20 @@
 		3388DF088B948394239DDCD6 /* BR_MerkleBlock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_MerkleBlock.c; sourceTree = "<group>"; };
 		3388DF212FDC5F8836DBDAD8 /* BRSendBCHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSendBCHViewController.h; sourceTree = "<group>"; };
 		3388DF2A69A3B5172646B5C3 /* ObservableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableImageView.swift; sourceTree = "<group>"; };
-		3388DF30480880EE66E4B2C1 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = net/Defines.h; sourceTree = "<group>"; };
+		3388DF30480880EE66E4B2C1 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		3388DF37910596356B005D09 /* BRKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRKey.h; sourceTree = "<group>"; };
-		3388DF453EF126B81F3958D5 /* PMTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMTimer.m; path = net/PMTimer.m; sourceTree = "<group>"; };
+		3388DF453EF126B81F3958D5 /* PMTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMTimer.m; sourceTree = "<group>"; };
 		3388DF49CEEFD6F6610C2FC0 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		3388DF4C64B09DAF70744A26 /* krb5_asn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
 		3388DF5FB370F58F1C483EDD /* BRTransactionEntity.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRTransactionEntity.mm; sourceTree = "<group>"; };
 		3388DF632E6937A83B5CDCCA /* BRAppleWatchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAppleWatchData.h; sourceTree = "<group>"; };
 		3388DF6ADC30894984071E2F /* BRBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBubbleView.h; sourceTree = "<group>"; };
 		3388DF744BDDBB6A885CEFE3 /* BRTransaction+Utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "BRTransaction+Utils.mm"; sourceTree = "<group>"; };
-		3388DF830A34A36E815CAD36 /* PMTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMTimer.h; path = net/PMTimer.h; sourceTree = "<group>"; };
+		3388DF830A34A36E815CAD36 /* PMTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMTimer.h; sourceTree = "<group>"; };
 		3388DF8677CA30E40CF61433 /* BRTransactionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTransactionEntity.h; sourceTree = "<group>"; };
 		3388DF8DBF790E6B78C8E817 /* bn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
 		3388DF9261574B8207EDC731 /* BRAmountViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRAmountViewController.mm; sourceTree = "<group>"; };
 		3388DFBC8F1656B160F1EDFF /* BR_BIP38Key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BR_BIP38Key.c; sourceTree = "<group>"; };
-		3388DFC02E08A59C30F12DA8 /* BuffersStorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuffersStorage.cpp; sourceTree = "<group>"; };
 		3388DFD4DE911F5F69BA121C /* BRBouncyBurgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBouncyBurgerButton.h; sourceTree = "<group>"; };
 		3388DFD64A1DEE8389E97988 /* BRReceiveViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BRReceiveViewController.mm; sourceTree = "<group>"; };
 		3388DFE0384AAD5BB4C7CA9E /* dtls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
@@ -803,6 +801,10 @@
 		D81763DC20E82DBB004D8D98 /* ETH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETH.swift; sourceTree = "<group>"; };
 		D81763E720E840BD004D8D98 /* Ether.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ether.swift; sourceTree = "<group>"; };
 		D81763EA20E84119004D8D98 /* DecimalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalExtension.swift; sourceTree = "<group>"; };
+		D817A2DE20FB26C20049F93C /* ByteArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ByteArray.cpp; sourceTree = "<group>"; };
+		D817A2DF20FB26C20049F93C /* SerializedBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SerializedBuffer.cpp; sourceTree = "<group>"; };
+		D817A2E020FB26C20049F93C /* BuffersStorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuffersStorage.cpp; sourceTree = "<group>"; };
+		D817A2E120FB26C20049F93C /* KeyGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyGenerator.cpp; sourceTree = "<group>"; };
 		D837DEBD20F0FFFA0059FE1D /* TransactionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFactory.swift; sourceTree = "<group>"; };
 		D837DEBF20F1004B0059FE1D /* KeystoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeystoreService.swift; sourceTree = "<group>"; };
 		D837DEC320F100FA0059FE1D /* Ethereum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ethereum.swift; sourceTree = "<group>"; };
@@ -1057,15 +1059,12 @@
 			children = (
 				3388D610D7A1AF8B8E4F355C /* NotificationManager.swift */,
 				3388DDE884A300337BD36EF1 /* Utils.swift */,
-				3388DB06489D366449EDCD23 /* ByteArray.cpp */,
-				3388DFC02E08A59C30F12DA8 /* BuffersStorage.cpp */,
 				3388D5DFD1BE9A1E7E3AA9E8 /* ByteArray_Wrapper.h */,
 				3388DA35ED59673699C0AA56 /* ByteArray_Wrapper.mm */,
 				3388DE392AC47F4C663DD03D /* ByteArray.h */,
 				3388D80B5897471C0679E524 /* BuffersStorage.h */,
 				3388D075F158E410D64CB4A4 /* SerializedBuffer.h */,
 				3388D28C40971C759620CCA6 /* SerializedBuffer-Wrapper.mm */,
-				3388DD80CED5B25C7EB6A935 /* SerializedBuffer.cpp */,
 				3388D4C99B3B50F02C953B1C /* SerializedBuffer-Wrapper.h */,
 				3388DB08C149FB477C04A405 /* PMFileManager.swift */,
 				3388D92B9646936301718E46 /* MessageManager.swift */,
@@ -1183,31 +1182,13 @@
 		3388DACF0A5C4538ABE90A8C /* components */ = {
 			isa = PBXGroup;
 			children = (
-				3388D0CC75003AAC22F35D94 /* ChatsTableViewCell.swift */,
 				3388D6396D2D06BC1A1ABA1F /* TextFieldWithImageInTableViewCellDelegate.swift */,
-				3388D2129EE99004AE929D8E /* TextFieldInTableViewCell.swift */,
 				3388D9F922B9E01FC3EA9FC0 /* ChatsTableViewCellDelegate.swift */,
-				3388D5B3381FD1A80B8E640B /* TextFieldWithImageInTableViewCell.swift */,
 				3388D4B49277848574A2991E /* TextFieldInTableViewCellDelegate.swift */,
 				3388DF2A69A3B5172646B5C3 /* ObservableImageView.swift */,
-				3388D5C3924766345FA81C2C /* ChatsTableGroupViewCell.swift */,
-				3388DC5A1BC4A9886EFC2645 /* ChatMessageViewCell.swift */,
-				3388D167BBE6667513705219 /* ChatMessageRcvViewCell.swift */,
-				3388D283967B917EEFE79828 /* ChatMessageItemViewCell.swift */,
-				3388D0FD01FE0CA66CA8FB65 /* ChatMessageItemRcvViewCell.swift */,
-				3305FB524D6E1B0D0E597741 /* ProfileTableInfoView.swift */,
 				3305FA73D7DDCFB7A3556B5A /* ProfileHeaderView.swift */,
 				3305FFA3F0D1EAEB4F2A0055 /* UpdateProfileHeaderView.swift */,
-				3305FC33135E9B1D0B25481C /* UpdateProfileTableInfoView.swift */,
-				2D617E011F7FAE4B004CAEB0 /* SettingsNotificationTableViewController.swift */,
-				2D617E031F7FC610004CAEB0 /* SettingsBasicTableViewController.swift */,
-				2D617E051F7FC629004CAEB0 /* SettingsMoneyTableViewController.swift */,
-				2D617E071F7FC642004CAEB0 /* SettingsSecurityTableViewController.swift */,
-				2D174FE71F88D6E3009113EA /* AuthTableViewController.swift */,
-				3305FB0A9647FDE56E04A1C6 /* SettingsTableView.swift */,
-				3305F7B393C84C5D017F7E55 /* NotificationSoundTableViewController.swift */,
 				3305F8187542254F38183C59 /* CopyLabel.swift */,
-				2D1DFF961FBCEB31006AE009 /* RegistrTableViewController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -1215,6 +1196,16 @@
 		3388DD20ED2226880840F428 /* AsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
+				3388D0CC89375C16F04C759E /* Packet.swift */,
+				3388D99B0C956DB4A637FEDA /* RPC.swift */,
+				3388DF830A34A36E815CAD36 /* PMTimer.h */,
+				3388DA7AC690054F0876297B /* Connection.h */,
+				3388D109400970B8D71B2CAA /* Queue.m */,
+				3388D72490DFC3256B67956B /* Request.h */,
+				3388D2A8E83A3AE79A88BF1F /* Queue.h */,
+				3388D0B9CE2708B2808909D6 /* Request.m */,
+				3388DF453EF126B81F3958D5 /* PMTimer.m */,
+				3388DB788CBE8C294FC1D573 /* Connection.m */,
 				3388DA530AF8EF5D9A9BB01D /* GCDAsyncSocket.h */,
 				3388D9CBFC8BB0E11575C063 /* GCDAsyncSocket.m */,
 			);
@@ -1247,40 +1238,9 @@
 		3388DE7E8E64DC7ED5636728 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				3388D76BE52C4595C847DA03 /* ChatsTableViewOld.swift */,
-				3388D1652CBB299DB5B6AABC /* StartViewController.swift */,
-				3388D7450D1F7924B5D365E7 /* TabsViewController.swift */,
-				3388DE142405CBDD466A7B34 /* ChatViewController.swift */,
-				2D84E07E1F62823800D40DB0 /* SettingsViewController.swift */,
-				3388D6BA4097481A6135319E /* MoneyViewController.mm */,
-				3388DA997847BAC1C76248C5 /* MoneyViewController.h */,
-				2D9C33781F6934F9005AEA2F /* GamesViewController.swift */,
-				2D576BB21F6A7A270004CFD4 /* ContactsViewController.swift */,
-				3305F71C333409AF8A1DDFE3 /* ProfileViewController.swift */,
-				3305FFBB384DA93ED39E591F /* UpdateProfileViewController.swift */,
-				3388DB82025DF455582E1F72 /* MoneyDepositView.swift */,
-				3388D5E5547DFAD46F4EA272 /* MoneyWithdrawView.swift */,
-				3388DEEDE3D385D6BC7E8292 /* WalletViewController.swift */,
-				3305FB35FEE7E1C2D2356A84 /* SettingsBasicViewController.swift */,
-				3305F6A52C79A9B32E4EBF36 /* SettingsMoneyViewController.swift */,
-				2D174FE51F88D2DA009113EA /* AuthViewController.swift */,
-				2D1500E11F8B8D4C00665409 /* KeyGuardViewController.swift */,
-				2D1F26F91F8CCEBF009DA744 /* SecurityPasswordViewController.swift */,
-				3388DC6C9A179D7872AA7007 /* MoneyTransferView.swift */,
-				3305F74EEE7D72804E192B41 /* SettingsSecurityViewController.swift */,
-				3305FC4F944DCB1513A86A0C /* AboutProgramViewController.swift */,
-				3305F49458884F44FBF8A0A2 /* NotificationSoundViewController.swift */,
-				3305FA718148E92C77782083 /* SettingsNotificationViewController.swift */,
-				3388DC86FAECFB1A5EF0D03F /* YMDepositViewController.swift */,
-				3388D0D775B9DE13CA5B3390 /* NewMoneyTransferView.swift */,
-				3305FDA9604427B8CEF7F085 /* InviteFriendsViewController.swift */,
-				3305F1A491D4407BF8A4646C /* ChatsViewController.swift */,
-				3305FA8C7C325D4C14C06969 /* SeedViewController.swift */,
-				3305FA50BDFA577D5FE6640F /* RegistrViewController.swift */,
-				3305FF737DBB6F377121285E /* QRScannerViewController.swift */,
-				3388DEF7E142303FA51D6A72 /* YMWithdrawViewController.swift */,
-				1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */,
-				120AD14A20B93B4C00544418 /* GroupSettingViewController.swift */,
+				D817A2D520FB226B0049F93C /* Others */,
+				D817A2D420FB221E0049F93C /* Tables */,
+				D817A2D320FB21B50049F93C /* Cells */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1592,57 +1552,15 @@
 		91ABAC8F1F3DB90A002F6D48 /* paymon */ = {
 			isa = PBXGroup;
 			children = (
-				D837DEC520F106790059FE1D /* Protocols */,
-				D81763E920E840FF004D8D98 /* Extension */,
-				D81763D920E82CB6004D8D98 /* Models */,
 				D81763BF20E829A6004D8D98 /* NetworkManager */,
 				D83BCB2520E2C4B7002B19C0 /* Helper */,
-				D8A28C1020DFD41600E11A7D /* ETH */,
-				2D1F26FB1F8CDCE5009DA744 /* animation */,
-				91ABACC71F3DBAF0002F6D48 /* cpp */,
-				91ABAC901F3DB90A002F6D48 /* AppDelegate.swift */,
-				91ABAC921F3DB90A002F6D48 /* ViewController.swift */,
-				91ABAC941F3DB90A002F6D48 /* Main.storyboard */,
-				91ABAC971F3DB90A002F6D48 /* Assets.xcassets */,
-				91ABAC991F3DB90A002F6D48 /* LaunchScreen.storyboard */,
-				91ABAC9C1F3DB90A002F6D48 /* Info.plist */,
-				91ABACBE1F3DB92C002F6D48 /* paymon-Bridging-Header.h */,
-				3388D0CC89375C16F04C759E /* Packet.swift */,
-				3388D99B0C956DB4A637FEDA /* RPC.swift */,
-				3388D01C1469A6979402B914 /* KeyGenerator.swift */,
-				3388DA67889648663F05CB62 /* KeyGenerator.h */,
-				3388D87E6C8FD1BCD83179EF /* KeyGenerator.cpp */,
-				3388DF30480880EE66E4B2C1 /* Defines.h */,
-				3388D0F36A93213A2CE46044 /* KeyGenerator_Wrapper.mm */,
-				3388DBAD42768831A2A9BF37 /* KeyGenerator_Wrapper.h */,
-				3388DCC55426490385D910B2 /* ClassStore.swift */,
-				3388D38AD4B3114006D85F39 /* utils */,
-				3388DA9AE2CFD9E4BC7E737A /* User.swift */,
-				3388DD36904CEFC4A59F4AAC /* Config.swift */,
-				3388DBF94EFDBED6727EBF3D /* NetworkManager_Wrapper.mm */,
-				3388D8329D0684F4A0E082CF /* NetworkManager_Wrapper.h */,
-				3388D2FF28E32435B8C52E79 /* NetworkManager.swift */,
-				3388DE7E8E64DC7ED5636728 /* view */,
-				3388DACF0A5C4538ABE90A8C /* components */,
-				3388D68419F3C75A16E4248C /* StickerPack.swift */,
-				3388D5876C10FFE2E39BFAEC /* Photo.swift */,
-				3388D87DE29B0E691BFA9D26 /* ObservableMediaManager.swift */,
 				3388D1976592C4C85A6D090E /* bitcoin */,
-				3388DAD01548CEC127CEE247 /* TransactionManager.swift */,
-				3388D591931FE9DC456B85F9 /* BIP39Words.plist */,
-				3388D6B071216733109605F4 /* Paymon-Prefix.pch */,
-				3388D481598CD8B55954FFD1 /* NetworkReachability.swift */,
-				3388DF830A34A36E815CAD36 /* PMTimer.h */,
-				3388DA7AC690054F0876297B /* Connection.h */,
-				3388D109400970B8D71B2CAA /* Queue.m */,
-				3388D72490DFC3256B67956B /* Request.h */,
-				3388DB788CBE8C294FC1D573 /* Connection.m */,
-				3388D2A8E83A3AE79A88BF1F /* Queue.h */,
-				3388D0B9CE2708B2808909D6 /* Request.m */,
-				3388DF453EF126B81F3958D5 /* PMTimer.m */,
-				3305FE151D941648E5D07CD5 /* ringtone */,
-				3388D74BA4C0A81952661ECC /* main.swift */,
-				2DFFF6481FAB14CF00DEC11F /* Localizable.strings */,
+				D817A2C720FB182A0049F93C /* Resources */,
+				D817A2C820FB18BF0049F93C /* Application */,
+				3388DACF0A5C4538ABE90A8C /* components */,
+				D81763D920E82CB6004D8D98 /* Models */,
+				3388DE7E8E64DC7ED5636728 /* view */,
+				D817A2CA20FB1A9A0049F93C /* Controllers */,
 			);
 			path = paymon;
 			sourceTree = "<group>";
@@ -1665,13 +1583,6 @@
 			path = paymonUITests;
 			sourceTree = "<group>";
 		};
-		91ABACC71F3DBAF0002F6D48 /* cpp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = cpp;
-			sourceTree = "<group>";
-		};
 		D81763BC20E8215D004D8D98 /* Currency */ = {
 			isa = PBXGroup;
 			children = (
@@ -1683,9 +1594,10 @@
 		D81763BF20E829A6004D8D98 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				D817A2C920FB19D70049F93C /* ConnectionManager */,
+				D81763C220E829A6004D8D98 /* Service */,
 				D81763C020E829A6004D8D98 /* ConnectionManager.swift */,
 				D81763C120E829A6004D8D98 /* BaseService.swift */,
-				D81763C220E829A6004D8D98 /* Service */,
 				D81763D720E829FB004D8D98 /* API.swift */,
 			);
 			path = NetworkManager;
@@ -1720,9 +1632,248 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		D817A2C720FB182A0049F93C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D817A2DC20FB24E40049F93C /* StoryBoard */,
+				3305FE151D941648E5D07CD5 /* ringtone */,
+				2DFFF6481FAB14CF00DEC11F /* Localizable.strings */,
+				91ABAC971F3DB90A002F6D48 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D817A2C820FB18BF0049F93C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				91ABAC9C1F3DB90A002F6D48 /* Info.plist */,
+				3388D591931FE9DC456B85F9 /* BIP39Words.plist */,
+				3388D74BA4C0A81952661ECC /* main.swift */,
+				3388D6B071216733109605F4 /* Paymon-Prefix.pch */,
+				91ABACBE1F3DB92C002F6D48 /* paymon-Bridging-Header.h */,
+				91ABAC901F3DB90A002F6D48 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D817A2C920FB19D70049F93C /* ConnectionManager */ = {
+			isa = PBXGroup;
+			children = (
+				3388DBF94EFDBED6727EBF3D /* NetworkManager_Wrapper.mm */,
+				3388D481598CD8B55954FFD1 /* NetworkReachability.swift */,
+				3388D8329D0684F4A0E082CF /* NetworkManager_Wrapper.h */,
+				3388D2FF28E32435B8C52E79 /* NetworkManager.swift */,
+			);
+			path = ConnectionManager;
+			sourceTree = "<group>";
+		};
+		D817A2CA20FB1A9A0049F93C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8A28C1020DFD41600E11A7D /* ETH */,
+				D817A2DA20FB24350049F93C /* Tabs */,
+				D817A2D920FB23FC0049F93C /* BitCoins */,
+				D817A2D820FB238A0049F93C /* Chats */,
+				D817A2D720FB23260049F93C /* Users */,
+				D817A2D620FB22E80049F93C /* Setting */,
+				D817A2DB20FB24900049F93C /* Others */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D817A2CB20FB1AFD0049F93C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */,
+				3388DAD01548CEC127CEE247 /* TransactionManager.swift */,
+				3388D87DE29B0E691BFA9D26 /* ObservableMediaManager.swift */,
+				3388DCC55426490385D910B2 /* ClassStore.swift */,
+				3388DD36904CEFC4A59F4AAC /* Config.swift */,
+				3388DA9AE2CFD9E4BC7E737A /* User.swift */,
+				3388D68419F3C75A16E4248C /* StickerPack.swift */,
+				3388D5876C10FFE2E39BFAEC /* Photo.swift */,
+				D837DEC320F100FA0059FE1D /* Ethereum.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D817A2CC20FB1B0C0049F93C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D81763B620E809DD004D8D98 /* Chain.swift */,
+				D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		D817A2CD20FB1B220049F93C /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				D81763E720E840BD004D8D98 /* Ether.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		D817A2CF20FB1FC30049F93C /* CryptoHelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3388DF30480880EE66E4B2C1 /* Defines.h */,
+				3388DBAD42768831A2A9BF37 /* KeyGenerator_Wrapper.h */,
+				3388D0F36A93213A2CE46044 /* KeyGenerator_Wrapper.mm */,
+				3388DA67889648663F05CB62 /* KeyGenerator.h */,
+				3388D01C1469A6979402B914 /* KeyGenerator.swift */,
+			);
+			path = CryptoHelperClasses;
+			sourceTree = "<group>";
+		};
+		D817A2D020FB20730049F93C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D83BCB1F20E2BBB7002B19C0 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D817A2D320FB21B50049F93C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3388D2129EE99004AE929D8E /* TextFieldInTableViewCell.swift */,
+				3388D5B3381FD1A80B8E640B /* TextFieldWithImageInTableViewCell.swift */,
+				3388D5C3924766345FA81C2C /* ChatsTableGroupViewCell.swift */,
+				3388DC5A1BC4A9886EFC2645 /* ChatMessageViewCell.swift */,
+				3388D167BBE6667513705219 /* ChatMessageRcvViewCell.swift */,
+				3388D283967B917EEFE79828 /* ChatMessageItemViewCell.swift */,
+				3388D0FD01FE0CA66CA8FB65 /* ChatMessageItemRcvViewCell.swift */,
+				3388D0CC75003AAC22F35D94 /* ChatsTableViewCell.swift */,
+				3388D76BE52C4595C847DA03 /* ChatsTableViewOld.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D817A2D420FB221E0049F93C /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				3305FB524D6E1B0D0E597741 /* ProfileTableInfoView.swift */,
+				3305FC33135E9B1D0B25481C /* UpdateProfileTableInfoView.swift */,
+				3305FB0A9647FDE56E04A1C6 /* SettingsTableView.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		D817A2D520FB226B0049F93C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3388DB82025DF455582E1F72 /* MoneyDepositView.swift */,
+				3388D5E5547DFAD46F4EA272 /* MoneyWithdrawView.swift */,
+				3388DC6C9A179D7872AA7007 /* MoneyTransferView.swift */,
+				3388D0D775B9DE13CA5B3390 /* NewMoneyTransferView.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		D817A2D620FB22E80049F93C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2D84E07E1F62823800D40DB0 /* SettingsViewController.swift */,
+				3305FB35FEE7E1C2D2356A84 /* SettingsBasicViewController.swift */,
+				3305F6A52C79A9B32E4EBF36 /* SettingsMoneyViewController.swift */,
+				3305F74EEE7D72804E192B41 /* SettingsSecurityViewController.swift */,
+				3305FA718148E92C77782083 /* SettingsNotificationViewController.swift */,
+				120AD14A20B93B4C00544418 /* GroupSettingViewController.swift */,
+				2D617E011F7FAE4B004CAEB0 /* SettingsNotificationTableViewController.swift */,
+				2D617E031F7FC610004CAEB0 /* SettingsBasicTableViewController.swift */,
+				2D617E051F7FC629004CAEB0 /* SettingsMoneyTableViewController.swift */,
+				2D617E071F7FC642004CAEB0 /* SettingsSecurityTableViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D817A2D720FB23260049F93C /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				3305FFBB384DA93ED39E591F /* UpdateProfileViewController.swift */,
+				2D174FE71F88D6E3009113EA /* AuthTableViewController.swift */,
+				2D1F26F91F8CCEBF009DA744 /* SecurityPasswordViewController.swift */,
+				3305F71C333409AF8A1DDFE3 /* ProfileViewController.swift */,
+				2D1DFF961FBCEB31006AE009 /* RegistrTableViewController.swift */,
+				3305FA50BDFA577D5FE6640F /* RegistrViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		D817A2D820FB238A0049F93C /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				2D576BB21F6A7A270004CFD4 /* ContactsViewController.swift */,
+				1217798C20B2C86500E45E60 /* CreateGroupViewController.swift */,
+				3305FDA9604427B8CEF7F085 /* InviteFriendsViewController.swift */,
+				3305F1A491D4407BF8A4646C /* ChatsViewController.swift */,
+				3388DE142405CBDD466A7B34 /* ChatViewController.swift */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		D817A2D920FB23FC0049F93C /* BitCoins */ = {
+			isa = PBXGroup;
+			children = (
+				3305FF737DBB6F377121285E /* QRScannerViewController.swift */,
+				3388DEF7E142303FA51D6A72 /* YMWithdrawViewController.swift */,
+				3388D6BA4097481A6135319E /* MoneyViewController.mm */,
+				3388DA997847BAC1C76248C5 /* MoneyViewController.h */,
+				3388DC86FAECFB1A5EF0D03F /* YMDepositViewController.swift */,
+			);
+			path = BitCoins;
+			sourceTree = "<group>";
+		};
+		D817A2DA20FB24350049F93C /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				3388D7450D1F7924B5D365E7 /* TabsViewController.swift */,
+				2D9C33781F6934F9005AEA2F /* GamesViewController.swift */,
+				3388DEEDE3D385D6BC7E8292 /* WalletViewController.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		D817A2DB20FB24900049F93C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3388D1652CBB299DB5B6AABC /* StartViewController.swift */,
+				2D174FE51F88D2DA009113EA /* AuthViewController.swift */,
+				2D1500E11F8B8D4C00665409 /* KeyGuardViewController.swift */,
+				3305FC4F944DCB1513A86A0C /* AboutProgramViewController.swift */,
+				3305F49458884F44FBF8A0A2 /* NotificationSoundViewController.swift */,
+				3305FA8C7C325D4C14C06969 /* SeedViewController.swift */,
+				3305F7B393C84C5D017F7E55 /* NotificationSoundTableViewController.swift */,
+				91ABAC921F3DB90A002F6D48 /* ViewController.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		D817A2DC20FB24E40049F93C /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				91ABAC941F3DB90A002F6D48 /* Main.storyboard */,
+				91ABAC991F3DB90A002F6D48 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		D817A2DD20FB268F0049F93C /* CPP */ = {
+			isa = PBXGroup;
+			children = (
+				D817A2E020FB26C20049F93C /* BuffersStorage.cpp */,
+				D817A2DE20FB26C20049F93C /* ByteArray.cpp */,
+				D817A2E120FB26C20049F93C /* KeyGenerator.cpp */,
+				D817A2DF20FB26C20049F93C /* SerializedBuffer.cpp */,
+			);
+			path = CPP;
+			sourceTree = "<group>";
+		};
 		D837DEC520F106790059FE1D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D837DECC20F1500D0059FE1D /* TransactionService.swift */,
 				D837DEC620F1068A0059FE1D /* TransactionFactoryProtocol.swift */,
 			);
 			path = Protocols;
@@ -1740,14 +1891,19 @@
 		D83BCB2520E2C4B7002B19C0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D817A2DD20FB268F0049F93C /* CPP */,
+				2D1F26FB1F8CDCE5009DA744 /* animation */,
+				3388D38AD4B3114006D85F39 /* utils */,
+				D81763E920E840FF004D8D98 /* Extension */,
+				D817A2D020FB20730049F93C /* Constants */,
+				D817A2CF20FB1FC30049F93C /* CryptoHelperClasses */,
+				D837DEC520F106790059FE1D /* Protocols */,
+				D817A2CD20FB1B220049F93C /* Structs */,
+				D817A2CC20FB1B0C0049F93C /* Enums */,
+				D817A2CB20FB1AFD0049F93C /* Classes */,
 				D837DED120F157D60059FE1D /* Defaults */,
 				D83BCB2B20E2C6D3002B19C0 /* DefaultManager */,
 				D83BCB2620E2C4C1002B19C0 /* KeychainManager */,
-				D83BCB2E20E2CB01002B19C0 /* EnumCollection.swift */,
-				D81763B620E809DD004D8D98 /* Chain.swift */,
-				D81763E720E840BD004D8D98 /* Ether.swift */,
-				D837DEC320F100FA0059FE1D /* Ethereum.swift */,
-				D837DECC20F1500D0059FE1D /* TransactionService.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1776,8 +1932,6 @@
 				D8A28C1120DFD42B00E11A7D /* SendViewController.swift */,
 				D8A28C1320DFD6D600E11A7D /* CoinDetailsViewController.swift */,
 				D83BCB1D20E2BA7D002B19C0 /* ReceiveViewController.swift */,
-				D83BCB1F20E2BBB7002B19C0 /* Constants.swift */,
-				D83BCB2320E2C05C002B19C0 /* QRGenerater.swift */,
 			);
 			path = ETH;
 			sourceTree = "<group>";
@@ -1999,22 +2153,20 @@
 				91724ACB1F54424700C369DB /* AppDelegate.swift in Sources */,
 				D837DEC920F108850059FE1D /* String+Helpers.swift in Sources */,
 				91724ACC1F54424700C369DB /* ViewController.swift in Sources */,
+				D817A2D120FB21680049F93C /* SettingsMoneyViewController.swift in Sources */,
 				91724ACE1F54424700C369DB /* Packet.swift in Sources */,
 				91724ACF1F54424700C369DB /* RPC.swift in Sources */,
 				2D9C33791F6934F9005AEA2F /* GamesViewController.swift in Sources */,
 				2D1F26FD1F8CDCFA009DA744 /* BounceButton.swift in Sources */,
 				91724AD01F54424700C369DB /* KeyGenerator.swift in Sources */,
-				91724AD21F54424700C369DB /* KeyGenerator.cpp in Sources */,
+				D817A2D220FB21680049F93C /* SettingsBasicViewController.swift in Sources */,
 				91724AD41F54424700C369DB /* KeyGenerator_Wrapper.mm in Sources */,
 				91724AD61F54424700C369DB /* ClassStore.swift in Sources */,
 				91724AD71F54424700C369DB /* NotificationManager.swift in Sources */,
 				91724AD81F54424700C369DB /* Utils.swift in Sources */,
-				91724AD91F54424700C369DB /* ByteArray.cpp in Sources */,
-				91724ADA1F54424700C369DB /* BuffersStorage.cpp in Sources */,
 				91724ADC1F54424700C369DB /* ByteArray_Wrapper.mm in Sources */,
 				91724AE01F54424700C369DB /* SerializedBuffer-Wrapper.mm in Sources */,
 				D81763CD20E829A6004D8D98 /* BaseService.swift in Sources */,
-				91724AE11F54424700C369DB /* SerializedBuffer.cpp in Sources */,
 				91724AE31F54424700C369DB /* PMFileManager.swift in Sources */,
 				91724AE41F54424700C369DB /* MessageManager.swift in Sources */,
 				2D84E07F1F62823800D40DB0 /* SettingsViewController.swift in Sources */,
@@ -2046,6 +2198,7 @@
 				3388D7D3C4DE46B03FDB2D5E /* ObservableMediaManager.swift in Sources */,
 				3388D86AE98182F9A179E18A /* ObservableImageView.swift in Sources */,
 				3388D5CBD539BB153DA834CE /* ChatsTableGroupViewCell.swift in Sources */,
+				D817A2E220FB26C30049F93C /* ByteArray.cpp in Sources */,
 				3388D8B2999EA6E2ACF0FDCC /* ChatViewController.swift in Sources */,
 				3388D15D2E3D9AEAE9E2217C /* ChatMessageViewCell.swift in Sources */,
 				3388D649A73CA3F276C9091A /* ChatMessageRcvViewCell.swift in Sources */,
@@ -2112,6 +2265,7 @@
 				3388D31B35A3BEBA1FA17C0F /* BRBIP32Sequence.mm in Sources */,
 				D8A28C1420DFD6D600E11A7D /* CoinDetailsViewController.swift in Sources */,
 				3388DF7D1667E7C5AFB96133 /* BRBIP39Mnemonic.mm in Sources */,
+				D817A2E320FB26C30049F93C /* SerializedBuffer.cpp in Sources */,
 				3388DCDAFDF87356599E5A01 /* BRBitID.swift in Sources */,
 				3388DE397353F3C527674496 /* BRBloomFilter.mm in Sources */,
 				3388DEE5500BCE12AC830FC4 /* BRBouncyBurgerButton.mm in Sources */,
@@ -2129,7 +2283,9 @@
 				3388D280ED55AEE94F987045 /* BREventConfirmView.mm in Sources */,
 				3388D884E522D84B955DC8A2 /* BREventManager.mm in Sources */,
 				3388D48A59EBEFB0C8D9E054 /* BRHTTPFileMiddleware.swift in Sources */,
+				D817A2E520FB26C30049F93C /* KeyGenerator.cpp in Sources */,
 				3388D7ECFCB59B49332EE0FB /* BRHTTPIndexMiddleware.swift in Sources */,
+				D817A2E420FB26C30049F93C /* BuffersStorage.cpp in Sources */,
 				3388D0FE9FC0B022A0362688 /* BRHTTPRouter.swift in Sources */,
 				3388D92042030E8B5D7CC348 /* BRHTTPServer.swift in Sources */,
 				3388D2BE61AD51E55C2EC286 /* BRKey+BIP38.mm in Sources */,
@@ -2417,7 +2573,7 @@
 					"$(SRCROOT)/openssl/",
 					"/usr/local/cryptopp-ios/include",
 				);
-				INFOPLIST_FILE = paymon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/paymon/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2436,7 +2592,7 @@
 				PROVISIONING_PROFILE = "0714eef9-478d-463b-9477-7c1bd08c850e";
 				PROVISIONING_PROFILE_SPECIFIER = RanosysWildcardDev;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "paymon/Application/paymon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
@@ -2473,7 +2629,7 @@
 					"$(SRCROOT)/openssl/",
 					"/usr/local/cryptopp-ios/include",
 				);
-				INFOPLIST_FILE = paymon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/paymon/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2493,7 +2649,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "paymon/paymon-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "paymon/Application/paymon-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
