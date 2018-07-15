@@ -28,6 +28,7 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 #import <sys/stat.h>
 #import <mach-o/dyld.h>
+#import "paymon-Swift.h"
 
 #define BRURLNotification            @"BRURLNotification"
 #define BRFileNotification           @"BRFileNotification"
@@ -441,7 +442,8 @@ static NSString *sanitizeString(NSString *s) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.row == 0) {
-        CoinDetailsViewController *coinDetail = [self.storyboard instantiateViewControllerWithIdentifier:@"CoinDetailsViewController"];
+        UIStoryboard *ethur = [UIStoryboard storyboardWithName:@"Ethur" bundle:[NSBundle mainBundle]];
+        CoinDetailsViewController *coinDetail = [ethur instantiateViewControllerWithIdentifier:@"CoinDetailsViewController"];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:coinDetail];
         [self presentViewController:nav animated:true completion:nil];
 

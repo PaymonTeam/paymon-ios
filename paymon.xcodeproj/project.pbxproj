@@ -240,6 +240,8 @@
 		D817A2E320FB26C30049F93C /* SerializedBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D817A2DF20FB26C20049F93C /* SerializedBuffer.cpp */; };
 		D817A2E420FB26C30049F93C /* BuffersStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D817A2E020FB26C20049F93C /* BuffersStorage.cpp */; };
 		D817A2E520FB26C30049F93C /* KeyGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D817A2E120FB26C20049F93C /* KeyGenerator.cpp */; };
+		D817A2E820FBDD270049F93C /* Ethur.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D817A2E720FBDD270049F93C /* Ethur.storyboard */; };
+		D817A2EA20FBDE8B0049F93C /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D817A2E920FBDE8B0049F93C /* StoryBoard.swift */; };
 		D837DEBE20F0FFFA0059FE1D /* TransactionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837DEBD20F0FFFA0059FE1D /* TransactionFactory.swift */; };
 		D837DEC020F1004B0059FE1D /* KeystoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837DEBF20F1004B0059FE1D /* KeystoreService.swift */; };
 		D837DEC420F100FA0059FE1D /* Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837DEC320F100FA0059FE1D /* Ethereum.swift */; };
@@ -805,6 +807,8 @@
 		D817A2DF20FB26C20049F93C /* SerializedBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SerializedBuffer.cpp; sourceTree = "<group>"; };
 		D817A2E020FB26C20049F93C /* BuffersStorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BuffersStorage.cpp; sourceTree = "<group>"; };
 		D817A2E120FB26C20049F93C /* KeyGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyGenerator.cpp; sourceTree = "<group>"; };
+		D817A2E720FBDD270049F93C /* Ethur.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ethur.storyboard; sourceTree = "<group>"; };
+		D817A2E920FBDE8B0049F93C /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
 		D837DEBD20F0FFFA0059FE1D /* TransactionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFactory.swift; sourceTree = "<group>"; };
 		D837DEBF20F1004B0059FE1D /* KeystoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeystoreService.swift; sourceTree = "<group>"; };
 		D837DEC320F100FA0059FE1D /* Ethereum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ethereum.swift; sourceTree = "<group>"; };
@@ -1710,6 +1714,7 @@
 			isa = PBXGroup;
 			children = (
 				D81763E720E840BD004D8D98 /* Ether.swift */,
+				D817A2E920FBDE8B0049F93C /* StoryBoard.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -1855,6 +1860,7 @@
 			children = (
 				91ABAC941F3DB90A002F6D48 /* Main.storyboard */,
 				91ABAC991F3DB90A002F6D48 /* LaunchScreen.storyboard */,
+				D817A2E720FBDD270049F93C /* Ethur.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -2077,6 +2083,7 @@
 				3305FC95E7AD556FA047D35C /* Circles.mp3 in Resources */,
 				3305FBEE5CD196ED02E9EE11 /* Popcorn.mp3 in Resources */,
 				3305F7F65027AC0BD724D871 /* Complete.mp3 in Resources */,
+				D817A2E820FBDD270049F93C /* Ethur.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2316,6 +2323,7 @@
 				3388D1AF8DB5F5E3EB8B0310 /* BRSendViewController.mm in Sources */,
 				3388D8D5CDB2317CBE4545F2 /* BRSettingsViewController.mm in Sources */,
 				3388DC858145892BF162886A /* BRSocketHelpers.c in Sources */,
+				D817A2EA20FBDE8B0049F93C /* StoryBoard.swift in Sources */,
 				D83BCB2820E2C4D1002B19C0 /* Keychain.swift in Sources */,
 				3388DC504CD5ED4B0B290F90 /* BRTar.swift in Sources */,
 				3388D7AEC71CB0970846C2CC /* BRTransaction+Utils.mm in Sources */,

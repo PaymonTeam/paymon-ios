@@ -13,6 +13,7 @@ struct StoryBoardIdentifier {
     static let sendVCStoryID = "SendViewController"
     static let scanVCStoryID = "ScanViewControllerID"
     static let chooseCurrencyVCStoryID = "ChooseCurrencyViewController"
+    static let CoinDetailsVCStoryID = "CoinDetailsViewController"
 }
 
 struct UserDefaultKey {

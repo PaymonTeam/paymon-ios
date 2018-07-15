@@ -144,14 +144,15 @@ class SendViewController: UIViewController, QRCaptureDelegate, SelectedCurrencyD
     }
 
     @IBAction func currencyPressed(_ sender: UIButton) {
-        if let currencyVC = storyboard?.instantiateViewController(withIdentifier: StoryBoardIdentifier.chooseCurrencyVCStoryID) as? ChooseCurrencyViewController {
+        if let currencyVC = StoryBoard.ethur.instantiateViewController(withIdentifier: StoryBoardIdentifier.chooseCurrencyVCStoryID) as? ChooseCurrencyViewController {
             currencyVC.delegate = self
             self.navigationController?.pushViewController(currencyVC, animated: true)
         }
     }
 
     @IBAction func scanQRPressed(_ sender: UIButton) {
-        if let scanController = storyboard?.instantiateViewController(withIdentifier: "ScanViewController") as? QRScannerViewController {
+
+        if let scanController = StoryBoard.main.instantiateViewController(withIdentifier: "ScanViewController") as? QRScannerViewController {
             scanController.delegate = self
             present(scanController, animated: true)
         }
